@@ -23,7 +23,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-        <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Readmore', 'wntblank_theme_boot4' ); ?></a></p>
+        <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn readmore"><?php _e( 'Readmore', 'wntblank_theme_boot4' ); ?></a></p>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer text-right">

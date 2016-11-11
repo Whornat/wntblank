@@ -44,26 +44,20 @@ wp_nav_menu( array(
 	<footer id="colophon" class="site-footer" role="contentinfo">
 <div class="site-info container text-center">
             <?php //printf( esc_html__( 'Proudly powered by %s', 'wntblank_theme_boot4' ), 'WordPress' ); ?>
-			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'wntblank_theme_boot4' ), 'wntblank_theme_boot4', '<a href="http://pagedemarque.com/" rel="designer">Pagedemarque</a>' ); ?></p>
-			<p>Une Conception <a href="http://pagedemarque.com/" target="blank">Page de Marque</a> - <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>">mentions légales</a></p>		
+			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'wntblank_theme_boot4' ), 'wntblank_theme_boot4', '<a href="http://pagedemarque.com/" rel="designer">Pagedemarque</a>' ); ?>
+			<?php 
+			$infostheme = wp_get_theme();
+			$nomdusite = get_bloginfo( 'name' );
+			$descriptiondusite = get_bloginfo( 'description' );
+			$site_url = network_site_url( '/' );
+			?>
+            
+            <p class="credits">Une Conception <a href="<?php echo $infostheme->get( 'AuthorURI' ); ?>" target="blank" class="author_site"><?php echo $infostheme->get( 'Author' ); ?></a> pour <a href="<?php echo $site_url; ?>" class="client_site" title="<?php echo $descriptiondusite; ?>"><?php echo $nomdusite; ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>" class="mentionslegales">mentions légales</a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Plan du site' ) ); ?>" class="plandusite" title="plan du site">Plan du site</a></p>		
         </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-    
-<?php // SI PAGE d'ACCUEIL ----------------------
-if ((is_home())|| is_singular(array('post','xxx','xxx')) || (is_page_template( 'template-pages/homepage.php' ))){ ?>
-   <script type="text/javascript">
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-	slideshowSpeed: 5000, //Integer: Set the speed of the slideshow cycling, in milliseconds
-	animationSpeed: 2000, //Integer: Set the speed of animations, in milliseconds
-  });
-});
-  </script>
-<?php } // FIN SI PAGE d'ACCUEIL ---------------------- ?>
 </body>
 </html>

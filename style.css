@@ -729,6 +729,14 @@ img {
 .form-submit #submit:hover{ background:#444; color:#FFF; text-decoration:none;}
 .tags-links a:hover { background:#CCC; color:#FFF }
 
+/* TEMPLATE PAGE TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+/* TEMPLATE PAGE TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+
+/* page-template-plandusite */
+.page-template-plandusite {}
+#sitemap_container{ padding-bottom:2rem;} 
+#sitemap_container .section{ margin:1rem 0;} 
+
 
 /* SOCIAL LINKS FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 

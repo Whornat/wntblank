@@ -123,6 +123,7 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
 /**
  * Enqueue scripts and styles.
  */
+ 
 function wntblank_theme_boot4_scripts() {
 	
 	/* SSSSSSS script defaut http://underscores.me/ SSSSSSSSSSSSSS */
@@ -163,10 +164,6 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
 	wp_enqueue_script( 'wntblank_theme_boot4-jquerymousewheel_script', get_template_directory_uri() . '/JS/jquery.mousewheel.js','','',true );
 	//------------------------ANIMATION-------------------------
-	// Version 01 simple---
-	//wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animate-on-scroll.css');
-	//wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/animate-on-scroll.js','','',true );
-	// version 02 avec framework ----
 	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
 	
@@ -221,12 +218,8 @@ require_once('bs4navwalker.php');
 /**
  * Masonry
  */
- require get_template_directory() . '/inc/masonry.php';
+ //require get_template_directory() . '/inc/masonry.php';
 
-/**
- * Customisation backoffice
- */
- //require get_template_directory() . '/inc/custombackoffice.php';
 /**
  * Customisation Tiny MCE
  */
@@ -272,48 +265,3 @@ function my_add_excerpts_to_pages() {
 
 
 /** xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */ 
-
-/** xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */ 
-/* SOCIAL LINKS --------------------------------------------------------------------------------------------------------------------- */
-/** http://crunchify.com/how-to-create-social-sharing-button-without-any-plugin-and-script-loading-wordpress-speed-optimization-goal/ */
-function crunchify_social_sharing_buttons($content) {
-	if(is_singular()){
-	
-		// Get current page URL 
-		$crunchifyURL = get_permalink();
- 
-		// Get current page title
-		$crunchifyTitle = str_replace( ' ', '%20', get_the_title());
-		
-		// Get Post Thumbnail for pinterest
-		$crunchifyThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
- 
-		// Construct sharing URL without using any script
-		$twitterURL = 'https://twitter.com/intent/tweet?text='.$crunchifyTitle.'&amp;url='.$crunchifyURL.'&amp;via=Pagedemarque';
-		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$crunchifyURL;
-		$googleURL = 'https://plus.google.com/share?url='.$crunchifyURL;
-		//$bufferURL = 'https://bufferapp.com/add?url='.$crunchifyURL.'&amp;text='.$crunchifyTitle;
-		
-		// Based on popular demand added Pinterest too
-		$pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$crunchifyURL.'&amp;media='.$crunchifyThumbnail[0].'&amp;description='.$crunchifyTitle;
- 
-		// Add sharing button at the end of page/page content
-		//$content .= '<!-- Crunchify.com social sharing. Get your copy here: http://crunfy.me/1EFBLtA -->';
-		$content .= '<div class="crunchify-social">';
-		//$content .= '<h5>SHARE ON</h5>
-		$content .= '<a class="crunchify-link crunchify-twitter" href="'. $twitterURL .'" target="_blank">Twitter</a>';
-		$content .= '<a class="crunchify-link crunchify-facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
-		$content .= '<a class="crunchify-link crunchify-googleplus" href="'.$googleURL.'" target="_blank">Google+</a>';
-		//$content .= '<a class="crunchify-link crunchify-buffer" href="'.$bufferURL.'" target="_blank">Buffer</a>';
-		$content .= '<a class="crunchify-link crunchify-pinterest" href="'.$pinterestURL.'" target="_blank">Pin It</a>';
-		$content .= '</div>';
-		
-		return $content;
-	}else{
-		// if not a post/page then don't include sharing button
-		return $content;
-	}
-};
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BOUTON DE PARTAGE DESACTIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// désactivé
-//add_filter( 'the_content', 'crunchify_social_sharing_buttons');

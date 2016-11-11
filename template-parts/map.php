@@ -11,15 +11,16 @@
 		?>
     		<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"
             <?php if( has_term( 'collecte-selective-textiles', 'container' ) ) {
-				echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker/marker_container-collecte-selective-textiles.png"';
-			}else if ( has_term( 'colonnes-a-papiers', 'container' ) ){
-				echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker/marker_container-poubelle-jaune.png"';
-			}else if ( has_term( 'colonnes-a-verre', 'container' ) ){
-				echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker/marker_container-colonnes-a-verre.png"';
-			}else {
 				echo'data-icon="http://maps.google.com/mapfiles/ms/micons/yellow.png"';
+			}else if ( has_term( 'colonnes-a-papiers', 'container' ) ){
+				echo'data-icon="http://maps.google.com/mapfiles/ms/micons/red.png"';
+			}else if ( has_term( 'colonnes-a-verre', 'container' ) ){
+				echo'data-icon="http://maps.google.com/mapfiles/ms/micons/blue.png"';
+			}else {
+				//si child theme
+				//echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker_red.png"';
+				echo'data-icon="'.get_template_directory_uri().'/IMG/marker_red.png"';
 			}?>
-            
             id="map_<?php echo$post->ID?>">
             
             <b>
