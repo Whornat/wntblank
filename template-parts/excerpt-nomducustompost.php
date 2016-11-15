@@ -10,26 +10,21 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php wntblank_theme_boot4_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );	?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-    
-    <?php // Affichage de l'image featured ?>
-	<?php if ( '' != get_the_post_thumbnail()) { ?>
-		<?php echo'<a href="'.get_the_permalink().'" rel="bookmark" class="pull-left thumbnailcontainer">'; ?>
-		<?php the_post_thumbnail('medium', array('class' => 'img-thumbnail')); ?></a>
+	<?php 
+	 	// affichage de l'image FEATURED SI STICKY!!!!!
+		if ( '' != get_the_post_thumbnail()) {
+		// on affiche l'image
+		?><a href="<?php the_permalink(); ?>" rel="bookmark" class="pull-left thumbnailcontainer"><?php
+    	the_post_thumbnail('medium', array('class' => 'img-thumbnail'));
+		?></a>
 	<?php } ?>
-    <?php // Fin Affichage de l'image featured ?>
+    
 		
-		
+    	<h5>Custom post : <?php echo get_post_type() ?></h5>
 		<?php
 			the_excerpt();
 			wp_link_pages( array(

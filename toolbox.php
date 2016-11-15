@@ -80,6 +80,11 @@ if (!empty($sticky)) {
 		the_field('NOMDUCHAMPSACF');
 		endif;
 
+// INSERER une image dans le theme enfant
+// FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF		
 
+//<img src="echo get_stylesheet_directory_uri(); /IMG/XXX.png">
+//PAS ça car c'est le theme parent
+//<img src="echo get_template_directory_uri(); /IMG/XXX.png">
 
 ?>

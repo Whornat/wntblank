@@ -28,18 +28,14 @@
 
 	<div class="entry-content">
     <?php // gestion de la gallery auto  ?>
-    <?php // wnt_image_gallery($post->ID); ?>
-    
+    <?php wnt_image_gallery($post->ID); ?>
 	
-	<?php 
-	 	// affichage de l'image FEATURED SI STICKY!!!!!
-		if ( '' != get_the_post_thumbnail() && !is_single()) {
-		// on affiche l'image
-		?><a href="<?php the_permalink(); ?>" rel="bookmark" class="pull-left thumbnailcontainer"><?php
-    	the_post_thumbnail('medium', array('class' => 'img-thumbnail'));
-		?></a>
-	<?php } ?>
-    
+    <?php // Affichage de l'image featured ?>
+	<?php //if ( '' != get_the_post_thumbnail()) { ?>
+		<?php //echo'<a href="'.get_the_permalink().'" rel="bookmark" class="pull-left thumbnailcontainer">'; ?>
+		<?php //the_post_thumbnail('medium', array('class' => 'img-thumbnail')); ?></a>
+	<?php //} ?>
+    <?php // Fin Affichage de l'image featured ?>
     
 		<?php
 			the_content( sprintf(

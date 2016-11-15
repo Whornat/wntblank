@@ -126,16 +126,9 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
  
 function wntblank_theme_boot4_scripts() {
 	
-	/* SSSSSSS script defaut http://underscores.me/ SSSSSSSSSSSSSS */
-	
 	// Integration BOOTSTRAP 4 --------------------
 	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/CSS/bootstrap.css');
-	//wp_enqueue_style('wntblank_theme_boot4-custom', get_template_directory_uri() . '/CSS/custom.css');
-	
 	wp_enqueue_style( 'wntblank_theme_boot4-style', get_stylesheet_uri() );
-	//wp_enqueue_script( 'wntblank_theme_boot4-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	//wp_enqueue_script( 'wntblank_theme_boot4-skip-link-focus-fix', get_template_directory_uri() . '/JS/skip-link-focus-fix.js', array(), '20130115', true );
-	/* SSSSSSS script defaut http://underscores.me/ SSSSSSSSSSSSSS */
 	
 	// MAP GOOGLE --------------------
 	wp_enqueue_script( 'wntblank_theme_boot4-googlemap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU', true, '' );
@@ -146,15 +139,6 @@ function wntblank_theme_boot4_scripts() {
 	
 	// GOOGLE FONT --------------------
 	//wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700', array(), null, true);
-
-	
-	// Integration BOOTSTRAP 4 JS --------------------
-	//wp_enqueue_script( 'wntblank_theme_boot4-bootstrapscript', get_template_directory_uri() . '/JS-bootstrap/bootstrap.min.js' );
-	//le code a été mis directement dans footer.php
-	
-	//------------------------flexslider-------------------------
-	wp_enqueue_style('wntblank_theme_boot4-flexslider', get_template_directory_uri() . '/CSS/flexslider.css');
-	wp_enqueue_script( 'wntblank_theme_boot4-flexslider_script', get_template_directory_uri() . '/JS/flexslider/jquery.flexslider-min.js','','',true );
 	
 	//------------------------fancybox-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox/jquery.fancybox.css');
@@ -236,9 +220,9 @@ require get_template_directory() . '/inc/tinymce.php';
 
 
  /**
- * fonction pour portfolio (gallery auto, rel pour fancybox... )
+ * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... )
  */
-//require get_template_directory() . '/inc/portfolio.php';
+require get_template_directory() . '/inc/portfolio.php';
 
  /**
  * fonction pour widget

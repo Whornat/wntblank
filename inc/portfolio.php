@@ -1,5 +1,14 @@
 <?php
 
+//------------------------INSERTION DES SCRIPTS NECESSAIRES flexslider-------------------------
+
+function wntblank_flexslider_scripts() {
+wp_enqueue_style('wntblank_theme_boot4-flexslider', get_template_directory_uri() . '/CSS/flexslider.css');
+wp_enqueue_script( 'wntblank_theme_boot4-flexslider_script', get_template_directory_uri() . '/JS/flexslider/jquery.flexslider-min.js','','',true );
+}
+add_action( 'wp_enqueue_scripts', 'wntblank_flexslider_scripts' );
+//------------------------flexslider-------------------------
+
 
 
 /**
@@ -77,6 +86,17 @@ if($images) : ?>
 	</p>
 	<?php endif; ?>
 </div><!-- end #slider .flexslider -->
+
+<script type="application/javascript">
+// Le script d'initialisation
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>
+
  
 <?php endif;
 // SI AUCUNE IMAGES
@@ -85,6 +105,7 @@ if($images) : ?>
 	<?php endif;
 //---------------
 }
+
 
 
 /**
@@ -103,92 +124,3 @@ return str_replace('<a href', '<a data-fancybox-group="groupe_'.$thePostID.'" hr
 }
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX enleve le style en ligne pourris XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 add_filter( 'use_default_gallery_style', '__return_false' );
-	
-/**
- * ====================================================
- * ajouter term to body class
- * ==================================================== 
- * 
- */	
-	
-function wpprogrammer_custom_taxonomy_in_body_class( $classes ){
-  if( is_singular() )
-  {
-    $custom_terms = get_the_terms(0, 'tag-projet');
-    if ($custom_terms) {
-      foreach ($custom_terms as $custom_term) {
-        //$classes[] = 'custom_tax_' . $custom_term->slug;
-        $classes[] = $custom_term->slug;
-      }
-    }
-  }
-  return $classes;
-}
-
-// désactivé !!!!!
-//add_filter( 'body_class', 'wpprogrammer_custom_taxonomy_in_body_class' );
-
-
-/**
- * ====================================================
- * Affichage commentaires modifié pour "AVIS CLIENTS"
- * ==================================================== 
- * 
- */	
-
-function avisclient($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-     <div id="comment-<?php comment_ID(); ?>">
-     
-           <?php comment_text() ?>
-
-     
-     
-      <div class="comment-author vcard">
-         <?php //printf(__('<span class="says">Par:</span> <cite class="fn">%s</cite>'), get_comment_author_link()) ?>
-         <?php echo '<span class="par">Par </span> <cite class="fn">'.get_comment_author_link().'</cite>,' ?>
-         <?php echo '<span class="le">rédigé le :</span> '.get_comment_date().'' ?>
-         <?php //printf(__('%1$s'), get_comment_date()) ?>
-         <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
-         
-      </div>
-      <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is awaiting moderation.') ?></em>
-         <br />
-      <?php endif; ?>
-
-      <div class="comment-meta commentmetadata"><?php edit_comment_link(__('(Edit)'),'  ','') ?></div>
-
-
-      <div class="reply">
-         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-      </div>
-     </div>
-<?php
-}
-
-/**
- * ====================================================
- * sticky-posts-custom-post-types
- http://www.geekpress.fr/wordpress/astuce/sticky-posts-custom-post-types-1967/
- * ==================================================== 
- * 
- */	
-
-    add_action( 'admin_footer-post.php', 'gkp_add_sticky_post_support' );
-    add_action( 'admin_footer-post-new.php', 'gkp_add_sticky_post_support' );
-    function gkp_add_sticky_post_support() 
-    { global $post, $typenow; ?>
-    	
-    	<?php if ( $typenow == ('portfolio' || 'art') && current_user_can( 'edit_others_posts' ) ) : ?>
-    	<script>
-    	jQuery(function($) {
-    		var sticky = "<br/><span id='sticky-span'><input id='sticky' name='sticky' type='checkbox' value='sticky' <?php checked( is_sticky( $post->ID ) ); ?> /> <label for='sticky' class='selectit'><?php _e( "Stick this post to the front page" ); ?></label><br /></span>";	
-    		$('[for=visibility-radio-public]').append(sticky);	
-    	});
-    	</script>
-    	<?php endif; ?>
-    	
-    <?php
-    }
