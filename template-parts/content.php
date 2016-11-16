@@ -28,7 +28,7 @@
 
 	<div class="entry-content">
     <?php // gestion de la gallery auto  ?>
-    <?php wnt_image_gallery($post->ID); ?>
+    <?php //wnt_image_gallery($post->ID); ?>
 	
     <?php // Affichage de l'image featured ?>
 	<?php //if ( '' != get_the_post_thumbnail()) { ?>

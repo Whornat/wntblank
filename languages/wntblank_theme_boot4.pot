@@ -110,6 +110,13 @@ msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
+#: inc/template-tags.php:28
+#, php-format
+#@ _s
+msgctxt "post date"
+msgid "posted on %s"
+msgstr ""
+
 #: inc/template-tags.php:33
 #, php-format
 #@ _s

@@ -56,8 +56,9 @@ get_header(); ?>
 
 <h6><small>H6 :</small> vitae vehicula quis, suscipit id arcu. Donec eu est velit. Nulla dignissim ullamcorper lectus ut dictum. </h6>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
-
-
+<h2>Citation</h2>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus.</p></blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 
 <h2>Adresse</h2>
 <address>
@@ -66,10 +67,6 @@ get_header(); ?>
   San Francisco, CA 94103<br>
   <abbr title="Phone">P:</abbr> (123) 456-7890
 </address>
-<h2>Citation</h2>
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-</blockquote>
 
 <h2>Tableau</h2>
 <table class="table table-striped"> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope="row">3</th> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody> </table>
@@ -114,7 +111,6 @@ get_header(); ?>
 <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
 <button type="button" class="btn btn-link">Link</button>
 </div>
-
 <div class="alert alert-warning alert-dismissible fade in" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">×</span>

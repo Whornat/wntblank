@@ -25,7 +25,7 @@ function wntblank_theme_boot4_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'wntblank_theme_boot4' ),
+		esc_html_x( 'posted on %s', 'post date', 'wntblank_theme_boot4' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -33,7 +33,10 @@ function wntblank_theme_boot4_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'wntblank_theme_boot4' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-
+	
+	if ('post' === get_post_type()){
+	echo '<a href="'.get_post_type_archive_link( 'post' ).'" class="archive_link_post">Article</a> '; // WPCS: XSS OK.
+	}
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }

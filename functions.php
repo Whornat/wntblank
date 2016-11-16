@@ -222,7 +222,7 @@ require get_template_directory() . '/inc/tinymce.php';
  /**
  * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... )
  */
-require get_template_directory() . '/inc/portfolio.php';
+//require get_template_directory() . '/inc/portfolio.php';
 
  /**
  * fonction pour widget
