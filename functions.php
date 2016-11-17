@@ -128,6 +128,11 @@ function wntblank_theme_boot4_scripts() {
 	
 	// Integration BOOTSTRAP 4 --------------------
 	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/CSS/bootstrap.css');
+	//VERSION CDN------------------
+	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
+	
+	
+	
 	wp_enqueue_style( 'wntblank_theme_boot4-style', get_stylesheet_uri() );
 	
 	// MAP GOOGLE --------------------
@@ -135,7 +140,7 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_script( 'wntblank_theme_boot4-googlemapACF', get_template_directory_uri() . '/JS/gmap-ACF.js', array(), null, true );
 	
 	// Integration Font AWESOME --------------------
-	wp_enqueue_style('wntblank_theme_boot4-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+	wp_enqueue_style('wntblank_theme_boot4-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	
 	// GOOGLE FONT --------------------
 	//wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
@@ -146,19 +151,22 @@ function wntblank_theme_boot4_scripts() {
 	
 	//------------------------OPTIONAL-------------------------
 	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
-	wp_enqueue_script( 'wntblank_theme_boot4-jquerymousewheel_script', get_template_directory_uri() . '/JS/jquery.mousewheel.js','','',true );
+	//wp_enqueue_script( 'wntblank_theme_boot4-jquerymousewheel_script', get_template_directory_uri() . '/JS/jquery.mousewheel.js','','',true );
 	//------------------------ANIMATION-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
 	
 	wp_enqueue_script('wntblank_theme_boot4-tether', get_template_directory_uri() . '/JS-bootstrap/tether.min.js','','',true );
 	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/JS-bootstrap/bootstrap.min.js','','',true );
+	//VERSION CDN------------------
+	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js','','',true );
+	
 	wp_enqueue_script('wntblank_theme_boot4-ie10viewport', get_template_directory_uri() . '/JS-bootstrap/ie10-viewport-bug-workaround.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/JS-bootstrap/bootstrap-dropdownsonhover.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/JS-bootstrap/bootstrap-dropdownsonhover-v01.js','','',true );
 	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_template_directory_uri() . '/JS/fancybox-init.js','','',true );
 		
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-	// nécessaire pour utiliser "dropdownsonhover" -----------------------------------------------------------------------
+	// nécessaire pour utiliser "dropdownsonhover-v01" et fancy box-----------------------------------------------------------------------
 	wp_deregister_script('jquery');
 	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '');
 	wp_enqueue_script('jquery');

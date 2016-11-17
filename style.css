@@ -194,6 +194,8 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 .widget {margin: 0 0 1.5em;}
 .widget select {max-width: 100%;}
 .widget-title { font-size:1.25rem;}
+/*search */
+.search-field, .search-submit { width:100%}
 
 /*--------------------------------------------------------------
 # Content
@@ -219,12 +221,18 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 .page-links {clear: both;margin: 0 0 1.5em;}
 
 /*--------------------------------------------------------------
+## Posts and pages protégés
+--------------------------------------------------------------*/
+.post-password-form {}
+.post-password-form input[type="submit"]:hover{ background:#e6e6e6; border-color:#adadad; color:#373a3c}
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {word-wrap: break-word;}
 .bypostauthor {	display: block;}
 
-#commentform input, #commentform textarea, .search-field {
+#commentform input, #commentform textarea, .search-field, .post-password-form input {
   background-clip: padding-box;
   background-color: #fff;
   background-image: none;
@@ -682,4 +690,14 @@ figure:hover figcaption { left: 0; }
 .cap-full:hover figcaption { bottom: 0;  }
 /* EFFET DE SURVOLE POUR LES GALLERY  GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
 /* GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
+
+/* RESPONSIVE SESSION  GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
+/* GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
+
+
+
+@media (max-width: 767px) {
+  #primary.pull-right, #primary.pull-left { float:none;}
+}
+
 

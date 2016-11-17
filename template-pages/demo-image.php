@@ -8,7 +8,7 @@ get_header(); ?>
 
 </style>
 
-	<div id="primary" class="col-md-8 content-area">
+	<div id="primary" class="col-md-9 content-area <?php echo get_theme_mod('sidebar_position') ?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php
