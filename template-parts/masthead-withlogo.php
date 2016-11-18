@@ -1,5 +1,5 @@
-<div class="container">
-        <div class="site-branding row">
+<div class="site-branding container">
+        <div class="row">
         	<div class="col-md-3">
 			<h1 class="site-title">
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
@@ -21,5 +21,5 @@
 			<?php
 			endif; ?>
 			</div>            
-		</div><!-- .site-branding -->
-</div><!-- .container -->
+	</div><!-- .row -->
+</div><!-- .site-branding -->

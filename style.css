@@ -55,8 +55,23 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 }
 
 /*--------------------------------------------------------------
+# masthead
+--------------------------------------------------------------*/
+.site-title { text-align:center; margin:0;}
+#site-logo { margin:0.5rem; display:block;}
+.site-sloggan { margin-top:1rem;}
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+/* menu-.php --------------------------------------------------*/
+#masthead .navbar-toggler { width:auto;}
+/* menu top fixed --------------------------------------------------*/
+#masthead .navbar-brand { height:3rem;}
+#masthead .navbar-brand img{ max-width:100%; height:100%;}
+.navbar-fixed-top .navbar-main .navbar-nav .nav-link {  padding: 0.8rem 0.5rem;}
+/* ---------------------------------------------------------------- */
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,	
@@ -94,9 +109,10 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 .posts-navigation .nav-next a,
 .post-navigation .nav-next a { text-transform:uppercase; font-weight:600; text-decoration:none;}
 
-
 .inlinemenu {}
 .inlinemenu li{ display:inline; margin:0 5px;}
+
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -695,9 +711,26 @@ figure:hover figcaption { left: 0; }
 /* GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
 
 
-
+@media (max-width: 575px) {
+  .site-sloggan { text-align:center}
+  #masthead .navbar-brand { height: auto; width:100%; text-align:center;}
+  #masthead .navbar-toggler { width: 100%;}
+  #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}  
+}
 @media (max-width: 767px) {
   #primary.pull-right, #primary.pull-left { float:none;}
 }
+@media (max-width: 991px) {}
+@media (max-width: 1199px) {}
+
+
+
+@media (min-width: 576px) {}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+
+
 
 
