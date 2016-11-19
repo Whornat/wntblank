@@ -58,7 +58,6 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 # masthead
 --------------------------------------------------------------*/
 #masthead { position:relative;}
-.site-branding.withfullbanner .menu_standard{ position:absolute; bottom:0; width:100%;}
 .site-title { text-align:center; margin:0;}
 #site-logo { margin:0.5rem; display:block;}
 .site-sloggan { margin-top:1rem;}
@@ -68,12 +67,17 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 --------------------------------------------------------------*/
 
 /* menu-.php --------------------------------------------------*/
-body.admin-bar #masthead .navbar-toggler { width:auto;}
+#masthead .navbar-toggler { width:auto;}
 /* menu top fixed --------------------------------------------------*/
-#masthead .navbar-fixed-top { top: 32px;}
+body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 #masthead .navbar-brand { height:3rem; margin:0 1rem 0 0;}
 #masthead .navbar-brand img{ max-width:100%; height:100%;}
 .navbar-fixed-top .navbar-main .navbar-nav .nav-link {  padding: 0.8rem 0.5rem;}
+/*menu-topfixedonscroll.php */
+.site-branding.withfullbanner .menu_standard,
+.site-branding.withfullbanner .stickyonscroll{ position:absolute; bottom:0; width:100%;}
+#masthead .navbar-fixed-top { bottom: auto !important; position: fixed !important;}
+#content.paddingforfixednav{ padding-top:4.5rem;}
 /* ---------------------------------------------------------------- */
 /*#masthead .withfullbanner .menu_container { position:absolute; bottom:0; width:100%;}*/
 
@@ -706,6 +710,7 @@ figure:hover figcaption { left: 0; }
 
 
 @media (max-width: 575px) {
+   /*body { background:#3F6 !important}*/
   .site-sloggan { text-align:center}
   #masthead .navbar-brand { height: auto; width:100%; text-align:center;}
   #masthead .navbar-toggler { width: 100%;}

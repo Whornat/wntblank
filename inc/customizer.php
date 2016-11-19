@@ -71,6 +71,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'choices'  => array(
 			''  => 'Standard',
 			'topfixed' => 'Fixed on the top',
+			'topfixedonscroll' => 'Scrolling Fixe nav on the top',
 			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
 		),
 	)
