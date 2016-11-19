@@ -57,6 +57,8 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 /*--------------------------------------------------------------
 # masthead
 --------------------------------------------------------------*/
+#masthead { position:relative;}
+.site-branding.withfullbanner .menu_standard{ position:absolute; bottom:0; width:100%;}
 .site-title { text-align:center; margin:0;}
 #site-logo { margin:0.5rem; display:block;}
 .site-sloggan { margin-top:1rem;}
@@ -66,12 +68,15 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 --------------------------------------------------------------*/
 
 /* menu-.php --------------------------------------------------*/
-#masthead .navbar-toggler { width:auto;}
+body.admin-bar #masthead .navbar-toggler { width:auto;}
 /* menu top fixed --------------------------------------------------*/
-#masthead .navbar-brand { height:3rem;}
+#masthead .navbar-fixed-top { top: 32px;}
+#masthead .navbar-brand { height:3rem; margin:0 1rem 0 0;}
 #masthead .navbar-brand img{ max-width:100%; height:100%;}
 .navbar-fixed-top .navbar-main .navbar-nav .nav-link {  padding: 0.8rem 0.5rem;}
 /* ---------------------------------------------------------------- */
+/*#masthead .withfullbanner .menu_container { position:absolute; bottom:0; width:100%;}*/
+
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,	
@@ -79,27 +84,14 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
+.post-navigation .nav-previous {float: left;width: 50%;}
 .nav-previous a:before{ font-family:'FontAwesome'; margin-right:0.5rem; content:'\f060'}
-
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
+.post-navigation .nav-next {float: right;text-align: right;width: 50%;}
 .nav-next a:after{ font-family:'FontAwesome'; margin-left:0.5rem; content:'\f061'}
-
-.nav-links:after {
-  clear: both;
-  content: "";
-  display: table;
-}
+.nav-links:after { clear: both; content: ""; display: table;}
 
 
 .comment-navigation .nav-previous a,
@@ -217,6 +209,8 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 # Content
 --------------------------------------------------------------*/
 .site-content { padding-top:1rem; padding-bottom:2rem;}
+.withmenu_topfixed #content{ padding-top:4rem;}
+
 .panel { padding:0.5rem 1rem;}
 
 /*--------------------------------------------------------------
@@ -716,11 +710,14 @@ figure:hover figcaption { left: 0; }
   #masthead .navbar-brand { height: auto; width:100%; text-align:center;}
   #masthead .navbar-toggler { width: 100%;}
   #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}  
+  .site-branding.withfullbanner { min-height:100px !important;}
 }
 @media (max-width: 767px) {
   #primary.pull-right, #primary.pull-left { float:none;}
 }
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+  .withmenu_topfixed #content{ padding-top:8rem;}
+}
 @media (max-width: 1199px) {}
 
 
