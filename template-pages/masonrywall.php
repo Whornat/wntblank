@@ -5,7 +5,7 @@
  
 get_header(); ?>
 
-	<div id="primary" class="col-md-9 content-area <?php echo get_theme_mod('sidebar_position') ?>">
+	<div id="primary" class="col-lg-9 col-md-7 content-area <?php echo get_theme_mod('sidebar_position') ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -39,7 +39,7 @@ get_header(); ?>
 
 		endif; ?>
         
-        
+        <h2>Cette page demo liste les articles du site avec un effet d'ajustement de bloc "masonry"</h2>
         
         <div class="row masonrygrid" id="loops">
         <div class="grid-sizer col-sm-6"></div>

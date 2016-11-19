@@ -27,20 +27,10 @@
 <body <?php body_class(); ?>>
 
 
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wntblank_theme_boot4' ); ?></a>
-
+<div id="page" class="site withmenu_<?php echo get_theme_mod('topmenu_type')?>">
 	<header id="masthead" class="site-header">
-    
-    	<?php if ( get_header_image() ) { ?>
-    	<?php get_template_part( 'template-parts/masthead', 'withbanner'); ?>
-		<?php }else{ // End header image check. ?>
-    	<?php get_template_part( 'template-parts/masthead', 'withlogo'); ?>
-		<?php } ?>
-        
-    	<?php get_template_part( 'template-parts/menu', 'standard'); ?>
-    	<?php //get_template_part( 'template-parts/menu', 'topfixed'); ?>
-        
+    	<?php get_template_part( 'template-parts/branding', get_theme_mod('branding_type')); ?>
+    	<?php get_template_part( 'template-parts/menu', get_theme_mod('topmenu_type') ); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

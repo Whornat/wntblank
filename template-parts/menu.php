@@ -1,4 +1,4 @@
-<div class="menu_container">
+<div class="menu_container menu_standard">
       	<div class="container">
 
 <nav class="navbar navbar-main">

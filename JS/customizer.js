@@ -39,7 +39,7 @@
 	} );
 	//
 	// AJOUT DE MA NOUVELLE FONCTION
-	wp.customize( 'sidebar_position', function( value ) {
+	wp.customize( 'content_position', function( value ) {
 		value.bind( function( newval ) {
 			//$('#primary').css( 'float', newval );
 			$('#primary').removeClass( 'pull-left pull-right' );

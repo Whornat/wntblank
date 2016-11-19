@@ -31,34 +31,72 @@ add_action( 'customize_preview_init', 'wntblank_theme_boot4_customize_preview_js
 // voir https://premium.wpmudev.org/blog/wordpress-theme-customization-api/
 
 function wntblank_themeoptions( $wp_customize ) {
-	// 1) JE CREE MA NOUVELLE SECTION
+	// 1) JE CREE MA NOUVELLE SECTION ----------------------------------
 	$wp_customize->add_section( 
 	'mytheme_structure_options', 
 	array(
 		'title'       => __( 'Structure du theme', 'mytheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Changing theme structure', 'wntblank_theme_boot4'), 
+		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblank_theme_boot4'), 
 	) 
 	);
-	// 2) JE CREE MON PARAMETRE
-	$wp_customize->add_setting( 'sidebar_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
-	// 3) JE CRE L'INTERFACE
-	$wp_customize->add_control('your_control_id', 
+	// 2) JE CREE MON PARAMETRE ----------------------------------
+	$wp_customize->add_setting( 'content_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
+	// 2nd parametre pour le menu
+	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
+	// 3eme parametre pour le "branding"
+	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
+	
+	// 3) JE CRE L'INTERFACE ----------------------------------
+	$wp_customize->add_control('control_content_position', 
 	array(
-		'label'    => __( 'Sidebar position', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Content position', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
-		'settings' => 'sidebar_position',
+		'settings' => 'content_position',
 		'type'     => 'radio',
 		'choices'  => array(
-			'pull-left'  => 'pull-left',
-			'pull-right' => 'pull-right',
+			'pull-left'  => 'Left',
+			'pull-right' => 'Right',
 		),
 	)
-);
-	// 4) --
+	);
+	// 2nd parametre pour le menu
+	$wp_customize->add_control('control_topmenu_type', 
+	array(
+		'label'    => __( 'Menu type', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'topmenu_type',
+		'type'     => 'radio',
+		'choices'  => array(
+			''  => 'Standard',
+			'topfixed' => 'Fixed on the top',
+			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
+		),
+	)
+	);
+	// -----------------------------------------------------------
+	// 3eme parametre pour le branding
+	$wp_customize->add_control('control_branding_type', 
+	array(
+		'label'    => __( 'Branding type', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'branding_type',
+		'type'     => 'radio',
+		'choices'  => array(
+			''  => 'Standard',
+			'nologo' => 'No logo',
+			'fullbanner' => 'Full banner (You must add an header_image before)',
+			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
+			'none' => 'Hide branding',
+		),
+	)
+	);
+	// -----------------------------------------------------------
 	
 	
+
+
 	
 }
 add_action( 'customize_register' , 'wntblank_themeoptions' );
