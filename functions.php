@@ -179,9 +179,16 @@ function wntblank_theme_boot4_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wntblank_theme_boot4_scripts' );
 
-// integration API GOOGLE MAP pour ACF pro ------------------------------------------------------------
+// integration API GOOGLE MAP pour ACF ------------------------------------------------------------
 // https://support.advancedcustomfields.com/forums/topic/google-maps-field-needs-setting-to-add-api-key/
 
+// Pour la version STANDARD
+function my_acf_google_map_api( $api ){
+	$api['key'] = 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU';
+	return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+// Pour la version PRO
 function my_acf_init() {
 	acf_update_setting('google_api_key', 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU');
 }
@@ -248,6 +255,23 @@ function be_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'be_body_classes' );
 
+/* suppression de la class "tag" du body de wordpress car ça fait un conflit avec bootstrap*/
+add_filter( 'body_class', '_twbs_bootstrap_20542', 10, 1 );
+add_filter( 'post_class', '_twbs_bootstrap_20542', 10, 1 );
+function _twbs_bootstrap_20542( $classes )
+{
+    return array_diff( $classes, array(
+        'tag',
+        'tag-pill',
+        'tag-default',
+        'tag-info',
+        'tag-warning',
+        'tag-danger',
+        'tag-success',
+        'tag-primary',
+    ) );
+}
+/* suppression de la class "tag" du body de wordpress car ça fait un conflit avec bootstrap*/
 
 /** Ajout excerpts to page */ 
  add_action( 'init', 'my_add_excerpts_to_pages' );
@@ -255,5 +279,16 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
 
+/** suppression des Template page de demo si on n'est pas un administrator */
+add_filter( 'theme_page_templates', 'my_remove_page_template' );
+function my_remove_page_template( $pages_templates ) {
+	if( !current_user_can('manage_options') ) {
+    unset( $pages_templates['template-pages/demo-typography.php'] );
+    unset( $pages_templates['template-pages/demo-animate.php'] );
+    unset( $pages_templates['template-pages/demo-image.php'] );
+    unset( $pages_templates['template-pages/demo-masonry.php'] );
+	}
+    return $pages_templates;
+}
 
 /** xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */ 

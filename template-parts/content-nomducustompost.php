@@ -39,13 +39,15 @@
     <?php
 	// TESTER SI ACF est installé --------------------------------------------
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
-	$location = get_field('google_map');
-
-	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) &&  ( !empty($location) )) {
+	
+	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) || is_plugin_active( 'advanced-custom-fields/acf.php' )) {
+		$location = get_field('google_map');
+		if (!empty($location) ){
     	//echo "ACF est activé";
 		echo "<div class='acf-map' id='map_google'>";
 			get_template_part( 'template-parts/map');
 		echo "</div>";
+		}
 	}
 	// TESTER SI ACF est installé --------------------------------------------
 	?>

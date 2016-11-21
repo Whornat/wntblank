@@ -39,7 +39,7 @@
 	// TESTER SI ACF est installé --------------------------------------------
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
 	
-	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' )) {
+	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) || is_plugin_active( 'advanced-custom-fields/acf.php' )) {
 		$location = get_field('google_map');
 		if (!empty($location) ){
     	//echo "ACF est activé";
