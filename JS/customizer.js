@@ -46,6 +46,23 @@
 			$('#primary').addClass( newval );
 		} );
 	} );
+	// AJOUT DE MA NOUVELLE FONCTION
+	wp.customize( 'content_size', function( value ) {
+		value.bind( function( newval ) {
+			//$('#primary').css( 'float', newval );
+			$('#primary').removeClass( 'col-lg-9 col-md-7 col-lg-8 col-md-6' );
+			$('#primary').addClass( newval );
+			if (newval === 'col-lg-9 col-md-7'){
+				$('#secondary').removeClass( 'col-lg-4 col-md-6' );
+				$('#secondary').addClass('col-lg-3 col-md-5');
+			} else if (newval === 'col-lg-8 col-md-6'){
+				$('#secondary').removeClass( 'col-lg-3 col-md-5' );
+				$('#secondary').addClass('col-lg-4 col-md-6');
+			}
+			
+			
+		} );
+	} );
 	
 	
 	

@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-lg-9 col-md-7 content-area <?php echo get_theme_mod('content_position') ?>">
+	<div id="primary" class="<?php echo get_theme_mod('content_size') ?> content-area <?php echo get_theme_mod('content_position') ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php

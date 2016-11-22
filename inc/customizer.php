@@ -43,9 +43,11 @@ function wntblank_themeoptions( $wp_customize ) {
 	);
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
-	// 2nd parametre pour le menu
+	// 2nd parametre pour la taille du content
+	$wp_customize->add_setting( 'content_size',	array('default' => 'col-lg-9 col-md-7', 'transport' => 'postMessage'));
+	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
-	// 3eme parametre pour le "branding"
+	// 4eme parametre pour le "branding"
 	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
 	
 	// 3) JE CRE L'INTERFACE ----------------------------------
@@ -61,7 +63,21 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
-	// 2nd parametre pour le menu
+	// 2nd parametre pour la taille
+	$wp_customize->add_control('control_content_size', 
+	array(
+		'label'    => __( 'Content size', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'content_size',
+		'type'     => 'radio',
+		'choices'  => array(
+			'col-lg-9 col-md-7'  => 'Standard',
+			'col-lg-8 col-md-6' => 'Smaller',
+		),
+	)
+	);
+	
+	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_type', 
 	array(
 		'label'    => __( 'Menu type', 'wntblank_theme_boot4' ),
@@ -77,7 +93,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// -----------------------------------------------------------
-	// 3eme parametre pour le branding
+	// 4eme parametre pour le branding
 	$wp_customize->add_control('control_branding_type', 
 	array(
 		'label'    => __( 'Branding type', 'wntblank_theme_boot4' ),
