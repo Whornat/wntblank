@@ -72,12 +72,13 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 #masthead .navbar-brand { height:3rem; margin:0 1rem 0 0;}
 #masthead .navbar-brand img{ max-width:100%; height:100%;}
-.navbar-fixed-top .navbar-main .navbar-nav .nav-link {  padding: 0.8rem 0.5rem;}
+.navbar-fixed-top .navbar-main .navbar-nav .nav-link,
+.stickyonscroll .navbar-main .navbar-nav .nav-link{  padding: 0.8rem 0.5rem;}
 /*menu-topfixedonscroll.php */
 .site-branding.withfullbanner .menu_standard,
 .site-branding.withfullbanner .stickyonscroll{ position:absolute; bottom:0; width:100%;}
 #masthead .navbar-fixed-top { bottom: auto !important; position: fixed !important;}
-#content.paddingforfixednav{ padding-top:4.5rem;}
+#content.paddingforfixednav{ padding-top:4.1rem;}
 /* ---------------------------------------------------------------- */
 /*#masthead .withfullbanner .menu_container { position:absolute; bottom:0; width:100%;}*/
 
