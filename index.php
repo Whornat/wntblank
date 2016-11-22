@@ -14,7 +14,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="<?php echo get_theme_mod('content_size') ?> content-area <?php echo get_theme_mod('content_position') ?>">
+	<?php if (get_theme_mod('content_size') == ''){ $content_size = "col-lg-9 col-md-7"; }else{ $content_size = get_theme_mod('content_size');} ?>
+	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
+    
 		<main id="main" class="site-main" role="main">
 
 		<?php
