@@ -20,7 +20,7 @@
         </a>
 	<?php }else{?>
     <a href="<?php the_permalink(); ?>" rel="bookmark" class="">
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/IMG/350x270_medium.png" class="img-rounded" > 
+	<?php echo'<img src="'.get_stylesheet_directory_uri().'/IMG/510x370_medium-md6.png" alt="" title="" class="img-rounded">';?>
     </a> 
     <?php }?>
 </figure><!-- #post-## -->

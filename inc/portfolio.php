@@ -54,7 +54,7 @@ if($images) : ?>
 	        <li<?php 
 	        	// Each end image in a row gets the "lastimage" class added. 
 	        	if($count % $perRow == 0) { echo ' class="lastimage"'; } ?>>
-	            	<?php echo wp_get_attachment_image($image->ID, 'thumb_large'); ?>
+	            	<?php echo wp_get_attachment_image($image->ID, 'medium'); ?>
                  	<?php // ----------TESTTTT -------------------------------------- ?>
                     <?php //echo $image->ID ?>
                     <?php //print_r(wp_get_attachment_metadata( $image->ID, true)); ?>
@@ -101,7 +101,7 @@ $(window).load(function() {
 <?php endif;
 // SI AUCUNE IMAGES
 	if( count($images) == 0) : ?>
-			 <?php echo get_the_post_thumbnail($parametre, 'thumb_large', array('class' => '')); ?>
+			 <?php echo get_the_post_thumbnail($parametre, 'medium', array('class' => '')); ?>
 	<?php endif;
 //---------------
 }

@@ -19,7 +19,7 @@
 		if ( '' != get_the_post_thumbnail()) {
 		// on affiche l'image
 		?><a href="<?php the_permalink(); ?>" rel="bookmark" class="pull-left thumbnailcontainer"><?php
-    	the_post_thumbnail('medium', array('class' => 'img-thumbnail'));
+    	the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail'));
 		?></a>
 	<?php } ?>
     

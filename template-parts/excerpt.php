@@ -25,7 +25,7 @@
     <?php // Affichage de l'image featured ?>
 	<?php if ( '' != get_the_post_thumbnail()) { ?>
 		<?php echo'<a href="'.get_the_permalink().'" rel="bookmark" class="pull-left thumbnailcontainer">'; ?>
-		<?php the_post_thumbnail('medium', array('class' => 'img-thumbnail')); ?></a>
+		<?php the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail')); ?></a>
 	<?php } ?>
     <?php // Fin Affichage de l'image featured ?>
 		
