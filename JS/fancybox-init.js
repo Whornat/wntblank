@@ -1,12 +1,5 @@
 $(document).ready(function() {	
 	$(".fancybox, .gallery-icon > a").fancybox({
-		helpers : {
-        overlay : {
-            css : {
-                'background' : 'rgba(250, 250, 250, 0.75)'
-            }
-        }
-    },		
 		maxWidth	: 1200,
 		//maxHeight	: 490,
 		fitToView	: false,

@@ -244,6 +244,12 @@ require get_template_directory() . '/inc/tinymce.php';
  */
 //require get_template_directory() . '/inc/widgets-custom.php';
 
+ /**
+ * fonction pour les excerpts
+ */
+include(get_stylesheet_directory() . '/inc/excerpt-advanced.php');
+
+
 
 /**
  * Body Classes
@@ -272,12 +278,6 @@ function _twbs_bootstrap_20542( $classes )
     ) );
 }
 /* suppression de la class "tag" du body de wordpress car ça fait un conflit avec bootstrap*/
-
-/** Ajout excerpts to page */ 
- add_action( 'init', 'my_add_excerpts_to_pages' );
-function my_add_excerpts_to_pages() {
-     add_post_type_support( 'page', 'excerpt' );
-}
 
 /** suppression des Template page de demo si on n'est pas un administrator */
 add_filter( 'theme_page_templates', 'my_remove_page_template' );

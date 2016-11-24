@@ -36,8 +36,9 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblank_theme_boot4' ),
 				'after'  => '</div>',
 			) );
+			
+        //echo'<p class="text-right"><a href='.get_the_permalink().'" class="btn btn-secondary readmore">'.esc_html__( 'Readmore', 'wntblank_theme_boot4' ).'</a></p>';
 		?>
-        <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn readmore"><?php _e( 'Readmore', 'wntblank_theme_boot4' ); ?></a></p>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer text-right">

@@ -25,8 +25,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-    	<h2>Custom post : <?php echo get_post_type() ?></h2>
-		<?php
+    	<?php $post_type = get_post_type(); ?>
+    	<h2>Custom post :   <a href="<?php echo get_post_type_archive_link( $post_type); ?>"><?php echo get_post_type() ?></a></h2>
+        <?php
 			the_content();
 
 			wp_link_pages( array(
