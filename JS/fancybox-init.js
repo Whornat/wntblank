@@ -24,6 +24,8 @@ $(document).ready(function() {
 $('.ajaxlink').fancybox({
 	    helpers : {
         overlay : {
+			// pour eviter de remonter vers le haut de page au scroll
+			locked: false,
             css : {
                 'background' : 'rgba(250, 250, 250, 0.75)'
             }
