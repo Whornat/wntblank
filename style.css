@@ -61,10 +61,15 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 .site-title { text-align:center; margin:0;}
 #site-logo { margin:0.5rem; display:block;}
 .site-sloggan { margin-top:1rem;}
+#site-logo img { max-width:100%; height:auto;}
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+/* rajoute du padding d/g au lien de la navbar par defaut */
+.navbar-nav .nav-link { padding: 0.5rem;}
+.navbar-nav .nav-link.active { background:rgba(255,255,255,0.2)}
 
 /* menu-.php --------------------------------------------------*/
 #masthead .navbar-toggler { width:auto;}
@@ -208,7 +213,9 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 }
 
 .nomargin { margin:0 !important;}
+.nomargintop { margin-top:0 !important;}
 .nopadding { padding:0 !important;}
+.noppadingtop { padding-top:0 !important;}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -592,8 +599,13 @@ object {
 #sitemap_container .section{ margin:1rem 0;} 
 
 /* onepage.php */
+.page-template-onepage-scrolling #content { display:none;}
 .slide_fullheight {/* unité vh (pour "viewport height") */ min-height: 100vh;}
 .content_slide { padding:8rem 0;}
+
+/* imagine.php */
+.page-template-imagine #content { display:none;}
+
 
 /* SOCIAL LINKS FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 
@@ -740,8 +752,3 @@ figure:hover figcaption { left: 0; }
 @media (min-width: 768px) {}
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
-
-
-
-
-

@@ -218,6 +218,18 @@ require_once('bs4navwalker.php');
  * Masonry
  */
  //require get_template_directory() . '/inc/masonry.php';
+ 
+ 
+ /**
+ * One page scrolling
+ */
+ require get_template_directory() . '/inc/onepage-scrolling.php';
+ 
+ 
+ /**
+ * Imagine
+ */
+ //require get_template_directory() . '/inc/imagine.php';
 
 /**
  * Customisation Tiny MCE
@@ -248,6 +260,36 @@ require get_template_directory() . '/inc/tinymce.php';
  * fonction pour les excerpts
  */
 include(get_stylesheet_directory() . '/inc/excerpt-advanced.php');
+
+
+// -------------------------------------------------------------
+// FONCTION DES ATTRIBUTS DU BODY ------------------------------
+
+function body_customconfig() {
+	$attributs = array(
+		//'data-spy=',
+		//'data-target=',
+		//'data-offset=',
+	);
+	$displayattributs  = '';
+	
+	if(has_filter('body_add_attributs')) {
+		$attributs = apply_filters('body_add_attributs', $attributs);
+	}
+	
+	
+	foreach($attributs as $attribut) :
+		$displayattributs .= '' . $attribut . '';
+	endforeach;
+	$displayattributs .= '';
+	
+	return $displayattributs;
+}
+
+
+add_action( 'hook_bodycustomconfig', 'body_customconfig' );
+// -------------------------------------------------------------
+// FONCTION DES ATTRIBUTS DU BODY -------------------------
 
 
 
@@ -287,6 +329,8 @@ function my_remove_page_template( $pages_templates ) {
     unset( $pages_templates['template-pages/demo-animate.php'] );
     unset( $pages_templates['template-pages/demo-image.php'] );
     unset( $pages_templates['template-pages/demo-masonry.php'] );
+    unset( $pages_templates['template-pages/onepage-scrolling.php'] );
+    unset( $pages_templates['template-pages/royalsliderpage.php'] );
 	}
     return $pages_templates;
 }

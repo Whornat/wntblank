@@ -24,8 +24,7 @@
 <![endif]-->
 </head>
 
-<body <?php body_class(); ?>>
-
+<body <?php body_class(); ?>  <?php echo body_customconfig(); ?>>
 
 <div id="page" class="site withmenu_<?php echo get_theme_mod('topmenu_type')?>">
 	<header id="masthead" class="site-header">
