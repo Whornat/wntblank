@@ -17,11 +17,11 @@
 		if ( '' != get_the_post_thumbnail()) {
 		// on affiche l'image
 		?><a href="<?php the_permalink(); ?>" rel="bookmark" class="">
-		<?php the_post_thumbnail('medium', array('class' => 'img-rounded thumbnailcontainer'));?>
+		<?php the_post_thumbnail('medium', array('class' => 'img-fluid img-rounded thumbnailcontainer'));?>
         </a>
 	<?php }else{?>
     <a href="<?php the_permalink(); ?>" rel="bookmark" class="">
-	<?php echo'<img src="'.get_stylesheet_directory_uri().'/IMG/510x370_medium-md6.png" alt="" title="" class="img-rounded">';?>
+	<?php echo'<img src="'.get_stylesheet_directory_uri().'/IMG/510x370_medium-md6.png" alt="" title="" class="img-fluid img-rounded">';?>
     </a> 
     <?php }?>
 </article><!-- #post-## -->

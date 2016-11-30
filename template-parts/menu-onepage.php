@@ -13,7 +13,7 @@
   <li class="nav-item"><a class="nav-link" href="#step03">3</a></li>
   <li class="nav-item"><a class="nav-link" href="#step04">4</a></li>
   	</ul>
-</nav>    
+</div>    
          
          
          

@@ -64,7 +64,4 @@
     
 <?php
 //get_sidebar();
-get_footer(); ?>
-<?php wp_footer(); ?>
-</body>
-</html>
+get_footer();
