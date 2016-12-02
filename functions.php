@@ -247,9 +247,14 @@ require get_template_directory() . '/inc/tinymce.php';
 
 
  /**
- * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... )
+ * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... ) via FLEXSLIDER
  */
-//require get_template_directory() . '/inc/portfolio.php';
+//require get_template_directory() . '/inc/flexslider-init.php';
+
+ /**
+ * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... ) via ROYALSLIDER
+ */
+//require get_template_directory() . '/inc/royalslider-init.php';
 
  /**
  * fonction pour widget
