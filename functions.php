@@ -182,17 +182,29 @@ add_action( 'wp_enqueue_scripts', 'wntblank_theme_boot4_scripts' );
 // integration API GOOGLE MAP pour ACF ------------------------------------------------------------
 // https://support.advancedcustomfields.com/forums/topic/google-maps-field-needs-setting-to-add-api-key/
 
-// Pour la version STANDARD
+// On récupère la valeur de la clef (AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU)
+$googlemapkey = get_theme_mod('googlemapkey');
+if ($googlemapkey == ''){
+	// RIEN
+	}else{ 
+	// SINON ON ACTIVE LE SUPPORT GGMAP SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+
+	// FIN DU SI (en dessous) SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+} 
+
+
+// Pour la version STANDARD --------------------------------
 function my_acf_google_map_api( $api ){
 	$api['key'] = 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU';
 	return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-// Pour la version PRO
+// Pour la version PRO ------------------------------------
 function my_acf_init() {
 	acf_update_setting('google_api_key', 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU');
 }
 add_action('acf/init', 'my_acf_init');
+
 
 // integration API GOOGLE MAP pour ACF pro ------------------------------------------------------------
 
@@ -247,14 +259,14 @@ require get_template_directory() . '/inc/tinymce.php';
 
 
  /**
- * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... ) via FLEXSLIDER
+ * fonction pour le choix du script de gestion des sliders
  */
-//require get_template_directory() . '/inc/flexslider-init.php';
+$slider_script = get_theme_mod('slider_script');
+if ($slider_script == ''){
+}else{ 
+require get_template_directory() . '/inc/'.$slider_script.'-init.php';
+} 
 
- /**
- * fonction pour gestion avancé des images (gallery auto, rel pour fancybox... ) via ROYALSLIDER
- */
-//require get_template_directory() . '/inc/royalslider-init.php';
 
  /**
  * fonction pour widget

@@ -39,8 +39,22 @@ function wntblank_themeoptions( $wp_customize ) {
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
 		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblank_theme_boot4'), 
+	)
+	);
+	// 1) JE CREE MA 2nd SECTION ----------------------------------
+	$wp_customize->add_section( 
+	'mytheme_fonctionnality_options',
+	// 2eme section
+	array(
+		'title'       => __( 'Fonctionnalités du theme', 'mytheme' ),
+		'priority'    => 100,
+		'capability'  => 'edit_theme_options',
+		'description' => __('activation des fonctionnalités avancées', 'wntblank_theme_boot4'), 
 	) 
 	);
+	// 1) JE CREE MA 2nd SECTION ----------------------------------
+	
+	
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
@@ -49,6 +63,11 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
 	// 4eme parametre pour le "branding"
 	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
+	// ********************************************
+	//****** pour la 2eme section *****************
+	// ********************************************
+	$wp_customize->add_setting( 'slider_script',	array('default' => 'none', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	
 	// 3) JE CRE L'INTERFACE ----------------------------------
 	$wp_customize->add_control('control_content_position', 
@@ -89,6 +108,7 @@ function wntblank_themeoptions( $wp_customize ) {
 			'topfixed' => 'Fixed on the top',
 			'topfixedonscroll' => 'Scrolling Fixe nav on the top',
 			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
+			'none' => 'Hide menu',
 		),
 	)
 	);
@@ -111,8 +131,38 @@ function wntblank_themeoptions( $wp_customize ) {
 	);
 	// -----------------------------------------------------------
 	
+	// ********************************************
+	//****** pour la 2eme section *****************
+	// ********************************************	
 	
-
+	// -----------------------------------------------------------
+	// 1 parametre pour le controle des slider
+	$wp_customize->add_control('control_sliderscript', 
+	array(
+		'label'    => __( 'Script pour le slider', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_fonctionnality_options',
+		'settings' => 'slider_script',
+		'type'     => 'radio',
+		'choices'  => array(
+			'none'  => 'aucun',
+			'royalslider' => 'RoyalSlider',
+			'flexslider' => 'Flexslider',
+		),
+	)
+	);
+	// -----------------------------------------------------------
+	// 2 parametre clefgoogleMAP
+	$wp_customize->add_control('control_googlemapkey', 
+	array(
+		'label'    => __( 'googlemapkey', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_fonctionnality_options',
+		'settings' => 'googlemapkey',
+		'type'     => 'text'
+	)
+	);
+	
+	
+	
 
 	
 }

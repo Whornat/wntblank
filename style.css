@@ -341,7 +341,7 @@ object {
 
 .thumbnailcontainer{}
 .thumbnailcontainer.pull-left { margin-right:1rem;}
-img.alignleft, img.alignright, img.aligncenter { max-width:100%; height:auto;}
+img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; height:auto;}
 
 
 /*--------------------------------------------------------------

@@ -28,18 +28,25 @@ get_header(); ?>
             <div class="container">
             
             
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignright">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignleft">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignnone">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="aligncenter">
+                        
+            
+            
             <div class="gallery gallery-columns-3">
                     <figure class="gallery-item cap-bot">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/medium-300x176.jpg" alt="" title="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
                         <figcaption>legende de la photo</figcaption>            
                     </figure>
                      <figure class="gallery-item cap-top">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/medium-300x176.jpg" alt="" title="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
                         <figcaption>legende de la photo</figcaption>            
            
                     </figure>
                     <figure class="gallery-item cap-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/medium-300x176.jpg" alt="" title="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
                         <figcaption>legende de la photo</figcaption>            
                     </figure>
               </div><!-- fin gallery -->
