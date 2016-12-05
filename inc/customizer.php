@@ -68,6 +68,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// ********************************************
 	$wp_customize->add_setting( 'slider_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
 	
 	// 3) JE CRE L'INTERFACE ----------------------------------
 	$wp_customize->add_control('control_content_position', 
@@ -160,7 +161,16 @@ function wntblank_themeoptions( $wp_customize ) {
 		'type'     => 'text'
 	)
 	);
-	
+	// -----------------------------------------------------------
+	// 3 parametre clefgoogleMAP
+	$wp_customize->add_control('control_googleanalyticsID', 
+	array(
+		'label'    => __( 'Google Analytics ID', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_fonctionnality_options',
+		'settings' => 'googleanalyticsID',
+		'type'     => 'text'
+	)
+	);
 	
 	
 

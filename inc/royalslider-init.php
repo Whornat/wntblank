@@ -40,11 +40,10 @@ function wnt_image_gallery($parametre) {
  
     $images = get_posts($args);
 // Assuming we found some images, display them.
-if($images) : ?>
+if($images) { ?>
  
-<div class="slider project-slider">
-    <div id="slider" class="flexslider">
-    <ul class="slides">
+<div id="slider_single">
+<div class="slidersingle royalSlider rsDefaultInv" style="width:100%;">
     	<?php
     	// We'll use the $count here to keep track of what image we're on.
     	$count = 1;
@@ -52,31 +51,25 @@ if($images) : ?>
         foreach($images as $image) { 
         	// Only show the image if it is within our limit.
         	if($count <= $limitImages) : ?>
-	        <li<?php 
-	        	// Each end image in a row gets the "lastimage" class added. 
-	        	if($count % $perRow == 0) { echo ' class="lastimage"'; } ?>>
-	            	<?php echo wp_get_attachment_image($image->ID, 'medium'); ?>
-                 	<?php // ----------TESTTTT -------------------------------------- ?>
-                    <?php //echo $image->ID ?>
-                    <?php //print_r(wp_get_attachment_metadata( $image->ID, true)); ?>
-                 	<?php // ----------TESTTTT -------------------------------------- ?>
-                    <?php // AFFICHAGE DE LA LEGENDE MARCHE PAS !!!!!!!!!! ------------------------------------------------
-                    $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
-					//if(count($alt)) echo '<p class="caption">'.$alt.'</p>';
-					if(($alt)!='') echo '<p class="flex-caption">'.$alt.'</p>';
-					?>
-                    <?php // AFFICHAGE DE LA LEGENDE MARCHE  ------------------------------------------------
-		//echo "image id:";
-		//echo $image->ID;
-		//echo "image caption:";
-		if(($image->post_excerpt)!='') echo '<p class="flex-caption">'.$image->post_excerpt.'</p>';
-		//echo "image description:";
-		//echo $image->post_content;
-		?>
-	        </li>
+            
+   
+            
+            
+            
+	        <div class="rsContent <?php if($count % $perRow == 0) { echo 'lastimage'; }?>">
+            
+	            	<?php $arrayimage =wp_get_attachment_image_src($image->ID, 'large'); ?>
+                    <?php $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);?>
+                    
+	            	<?php //print_r($arrayimage); ?>
+					<?php echo'<img src="'.$arrayimage[0].'" alt="'.$alt.'" title="" class="rsImg">';?>
+					<?php if($alt!=='') {
+						echo'<div class="rsCaption">'.$alt.'</div>';
+					}?>
+                    <?php // AFFICHAGE DE LA LEGENDE MARCHE  ------------------------------------------------?>
+	        </div><!-- .rsContent -->
 	         <?php  endif; $count++; }  ?>
-	</ul>
-    </div>
+    </div><!-- sliderprojet -->
     
 	<?php 
 	// Did we have more images than our limit? Then create a "More" link.
@@ -86,25 +79,28 @@ if($images) : ?>
 		<a href="<?php echo get_permalink($images[0]->ID); ?>">View More Images &raquo;</a>
 	</p>
 	<?php endif; ?>
-</div><!-- end #slider .flexslider -->
+</div><!-- #slider_single -->
 
-<script type="application/javascript">
-// Le script d'initialisation
-// Can also be used with $(document).ready()
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
+
+<script id="" type="text/javascript">
+jQuery(document).ready(function($) {
+	$('.slidersingle').royalSlider({
+		autoPlay:{enabled:!0}
+		});
 });
-</script>
-
+</script> 
  
-<?php endif;
-// SI AUCUNE IMAGES
-	if( count($images) == 0) : ?>
-			 <?php echo get_the_post_thumbnail($parametre, 'medium', array('class' => '')); ?>
-	<?php endif;
-//---------------
+<?php 
+// si il n'y a pas d'image alors on affcihe le featured
+}else {
+the_post_thumbnail($parametre, 'medium', array('class' => 'img-fluid'));
+
+}
+// et voila c'est fini ;)
+
+
+
+
 }
 
 

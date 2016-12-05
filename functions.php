@@ -136,8 +136,10 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_style( 'wntblank_theme_boot4-style', get_stylesheet_uri() );
 	
 	// MAP GOOGLE --------------------
-	wp_enqueue_script( 'wntblank_theme_boot4-googlemap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU', true, '' );
+	if( get_theme_mod('googlemapkey') ){
+	wp_enqueue_script( 'wntblank_theme_boot4-googlemap', 'https://maps.googleapis.com/maps/api/js?key='.get_theme_mod('googlemapkey').'', true, '' );
 	wp_enqueue_script( 'wntblank_theme_boot4-googlemapACF', get_template_directory_uri() . '/JS/gmap-ACF.js', array(), null, true );
+	}
 	
 	// Integration Font AWESOME --------------------
 	wp_enqueue_style('wntblank_theme_boot4-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -183,28 +185,21 @@ add_action( 'wp_enqueue_scripts', 'wntblank_theme_boot4_scripts' );
 // https://support.advancedcustomfields.com/forums/topic/google-maps-field-needs-setting-to-add-api-key/
 
 // On récupère la valeur de la clef (AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU)
-$googlemapkey = get_theme_mod('googlemapkey');
-if ($googlemapkey == ''){
-	// RIEN
-	}else{ 
-	// SINON ON ACTIVE LE SUPPORT GGMAP SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-
-	// FIN DU SI (en dessous) SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-} 
-
+if( get_theme_mod('googlemapkey') ){
 
 // Pour la version STANDARD --------------------------------
 function my_acf_google_map_api( $api ){
-	$api['key'] = 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU';
+	$api['key'] = get_theme_mod('googlemapkey');
 	return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 // Pour la version PRO ------------------------------------
 function my_acf_init() {
-	acf_update_setting('google_api_key', 'AIzaSyDIku7UjD-904hsX55tTfzxMZrUMmlEinU');
+	acf_update_setting('google_api_key', get_theme_mod('googlemapkey'));
 }
 add_action('acf/init', 'my_acf_init');
 
+}// FIN DU SI 
 
 // integration API GOOGLE MAP pour ACF pro ------------------------------------------------------------
 
@@ -353,3 +348,18 @@ function my_remove_page_template( $pages_templates ) {
 }
 
 /** xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */ 
+
+if( get_theme_mod('googleanalyticsID') ){
+function script_googleanalytics(){ ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '<?php echo get_theme_mod('googleanalyticsID') ?>', 'auto');
+  ga('send', 'pageview');
+</script>
+<?php }
+add_action('wp_footer', 'script_googleanalytics'); 
+}// end if exist
+?>
