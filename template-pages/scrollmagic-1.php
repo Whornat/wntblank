@@ -76,6 +76,9 @@
 					</div>
 					<div class="spacer s2"></div>
 					<script type="text/javascript">
+						
+(function ($) {
+						
 						// init controller
 						var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
@@ -94,6 +97,8 @@
 										.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
 										.addIndicators()
 										.addTo(controller);
+}(jQuery));	
+	
 					</script>
 				</section>
 				<div class="spacer s_viewport"></div>

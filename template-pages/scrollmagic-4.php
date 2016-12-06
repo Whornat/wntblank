@@ -3,6 +3,7 @@
  Template Name: ScrollMagic exemple 4
  */
  //https://ihatetomatoes.net/5-days-with-scrollmagic/
+// https://ihatetomatoes.net/a-simple-parallax-template-using-scrollmagic-and-greensock/
   get_header(); ?>
 
 </div><!-- content -->

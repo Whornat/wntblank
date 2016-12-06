@@ -15,8 +15,6 @@
   	</ul>
 </div>    
          
-         
-         
 </nav><!-- .navbar -->
 <script type="text/javascript">
 // 1) EFFET STICKY SUR LE MENU DE LA PAGE D'ACCEUIL =========================================================

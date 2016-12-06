@@ -144,6 +144,9 @@ function wntblank_theme_boot4_scripts() {
 	// Integration Font AWESOME --------------------
 	wp_enqueue_style('wntblank_theme_boot4-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	
+	// Integration modernizr en version light : nécessaire pour scrollmagic --------------------
+	wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-modernizr_script', get_template_directory_uri() . '/JS/modernizr.custom.min.js','','',false );
+	
 	// GOOGLE FONT --------------------
 	//wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
 	
@@ -235,7 +238,7 @@ require_once('bs4navwalker.php');
 /**
  * scrollmagic
  */
- require get_template_directory() . '/inc/scrollmagic-cdn.php';
+ require get_template_directory() . '/inc/scrollmagic.php';
  
  /**
  * Imagine
