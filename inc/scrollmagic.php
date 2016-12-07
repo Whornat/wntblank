@@ -22,7 +22,13 @@ wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-tweenmax_script
 wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic_script', get_template_directory_uri() . '/scrollmagic/minified/ScrollMagic.min.js','','',false );
 			
 //wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-gsap_script', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js','','',false );
-wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-gsap_script', get_template_directory_uri() . '/scrollmagic/minified/plugins/animation.gsap.min.js','','',false );		
+wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-gsap_script', get_template_directory_uri() . '/scrollmagic/minified/plugins/animation.gsap.min.js','','',false );
+
+//wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-gsap_script', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js','','',false );
+wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_imagesloaded_script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js','','',false );
+						
+			
+			
 
 // POUR LE SCROLLING vers les ancres : supprimmé et remplacer par un script en pied de page 			
 //wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-ScrollToPlugin_script', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js','','',false );
@@ -30,7 +36,9 @@ wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-gsap_script', g
 //wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-addIndicators_script', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js','','',false );
 wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-addIndicators_script', get_template_directory_uri() . '/scrollmagic/minified/plugins/debug.addIndicators.min.js','','',false );
 			
-//wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-initialisation_script', get_template_directory_uri() . '/JS/scrollmagic-init.js','','',false );
+//wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-initialisation_script', get_template_directory_uri() . '/JS/scrollmagic-init.js','','',true );
+wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-initialisation_script', get_template_directory_uri() . '/JS/scrollmagic-init-v2.js','','',true );
+	
 			
 }
 
