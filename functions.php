@@ -241,11 +241,6 @@ require_once('bs4navwalker.php');
  */
  require get_template_directory() . '/inc/scrollmagic.php';
  
- /**
- * Imagine
- */
- require get_template_directory() . '/inc/imagine.php';
-
 /**
  * Customisation Tiny MCE
  */
