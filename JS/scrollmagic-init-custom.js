@@ -32,8 +32,8 @@ $(function() {
 // SCENE 01 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 							
 							// DEFINITION DU MOUVEMENT : LA TIME LINE TTTTTTTTTTTTTTT
-							var animationstep01 = new TimelineMax();
-							animationstep01
+							var animationstep1 = new TimelineMax();
+							animationstep1
 								.fromTo(".animation01", 1, {x: "-200%"}, {x: "0%", ease: Linear.easeNone})  // in from left
 								.fromTo(".animation02", 1, {x:  "200%"}, {x: "0%", ease: Linear.easeNone})  // in from right
 								// pour lancer des animation en même temps j'utilise un label
@@ -48,16 +48,16 @@ $(function() {
 		
 							// DEFINITION DE LA SCENE : MAGICSCROLL TTTTTTTTTTTTTTT
 							   new ScrollMagic.Scene({
-									triggerElement: "#step01",
+									triggerElement: "#step1",
 									triggerHook: "onLeave",
 									//triggerHook: "0.5",
 									duration: "100%"
 								})
-								// soit directement dans les () : ".setTween("#step01 .bg_parallax", {y: "-50%", ease: Linear.easeNone})" ou via variable :
-							   	.setClassToggle("#step01", "is-active") // set class to active slide
+								// soit directement dans les () : ".setTween("#step1 .bg_parallax", {y: "-50%", ease: Linear.easeNone})" ou via variable :
+							   	.setClassToggle("#step1", "is-active") // set class to active slide
 							   // je fixe le slide au passage
-							   .setPin("#step01")							   
-								.addIndicators({name: ": ---step01---"}) // add indicators (requires plugin)
+							   .setPin("#step1")							   
+								.addIndicators({name: ": ---step1---"}) // add indicators (requires plugin)
 								.addTo(controller);
 							// DEFINITION DE LA SCENE : MAGICSCROLL TTTTTTTTTTTTTTT
 		
@@ -66,40 +66,40 @@ $(function() {
 // SCENE 01 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 // SCENE 01 Bis SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 							   new ScrollMagic.Scene({
-									triggerElement: "#step01",
+									triggerElement: "#step1",
 									triggerHook: "0.5",
 									//triggerHook: "onLeave",
 									duration: "50%"
 								})
-								// soit directement dans les () : ".setTween("#step01 .bg_parallax", {y: "-50%", ease: Linear.easeNone})" ou via variable :
-								.setTween(animationstep01)
-								.addIndicators({name: ": ---step01 b---"}) // add indicators (requires plugin)
+								// soit directement dans les () : ".setTween("#step1 .bg_parallax", {y: "-50%", ease: Linear.easeNone})" ou via variable :
+								.setTween(animationstep1)
+								.addIndicators({name: ": ---step1 b---"}) // add indicators (requires plugin)
 								.addTo(controller);
 // SCENE 01 Bis SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS		
 // SCENE 02 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 
 		
 							// DEFINITION DU MOUVEMENT : LA TIME LINE TTTTTTTTTTTTTTT
-							var animationstep02 = new TimelineMax();
-							animationstep02
+							var animationstep2 = new TimelineMax();
+							animationstep2
 							//.to( target, duration, vars, position )
-								//.fromTo("#step01 .bg_parallax", 1, {y: "0"}, {y: "100%", ease: Linear.easeNone})
-								.to("#step01 .bg_parallax", 2, {y:"50%"})
+								//.fromTo("#step1 .bg_parallax", 1, {y: "0"}, {y: "100%", ease: Linear.easeNone})
+								.to("#step1 .bg_parallax", 2, {y:"50%"})
 								// insert 1 second before end of timeline avec "-="
-  								.to("#step02 .title_slide", 2, {x:750}, "-=1");		
+  								.to("#step2 .title_slide", 2, {x:750}, "-=1");		
 							// FIN DEFINITION DU MOUVEMENT : LA TIME LINE TTTTTTTTTTTTTTT
 		
 							// DEFINITION DE LA SCENE : MAGICSCROLL TTTTTTTTTTTTTTT
 							new ScrollMagic.Scene({
-									triggerElement: "#step02",
+									triggerElement: "#step2",
 									triggerHook: "100%",
 									//triggerHook: "onLeave",
 									duration: "50%"
 								})
 								//.setPin("#pinContainer")
-								.setTween(animationstep02)
-							   	//.setTween("#step01 .bg_parallax", {y: "100%", ease: Linear.easeNone})
-								.addIndicators({name: ": ---step02---"}) // add indicators (requires plugin)
+								.setTween(animationstep2)
+							   	//.setTween("#step1 .bg_parallax", {y: "100%", ease: Linear.easeNone})
+								.addIndicators({name: ": ---step2---"}) // add indicators (requires plugin)
 								.addTo(controller);
 							// DEFINITION DE LA SCENE : MAGICSCROLL TTTTTTTTTTTTTTT
 		
@@ -108,8 +108,8 @@ $(function() {
 // SCENE 03 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS	
 		
 							// DEFINITION DU MOUVEMENT : LA TIME LINE TTTTTTTTTTTTTTT
-							var animationstep03 = new TimelineMax();
-							animationstep03
+							var animationstep3 = new TimelineMax();
+							animationstep3
 							//.to(".animation07", 0.5, {backgroundColor: "green", scale: 2, transformOrigin:'0% 0%'})
 							.to(".animation07", 0.5, {backgroundColor: "green", width:"200%", padding:"2rem"})
 							.to(".animation07 h3", 0.5, {color: "#FFFFFF"});
@@ -117,11 +117,11 @@ $(function() {
 		
 							// DEFINITION DE LA SCENE : MAGICSCROLL TTTTTTTTTTTTTTT
 							new ScrollMagic.Scene({
-										triggerElement: "#step03",
+										triggerElement: "#step3",
 										// pour lancer automatiquement une animation, il faut supprimmer le parametre "duration"
 										//duration: "50%"
 								})
-								.setTween(animationstep03) // trigger a TweenMax.to tween
+								.setTween(animationstep3) // trigger a TweenMax.to tween
 								.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 								.setClassToggle(".animation08", "launch")
 								.addTo(controller);

@@ -12,7 +12,7 @@ function onepage_add_body_attributs($attributs) {
 	// --------------------------------------------------------------------------
 	$extra_attributs = array(
 		'data-spy="scroll"',
-		'data-target="#menu_imagine"',
+		'data-target="#scrollingnav"',
 		'data-offset="150"',
 	);
 	// combine the two arrays

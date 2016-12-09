@@ -11,6 +11,8 @@
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
 <?php get_template_part( 'template-parts/menu','onepage'); ?>
+<?php //echo menu_onepagescrolling(array("step1", "step2", "step3","step4" ),''); ?>
+
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
         
@@ -21,7 +23,7 @@
 				//get_template_part( 'template-parts/content', 'page' );
 			//endwhile; // End of the loop.
 			?>  
-<section id="step01" class="content content_slide slide_fullheight" style="background:#CCCCCC">
+<section id="step1" class="content content_slide slide_fullheight" style="background:#CCCCCC">
          		<div class="container">
   				<h1>Section 01</h1>
                 <div class="row">
@@ -30,7 +32,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="step02" class="content content_slide">
+<section id="step2" class="content content_slide">
          		<div class="container">
   				<h1>Section 02</h1>
                 <div class="row">
@@ -39,7 +41,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="step03" class="content content_slide">
+<section id="step3" class="content content_slide">
          		<div class="container">
   				<h1>Section 02</h1>
                 <div class="row">
@@ -48,7 +50,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="step04" class="content content_slide">
+<section id="step4" class="content content_slide">
          		<div class="container">
   				<h1>Section 02</h1>
                 <div class="row">

@@ -234,6 +234,7 @@ require_once('bs4navwalker.php');
  * One page scrolling
  */
  require get_template_directory() . '/inc/onepage-scrolling.php';
+ require get_template_directory() . '/inc/onepage-functions.php';
 
 /**
  * scrollmagic
@@ -243,7 +244,7 @@ require_once('bs4navwalker.php');
  /**
  * Imagine
  */
- //require get_template_directory() . '/inc/imagine.php';
+ require get_template_directory() . '/inc/imagine.php';
 
 /**
  * Customisation Tiny MCE

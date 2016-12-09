@@ -2,7 +2,7 @@
 /**
  Template Name: Scrollmagic
  */
- get_header(isloading); ?>
+ get_header('isloading'); ?>
 
 <div id="primary" class="content-area">
 
@@ -25,7 +25,8 @@
 
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
-<?php get_template_part( 'template-parts/menu','onepage_bullet'); ?>
+<?php //get_template_part( 'template-parts/menu','onepage_bullet'); ?>
+<?php echo menu_onepagescrolling(array("step1", "step2", "step3","step4" ),''); ?>
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
         
@@ -43,7 +44,7 @@
                 </div> <!-- .container -->
             </article>
             
-            <article id="step01" class="slide fs">
+            <article id="step1" class="slide fs">
                 <div class="bcg"></div>
                 <div class="container">
                     <header class="slideInUp">
@@ -66,7 +67,7 @@
                 </div> <!-- .container -->
             </article>
 
-            <article id="step02" class="slide fs">
+            <article id="step2" class="slide fs">
                 <div class="bcg"></div>
                 <div class="container">
                     <header class="slideInUp">
@@ -90,7 +91,7 @@
                 </div> <!-- .container -->
             </article>
 
-            <article id="step03" class="slide fs">
+            <article id="step3" class="slide fs">
                 <div class="bcg"></div>
                 <div class="container">
                     <header class="slideInUp">
@@ -112,4 +113,4 @@
     
 <?php
 //get_sidebar();
-get_footer(simple);
+get_footer('simple');

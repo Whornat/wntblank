@@ -4,10 +4,10 @@
     var controller = new ScrollMagic.Controller();
 
     // get all slides
-	var slides = ["#step01", "#step02", "#step03"];
+	var slides = ["#step1", "#step2", "#step3"];
 
 	// get all headers in slides that trigger animation
-	var headers = ["#step01 header", "#step02 header", "#step03 header"];
+	var headers = ["#step1 header", "#step2 header", "#step3 header"];
 
 	// get all break up sections
 	var breakSections = ["#cb01", "#cb02", "#cb03"];
@@ -89,7 +89,7 @@
 		        triggerElement: header, // trigger CSS animation when header is in the middle of the viewport 
 		        offset: -95 // offset triggers the animation 95 earlier then middle of the viewport, adjust to your liking
 		    })
-		    .setClassToggle('#step0'+num, 'is-active') // set class to active slide
+		    .setClassToggle('#step'+num, 'is-active') // set class to active slide
 		    .addIndicators({name: "header - change inline style"}) // add indicators (requires plugin), use for debugging
 		    .addTo(controller);
 		});

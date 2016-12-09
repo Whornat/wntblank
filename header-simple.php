@@ -23,5 +23,4 @@
       <link href='<?php bloginfo('template_directory'); ?>/CSS/animations-ie-fix.css' rel='stylesheet'>
 <![endif]-->
 </head>
-
 <body <?php body_class(); ?>  <?php echo body_customconfig(); ?>>

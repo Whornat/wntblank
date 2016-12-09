@@ -36,16 +36,16 @@
 /* LA Section d'intro iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
 
 
-  #step01 .bg_parallax {
+  #step1 .bg_parallax {
     background: url("../IMG/demo/img_mountains01.jpg") no-repeat center center;
     background-size: cover; }
 	
-  #step02 .bg_parallax {
+  #step2 .bg_parallax {
     background: url("../IMG/demo/img_mountains02.jpg") no-repeat center center;
     background-size: cover; }
 	
 	
-  #step04 .bg_parallax {
+  #step4 .bg_parallax {
     background: url("../IMG/demo/img_mountains03.jpg") no-repeat center center;
     background-size: cover;
 }

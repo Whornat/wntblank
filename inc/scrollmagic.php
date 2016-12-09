@@ -44,3 +44,27 @@ wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-demo6_script', 
 		add_action( 'wp_enqueue_scripts', 'wntblank_scrollmagic_scripts' );
 
 //------------------------scrollmagic-------------------------
+
+//-------------- MON FILTRE POUR LES ATTRIBUT DU BODY-------------------------------
+/* j'ajoute les attributs complémentaire à ma balise body ligne 226 de function.php*/
+
+function scrollmagic_add_body_attributs($attributs) {
+	// On test si il s'agit de la page du template custom -----------------------
+	if (is_page_template (array('template-pages/scrollmagic.php','template-pages/scrollmagic-custom.php'))) {
+	// --------------------------------------------------------------------------
+	$extra_attributs = array(
+		'data-spy="scroll"',
+		'data-target="#scrollingnav"',
+		'data-offset="150"',
+	);
+	// combine the two arrays
+	$attributs = array_merge($extra_attributs, $attributs);
+	// On test si il s'agit de la page du template custom -----------------------
+	}
+	// --------------------------------------------------------------------------
+	
+	return $attributs;
+}
+add_filter('body_add_attributs', 'scrollmagic_add_body_attributs');
+//------------------------ MON FILTRE ----------------------------------------------
+

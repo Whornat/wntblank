@@ -2,13 +2,13 @@
 /**
  Template Name: Scrollmagic custom
  */
- get_header(isloading); ?>
-
+ get_header('simple'); ?>
 
 <div id="primary" class="content-area">
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
-<?php get_template_part( 'template-parts/menu','onepage_bullet'); ?>
+<?php //get_template_part( 'template-parts/menu','onepage_bullet'); ?>
+<?php echo menu_onepagescrolling(array("step1", "step2", "step3","step4" ),''); ?>
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
 <section id="intro" class="content content_slide slide_fullheight">
@@ -28,7 +28,7 @@
 			  
 			    
 			        
-<section id="step01" class="content content_slide slide_fullheight">
+<section id="step1" class="content content_slide slide_fullheight">
 	<div class="bg_parallax"></div>
 	<div class="inner">
 			     			
@@ -67,7 +67,7 @@
                 
                 </div><!--.inner-->
 </section>
-<section id="break01" class="content content_slide break">
+<section id="break1" class="content content_slide break">
          		<div class="container">
                 <div class="row">
 					--
@@ -75,7 +75,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="step02" class="content content_slide slide_fullheight">
+<section id="step2" class="content content_slide slide_fullheight">
 	<div class="bg_parallax"></div>
         		<div class="inner">
 				<header class="container title_slide"><h1>Section 02</h1></header>      		
@@ -92,7 +92,7 @@
 </section>
 
 
-<section id="step03" class="content content_slide slide_fullheight">
+<section id="step3" class="content content_slide slide_fullheight">
         		
 				<header class="container title_slide"><h1>Section 03</h1></header>      		
          		<div class="container">
@@ -116,7 +116,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="break02" class="content content_slide break">
+<section id="break2" class="content content_slide break">
          		<div class="container">
                 <div class="row">
                 --
@@ -124,7 +124,7 @@
                 </div><!--.container-->
 </section>
 
-<section id="step04" class="content content_slide slide_fullheight">
+<section id="step4" class="content content_slide slide_fullheight">
 	<div class="bg_parallax"></div>
 
 			
@@ -140,4 +140,4 @@
     
 <?php
 //get_sidebar();
-get_footer(simple);
+get_footer('simple');
