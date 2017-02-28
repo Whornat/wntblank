@@ -91,8 +91,9 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'content_size',
 		'type'     => 'radio',
 		'choices'  => array(
-			'col-lg-9 col-md-7'  => 'Standard',
-			'col-lg-8 col-md-6' => 'Smaller',
+			'col-lg-9'  => 'Standard',
+			'col-lg-8' => 'Smaller',
+			'col-lg-12' => 'Full',
 		),
 	)
 	);
