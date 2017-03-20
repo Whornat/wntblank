@@ -20,11 +20,16 @@ add_action( 'customize_register', 'wntblank_theme_boot4_customize_register' );
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wntblank_theme_boot4_customize_preview_js() {
-	wp_enqueue_script( 'wntblank_theme_boot4_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function mytheme_customizer_live_preview(){
+	wp_enqueue_script( 
+		  'wntblank_theme_boot4_customizer',			//Give the script an ID
+		  get_template_directory_uri().'/js/customizer.js',//Point to file
+		  array( 'jquery','customize-preview' ),	//Define dependencies
+		  '',						//Define a version (optional) 
+		  true						//Put script in footer?
+	);
 }
-add_action( 'customize_preview_init', 'wntblank_theme_boot4_customize_preview_js' );
-
+add_action( 'customize_preview_init', 'mytheme_customizer_live_preview' );
 
 // AJOUTS DE MES PARAMETRES PERSOS ---------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
