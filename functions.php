@@ -342,6 +342,7 @@ function my_remove_page_template( $pages_templates ) {
 	if( !current_user_can('manage_options') ) {
     unset( $pages_templates['template-pages/demo-typography.php'] );
     unset( $pages_templates['template-pages/demo-animate.php'] );
+    unset( $pages_templates['template-pages/demo-components.php'] );
     unset( $pages_templates['template-pages/demo-image.php'] );
     unset( $pages_templates['template-pages/demo-masonry.php'] );
     unset( $pages_templates['template-pages/onepage-scrolling.php'] );
