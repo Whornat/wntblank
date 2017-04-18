@@ -23,15 +23,16 @@
 </aside><!-- #secondary -->
 
 
-
- <?php 
+	<footer id="colophon" class="site-footer" role="contentinfo">
+	
+	 <?php 
 wp_nav_menu( array(
  	'theme_location'  => 'footer',
 	'menu'            => '',
  	'container' => false,  
 	'container_class' => '',
 	'container_id'    => '',
-	'menu_class'      => 'menu menu_footer inlinemenu text-center',
+	'menu_class'      => 'container menu menu_footer inlinemenu text-center',
 	'menu_id'         => '',
 	'echo'            => true,
 	'fallback_cb'     => 'wp_page_menu',
@@ -43,8 +44,10 @@ wp_nav_menu( array(
 	'walker'          => ''
 ));
 ?> 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-<div class="site-info container text-center">
+	
+	
+	
+<div class="container site-info text-center">
             <?php //printf( esc_html__( 'Proudly powered by %s', 'wntblank_theme_boot4' ), 'WordPress' ); ?>
 			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'wntblank_theme_boot4' ), 'wntblank_theme_boot4', '<a href="http://pagedemarque.com/" rel="designer">Pagedemarque</a>' ); ?>
 			<?php 

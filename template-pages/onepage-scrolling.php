@@ -3,14 +3,15 @@
  Template Name: Onepage-scrolling
  */
  get_header(); ?>
-
+ 
+</div><!-- .row row-site-content -->
 </div><!-- content -->
 </div><!-- .container -->
 <div id="primary" class="content-area">
 
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
-<?php get_template_part( 'template-parts/menu','onepage'); ?>
+<?php get_template_part( 'template-parts/menu','onepage_bullet'); ?>
 <?php //echo menu_onepagescrolling(array("step1", "step2", "step3","step4" ),''); ?>
 
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
