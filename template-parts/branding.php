@@ -1,5 +1,5 @@
 <div class="site-branding container">
-        <div class="row">
+        <div class="row justify-content-center">
         	<div class="col-md-3">
 			<h1 class="site-title">
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
@@ -14,7 +14,7 @@
             
             </h1>
             </div>
-        	<div class="col-md-8">
+        	<div class="col-md-9">
             <?php $description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
 				<h2 class="site-sloggan"><?php echo $description; /* WPCS: xss ok. */ ?></h2>

@@ -63,7 +63,9 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
-	$wp_customize->add_setting( 'content_size',	array('default' => 'col-lg-9 col-md-7', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'content_size',	array('default' => 'col', 'transport' => 'postMessage'));
+	// 2nd parametre pour la taille de la sidebarre
+	$wp_customize->add_setting( 'sidebar_size',	array('default' => 'col-lg-3', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
 	// 4eme parametre pour le "branding"
@@ -83,8 +85,8 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'content_position',
 		'type'     => 'radio',
 		'choices'  => array(
-			'pull-left'  => 'Left',
-			'pull-right' => 'Right',
+			'flex-first'  => 'Left',
+			'flex-last' => 'Right',
 		),
 	)
 	);
@@ -96,12 +98,30 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'content_size',
 		'type'     => 'radio',
 		'choices'  => array(
-			'col-lg-9'  => 'Standard',
+			'col'  => 'Standard',
 			'col-lg-8' => 'Smaller',
 			'col-lg-12' => 'Full',
 		),
 	)
 	);
+	
+	// 2nd parametre pour la taille
+	$wp_customize->add_control('control_sidebar_size', 
+	array(
+		'label'    => __( 'Sidebar size', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'sidebar_size',
+		'type'     => 'radio',
+		'choices'  => array(
+			'col-lg-4'  => 'Large',
+			'col-lg-3'  => 'Standard',
+			'col-lg-2' => 'Smaller',
+			'col-lg-12' => 'Full',
+		),
+	)
+	);	
+	
+	
 	
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_type', 

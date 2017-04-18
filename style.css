@@ -809,7 +809,6 @@ figure:hover figcaption { left: 0; }
 @media (max-width: 991px) {
   #primary.pull-right, #primary.pull-left { float:none;}
   .withmenu_topfixed #content{ padding-top:8rem;}
-  #secondary { padding: 0 !important; margin-top: 2rem}	
 }
 @media (max-width: 1199px) {}
 

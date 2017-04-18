@@ -366,4 +366,30 @@ function script_googleanalytics(){ ?>
 <?php }
 add_action('wp_footer', 'script_googleanalytics'); 
 }// end if exist
-?>
+
+/* Insertion du Fancybox sur les contenus */
+function wpc_auto_fancy_box() {
+	if (is_singular('post')) { ?>
+	    <script>
+	    jQuery(document).ready(function(){
+	        jQuery(".entry-content").find("a:has(img)").addClass('fancybox');
+			jQuery(".entry-content").find("a:has(img)").attr('rel','group1');
+        	        jQuery(".fancybox").fancybox( {
+					fitToView	: true,
+					autoSize	: true,
+					autoHeight	: true,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none',
+					padding			: 10,
+					helpers		: {
+						title	: { type : 'float' },
+						buttons	: {}
+					}
+				} );
+	        jQuery("a.group").fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':false});
+	    });
+	    </script>
+<?php } }
+
+add_action('wp_footer','wpc_auto_fancy_box');

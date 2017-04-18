@@ -11,9 +11,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-<?php $content_size = get_theme_mod('content_size');
-if ($content_size === 'col-lg-8'){$sidebar_size = 'col-lg-4';}else if($content_size === 'col-lg-9'){ $sidebar_size = 'col-lg-3';}else{$sidebar_size = 'col-lg-12';}
-?>
+<?php if (get_theme_mod('sidebar_size') == ''){ $sidebar_size = "col"; }else{ $sidebar_size = get_theme_mod('sidebar_size');} ?>
 <aside id="secondary" class="<?php echo $sidebar_size; ?> widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

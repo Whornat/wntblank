@@ -10,13 +10,15 @@
  */
 
 ?>
-	
+	</div><!-- .row-site-content -->
 	</div><!-- .container -->
 	</div><!-- #content -->
     
 <aside id="secondary-footer" class="widget-area" role="complementary">
 	<div class="container">
+		<div class="row">
 	<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+   		</div><!-- row -->
     </div><!-- .container -->
 </aside><!-- #secondary -->
 
