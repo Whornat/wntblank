@@ -92,6 +92,9 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 .navbar-centered .navbar-toggleable-xs {  display: inline-block !important;}
 @media (max-width: 575px) {.navbar-centered .navbar-toggleable-xs.collapse {display:none !important}}
 .navbar-centered .navbar-toggleable-xs.collapse.in { display:block !important}
+/* button toggler */
+.navbar-toggler {top: 4px;}
+
 
 /* = .navbar-dottedigation */
  .navbar-dotted {

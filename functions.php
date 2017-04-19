@@ -173,7 +173,9 @@ function wntblank_theme_boot4_scripts() {
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	// nécessaire pour utiliser "dropdownsonhover-v01" et fancy box-----------------------------------------------------------------------
 	wp_deregister_script('jquery');
-	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '');
+	//wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '');
+	// pour alpha 6 ci-dessous :
+	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', false, '');
 	wp_enqueue_script('jquery');
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	
