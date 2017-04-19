@@ -6,7 +6,17 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   
-
+   	<?php if (get_theme_mod('topmenu_logo') == 'true') {?>
+   	
+    	<a class="navbar-brand brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
+       		<img src="<?php echo get_theme_mod( 'wntblank_logotheme' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			<?php } else { ?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/IMG/logo.png" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'description' ); ?>">
+			<?php } ?> 
+		</a>
+         
+   	<?php } ?>
 
 <div id="exCollapsingNavbarsecondary" class="collapse navbar-collapse navscroll">
     <ul class="navbar-nav" id="scrollingnav">

@@ -68,6 +68,11 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'sidebar_size',	array('default' => 'col-lg-3', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
+	// 3eme parametre pour le menu
+	$wp_customize->add_setting( 'topmenu_align',	array('default' => '', 'transport' => 'postMessage'));
+	// 3eme parametre pour le menu
+	$wp_customize->add_setting( 'topmenu_logo',	array('default' => '', 'transport' => 'postMessage'));
+	
 	// 4eme parametre pour le "branding"
 	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
 	// ********************************************
@@ -131,7 +136,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'topmenu_type',
 		'type'     => 'radio',
 		'choices'  => array(
-			''  => 'Standard',
+			''=> 'Standard',
 			'topfixed' => 'Fixed on the top',
 			'topfixedonscroll' => 'Scrolling Fixe nav on the top',
 			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
@@ -139,6 +144,40 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
+	
+	// 3nd parametre pour le menu
+	$wp_customize->add_control('control_topmenu_align', 
+	array(
+		'label'    => __( 'Menu Align', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'topmenu_align',
+		'type'     => 'radio',
+		'choices'  => array(
+			''=> 'Standard',
+			'justify-content-center' => 'Centered',
+		),
+	)
+	);
+	// -----------------------------------------------------------
+	
+	// 3nd parametre pour le menu
+	$wp_customize->add_control('control_topmenu_logo', 
+	array(
+		'label'    => __( 'Logo in Navbar', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'topmenu_logo',
+		'type'     => 'radio',
+		'choices'  => array(
+			''=> 'NO',
+			'true' => 'YES',
+		),
+	)
+	);
+	// -----------------------------------------------------------	
+	
+	
+	
+	
 	// -----------------------------------------------------------
 	// 4eme parametre pour le branding
 	$wp_customize->add_control('control_branding_type', 

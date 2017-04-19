@@ -42,11 +42,11 @@ get_header(); ?>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 
 <p class="lead">Proin et interdum nisi. Integer ultrices ut lacus eu venenatis. Sed dolor ante, eleifend et facilisis nec, feugiat non nisi. Morbi at diam ut nisi fermentum ultrices vitae ac odio.</p>
-<h1><small>H1 :</small> Vivamus ut augue pharetra, euismod leo sed, ultrices sem.</h1>
+<h1><small>H1 :</small> Vivamus ut augue pharetra, euismod leo sed, <small class="text-muted">ultrices sem.</small></h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 <h2><small>H2 :</small> Maecenas imperdiet ac lorem vel imperdiet.</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
-<h3><small>H3 :</small> Mauris viverra ex sit amet vulputate varius. Quisque port</h3>
+<h3><small>H3 :</small> Mauris viverra ex sit amet vulputate varius. <small class="text-muted">Quisque port</small></h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 
 <h4><small>H4 :</small> felis ultricies turpis semper rutrum. Cras ac erat a metus maximus iaculis.</h4>
@@ -59,7 +59,19 @@ get_header(); ?>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 <h2>Citation</h2>
 <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus.</p></blockquote>
+
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
+
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
+
 
 <h2>Adresse</h2>
 <address>

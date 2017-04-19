@@ -85,13 +85,9 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 #masthead .navbar-fixed-top { bottom: auto !important; position: fixed !important;}
 #content.paddingforfixednav{ padding-top:4.1rem;}
 /*navbar-centered */
-.navbar-centered { text-align:center;}
-.navbar-centered #site-logo,
-.navbar-centered .navbar-brand,
-.navbar-centered .navbar-nav .nav-item{ display:inline-block; float:none;}
-.navbar-centered .navbar-toggleable-xs {  display: inline-block !important;}
-@media (max-width: 575px) {.navbar-centered .navbar-toggleable-xs.collapse {display:none !important}}
-.navbar-centered .navbar-toggleable-xs.collapse.in { display:block !important}
+.navbar-centered,
+.navbar-centered .navbar-main{}
+
 /* button toggler */
 .navbar-toggler {top: 4px;}
 
