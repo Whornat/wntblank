@@ -190,7 +190,7 @@ function wntblank_themeoptions( $wp_customize ) {
 			''  => 'Standard',
 			'nologo' => 'No logo',
 			'fullbanner' => 'Full banner (You must add an header_image before)',
-			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
+			'custom' => 'Custom (add branding-custom.php in folder "template-parts")',
 			'none' => 'Hide branding',
 		),
 	)
