@@ -414,7 +414,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 ## Galleries
 --------------------------------------------------------------*/
 
-.gallery {margin-bottom: 1.5em;}
+.gallery {margin-bottom: 1.5em; overflow: auto; clear: both}
 
 .gallery-item {
 	display: inline-block;
