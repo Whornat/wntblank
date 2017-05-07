@@ -151,8 +151,9 @@ function wntblank_theme_boot4_scripts() {
 	//wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
 	
 	//------------------------fancybox-------------------------
-	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox/jquery.fancybox.css');
-	wp_enqueue_script( 'wntblank_theme_boot4-fancybox_script', get_template_directory_uri() . '/JS/fancybox/jquery.fancybox.js','','',true );
+	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox-3/jquery.fancybox.min.css');
+	wp_enqueue_script( 'wntblank_theme_boot4-fancybox_script', get_template_directory_uri() . '/JS/fancybox-3/jquery.fancybox.min.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_template_directory_uri() . '/JS/fancybox-3/fancybox-init.js','','',true );
 	
 	//------------------------OPTIONAL-------------------------
 	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
@@ -168,7 +169,6 @@ function wntblank_theme_boot4_scripts() {
 	
 	wp_enqueue_script('wntblank_theme_boot4-ie10viewport', get_template_directory_uri() . '/JS-bootstrap/ie10-viewport-bug-workaround.js','','',true );
 	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/JS-bootstrap/bootstrap-dropdownsonhover-v01.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_template_directory_uri() . '/JS/fancybox-init.js','','',true );
 		
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	// nécessaire pour utiliser "dropdownsonhover-v01" et fancy box-----------------------------------------------------------------------
@@ -299,9 +299,9 @@ function body_customconfig() {
 	
 	
 	foreach($attributs as $attribut) :
-		$displayattributs .= '' . $attribut . '';
+		$displayattributs .= ' ' . $attribut . ' ';
 	endforeach;
-	$displayattributs .= '';
+	$displayattributs .= ' ';
 	
 	return $displayattributs;
 }

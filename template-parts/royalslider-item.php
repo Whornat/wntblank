@@ -6,7 +6,7 @@
  */
 ?>
 <div id="post-<?php the_ID(); ?>" class="rsContent">
-<a href="<?php the_permalink(); ?>" rel="bookmark">
+<a href="<?php the_permalink(); ?>" rel="bookmark" style="display:block; width:100%; height:100%">
      <?php 
 	 	// affichage de l'image FEATURED
 		if ( '' != get_the_post_thumbnail() ) {
@@ -14,7 +14,7 @@
     	the_post_thumbnail('medium', array('class' => 'img-fluid rsImg'));
 		} else {
     	// some code
-		echo'<img src="'.get_stylesheet_directory_uri().'/IMG/510x370_medium-md6.png" alt="" title="" class="rsImg">';
+		echo'<img src="'.get_stylesheet_directory_uri().'/IMG/510x370_medium-md6.png" alt="" title="" class="rsImg img-fluid">';
 		}
 	  ?>  
 </a>  

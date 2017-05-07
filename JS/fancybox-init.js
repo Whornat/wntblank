@@ -21,6 +21,12 @@ $(document).ready(function() {
 		
 	});
 	
+	//--------------------
+  	$(".modal_box").fancybox({
+		'modal' : true
+	});
+	//--------------------
+	
 $('.ajaxlink').fancybox({
 	    helpers : {
         overlay : {

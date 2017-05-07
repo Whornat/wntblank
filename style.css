@@ -675,7 +675,11 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 
 /* onepage.php */
 .page-template-onepage-scrolling #content { display:none;}
-.slide_fullheight {/* unité vh (pour "viewport height") */ height: 100vh;}
+@media (min-width: 576px) {
+	.slide_fullheight { min-height: 100vh;}
+}
+
+
 .content_slide { padding:8rem 0;}
 
 /* imagine.php */

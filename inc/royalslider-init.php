@@ -85,7 +85,10 @@ if($images) { ?>
 <script id="" type="text/javascript">
 jQuery(document).ready(function($) {
 	$('.slidersingle').royalSlider({
-		autoPlay:{enabled:!0}
+		imageScaleMode : 'fill',
+autoHeight: true,
+autoScaleSlider:false,
+imageAlignCenter:false
 		});
 });
 </script> 
