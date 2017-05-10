@@ -36,7 +36,7 @@ get_header(); ?>
           	<div class="container">
             <h1>FANCY BOX</h1>
             <p><a href="http://www.immo-visite.com/client_data/assets/2222222222.jpg" class="fancybox btn">lien Image avec effet fancy</a></p>
-            <p><a href="<?php echo get_page_link(2); ?>" class="ajaxlink btn btn-success">lien Page interne avec effet fancy</a></p>
+            <p><a href="<?php echo get_page_link(2); ?>" class="btn btn-success" data-fancybox data-type="ajax" data-src="<?php echo get_page_link(1); ?>" data-selector="#primary">lien Page interne avec effet fancy</a></p>
             </div>
        	  <div class="container">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>

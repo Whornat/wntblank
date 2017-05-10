@@ -54,7 +54,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'title'       => __( 'Fonctionnalités du theme', 'mytheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('activation des fonctionnalités avancées', 'wntblank_theme_boot4'), 
+		'description' => __('Enabled advanced setting', 'wntblank_theme_boot4'), 
 	) 
 	);
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
@@ -205,7 +205,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 1 parametre pour le controle des slider
 	$wp_customize->add_control('control_sliderscript', 
 	array(
-		'label'    => __( 'Script pour le slider', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Script for slider', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_fonctionnality_options',
 		'settings' => 'slider_script',
 		'type'     => 'radio',

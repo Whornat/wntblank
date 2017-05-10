@@ -20,7 +20,7 @@
 
 <?php wp_head(); ?>
 <!--[if lte IE 9]>
-      <link href='<?php bloginfo('template_directory'); ?>/CSS/animations-ie-fix.css' rel='stylesheet'>
+      <link href='<?php echo get_stylesheet_directory_uri(); ?>/CSS/ie-fix.css' rel='stylesheet'>
 <![endif]-->
 </head>
 

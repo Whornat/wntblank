@@ -1,4 +1,13 @@
 $(function() {
+	
+	// activation sur les galeries---
+	$(".fancybox, .gallery-icon > a").fancybox({});
+	// activation par defaut----
+	$("[data-fancybox]").fancybox({
+		// Options will go here
+	});
+	
+	
 
 //--------- DEMO MORPHING------------------------------------------
 //---------http://codepen.io/fancyapps/pen/vxLVJE ------------------
