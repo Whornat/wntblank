@@ -5,7 +5,7 @@
  * @package blank_bootstrap
  */
 ?>
-<div id="post-<?php the_ID(); ?>" class="rsContent">
+<figure id="post-<?php the_ID(); ?>" class="rsContent">
 <a href="<?php the_permalink(); ?>" rel="bookmark" style="display:block; width:100%; height:100%">
      <?php 
 	 	// affichage de l'image FEATURED
@@ -20,4 +20,4 @@
 </a>  
 <figure class="rsCaption"><?php the_title(); ?></figure>
 
-</div> 
+</figure> 
