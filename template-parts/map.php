@@ -19,7 +19,7 @@
 			}else {
 				//si child theme
 				//echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker_red.png"';
-				echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker_red.png"';
+				echo'data-icon="'.get_stylesheet_directory_uri().'/IMG/marker_google.png"';
 			}?>
             id="map_<?php echo$post->ID?>">
             
