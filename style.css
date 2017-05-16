@@ -63,6 +63,8 @@ ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-
 .site-sloggan { margin-top:1rem;}
 #site-logo img { max-width:100%; height:auto;}
 
+.site-branding.withfullbanner { padding: 1rem 0 4rem; background-position: top center; background-size: cover; background-repeat: no-repeat;}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -161,7 +163,7 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 
 
 .site-main .comment-navigation,
-.site-main .posts-navigation,	
+.site-main .posts-navigation,
 .site-main .post-navigation { clear:both; width:100%; margin:1rem 0;}
 
 .comment-navigation .nav-previous,
@@ -455,7 +457,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 /**
  * 11.4 - Comments
  */
- 
+
  #comments { margin:2rem 0;}
 
 .comment-list + .comment-respond,
@@ -506,7 +508,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 .comment-metadata,
 .pingback .edit-link {
 	color: #686868;
-	  
+
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -554,7 +556,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 .comment-form label {
 	color: #686868;
 	display: block;
-	  
+
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
@@ -581,7 +583,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 
 .no-comments {
 	border-top: 1px solid #d1d1d1;
-	  
+
 	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
@@ -637,8 +639,8 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 
 .comments-link a,
 .edit-link a,
-.more-link, 
-.tags-links a, 
+.more-link,
+.tags-links a,
 .comment-reply-link {
   display: inline-block;
   padding: .15rem 0.5rem;
@@ -670,8 +672,8 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { max-width:100%; 
 
 /* page-template-plandusite */
 .page-template-plandusite {}
-#sitemap_container{ padding-bottom:2rem;} 
-#sitemap_container .section{ margin:1rem 0;} 
+#sitemap_container{ padding-bottom:2rem;}
+#sitemap_container .section{ margin:1rem 0;}
 
 /* onepage.php */
 .page-template-onepage-scrolling #content { display:none;}
@@ -722,11 +724,11 @@ body.page .crunchify-social { text-align:center}
 
 /* Infinite Scroll IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 .load-more-manual #page-nav {
-	display:block !important; 
+	display:block !important;
 }
 #page-nav {
-	display:none; 
-	text-align:center; 
+	display:none;
+	text-align:center;
 }
 .load-more-manual #page-nav a {
 	margin:20px auto 10px auto;
@@ -741,7 +743,7 @@ body.page .crunchify-social { text-align:center}
     transition-duration: 150ms;
     text-decoration: none;
 }
-#infscr-loading { 
+#infscr-loading {
 	text-align: center;
 	z-index: 100;
 	position: fixed;
@@ -750,14 +752,14 @@ body.page .crunchify-social { text-align:center}
 	width: 200px;
 	margin-left:-100px;
 	padding: 10px;
-	background: #000; 
+	background: #000;
 	opacity: 0.8;
 	color: #FFF;
 	-webkit-border-radius: 10px;
 	 -moz-border-radius: 10px;
 	      border-radius: 10px;
 }
-.more { 
+.more {
 	width: 300px;
 }
 
@@ -812,7 +814,7 @@ figure:hover figcaption { left: 0; }
 @media (max-width: 575px) {
    /*body { background:#3F6 !important}*/
   .site-sloggan { text-align:center}
-  #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}  
+  #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}
   .site-branding.withfullbanner { min-height:100px !important;}
 }
 @media (max-width: 767px) {

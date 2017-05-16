@@ -9,7 +9,7 @@ get_header(); ?>
 </style>
 
 <?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
-	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">    
+	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -31,8 +31,8 @@ get_header(); ?>
 <i class="fa fa-camera-retro fa-4x"></i> fa-4x
 <i class="fa fa-camera-retro fa-5x"></i> fa-5x
             </div>
-            
-            
+
+
           	<div class="container">
             <h1>FANCY BOX</h1>
             <p><a href="http://www.immo-visite.com/client_data/assets/2222222222.jpg" class="fancybox btn">lien Image avec effet fancy</a></p>
@@ -130,6 +130,22 @@ get_header(); ?>
   </button>
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
 </div>
+
+<div class="panel bg_primary">
+		<h2><small>H2 :</small> Maecenas imperdiet ac lorem vel imperdiet.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
+</div><!-- bg_gris -->
+
+<div class="panel bg_secondary">
+		<h2><small>H2 :</small> Maecenas imperdiet ac lorem vel imperdiet.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
+</div><!-- bg_gris -->
+
+<div class="panel bg_gris">
+		<h2><small>H2 :</small> Maecenas imperdiet ac lorem vel imperdiet.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
+</div><!-- bg_gris -->
+
 
 
 
