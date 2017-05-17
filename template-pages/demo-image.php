@@ -8,7 +8,7 @@ get_header(); ?>
 
 </style>
 <?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
-	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">    
+	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -23,57 +23,57 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-            
-            
+
+
             <div class="container">
-            
-            
+
+
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignright">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignleft">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="alignnone">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="" class="aligncenter">
-                        
-            
-            
+
+
+
             <div class="gallery gallery-columns-3">
                     <figure class="gallery-item cap-bot">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
-                        <figcaption>legende de la photo</figcaption>            
+                        <figcaption>legende de la photo</figcaption>
                     </figure>
                      <figure class="gallery-item cap-top">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
-                        <figcaption>legende de la photo</figcaption>            
-           
+                        <figcaption>legende de la photo</figcaption>
+
                     </figure>
                     <figure class="gallery-item cap-left">
                         <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
-                        <figcaption>legende de la photo</figcaption>            
+                        <figcaption>legende de la photo</figcaption>
                     </figure>
               </div><!-- fin gallery -->
              <div class="gallery gallery-columns-2">
-                    <figure class="gallery-item cap-bot">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/big-500x700.jpg" alt="" title="">
-                        <figcaption>legende de la photo</figcaption>            
+                    <figure class="gallery-item cap-right">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
+                        <figcaption>legende de la photo</figcaption>
                     </figure>
                      <figure class="gallery-item cap-full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/big-500x700.jpg" alt="" title="">
-                        <figcaption>legende de la photo</figcaption>                                    
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
+                        <figcaption>legende de la photo</figcaption>
                     </figure>
                     <figure class="gallery-item cap-full">
-                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/big-500x700.jpg" alt="" title="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/IMG/510x370_medium-md6.png" alt="" title="">
                         <figcaption>
                         <h3>titre</h3>
                         <p>description courte</p>
                         <p><a href="#">En savoir plus</a></p>
-                        </figcaption>    
+                        </figcaption>
                      </figure>
-                    
-              </div><!-- fin gallery -->           
-            
+
+              </div><!-- fin gallery -->
+
             </div>
-          	
-       	  
-            
+
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -110,9 +110,9 @@ $gray-light:                #636c72 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
+// Remplacemeent des couleurs boutons
+$blue: $gray;
 
-// REMPLACEMENT DU BLEU PAR GRIS FONCE
-$blue: $gray-dark;
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             $blue !default;
@@ -963,3 +963,10 @@ $pre-bg:                      $gray-lightest !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
+
+// MES SURCHAGES ----------------------------------------
+// La couleur des boutons est mise plus haut (ligne 113)
+// $blue: $gray;
+$pagination-active-bg:                 $gray-lighter;
+$pagination-active-border:             $gray-lighter;
+$pagination-active-color:              $gray-dark;
