@@ -138,7 +138,7 @@ function wntblank_theme_boot4_scripts() {
 	// MAP GOOGLE --------------------
 	if( get_theme_mod('googlemapkey') ){
 	wp_enqueue_script( 'wntblank_theme_boot4-googlemap', 'https://maps.googleapis.com/maps/api/js?key='.get_theme_mod('googlemapkey').'', true, '' );
-	wp_enqueue_script( 'wntblank_theme_boot4-googlemapACF', get_template_directory_uri() . '/JS/gmap-ACF.js', array(), null, true );
+	wp_enqueue_script( 'wntblank_theme_boot4-googlemapACF', get_stylesheet_directory_uri() . '/JS/googlemapACF-init.js', array(), null, true );
 	}
 	
 	// Integration Font AWESOME --------------------
@@ -153,7 +153,7 @@ function wntblank_theme_boot4_scripts() {
 	//------------------------fancybox-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox-3/jquery.fancybox.min.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-fancybox_script', get_template_directory_uri() . '/JS/fancybox-3/jquery.fancybox.min.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_template_directory_uri() . '/JS/fancybox-3/fancybox-init.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_stylesheet_directory_uri() . '/JS/fancybox-init.js','','',true );
 	
 	//------------------------OPTIONAL-------------------------
 	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
@@ -269,6 +269,14 @@ if ($slider_script == ''){
 }else{ 
 require get_template_directory() . '/inc/'.$slider_script.'-init.php';
 } 
+ /**
+ * fonction pour parallax
+ */
+$parallax_script = get_theme_mod('parallax_script');
+if ($parallax_script == ''){
+}else{ 
+require get_template_directory() . '/inc/'.$parallax_script.'-init.php';
+} 
 
 
  /**
@@ -371,30 +379,3 @@ function script_googleanalytics(){ ?>
 <?php }
 add_action('wp_footer', 'script_googleanalytics'); 
 }// end if exist
-
-/* Insertion du Fancybox sur les contenus */
-function wpc_auto_fancy_box() {
-	if (is_singular('post')) { ?>
-	    <script>
-	    jQuery(document).ready(function(){
-	        jQuery(".entry-content").find("a:has(img)").addClass('fancybox');
-			jQuery(".entry-content").find("a:has(img)").attr('rel','group1');
-        	        jQuery(".fancybox").fancybox( {
-					fitToView	: true,
-					autoSize	: true,
-					autoHeight	: true,
-					closeClick	: false,
-					openEffect	: 'none',
-					closeEffect	: 'none',
-					padding			: 10,
-					helpers		: {
-						title	: { type : 'float' },
-						buttons	: {}
-					}
-				} );
-	        jQuery("a.group").fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':false});
-	    });
-	    </script>
-<?php } }
-
-add_action('wp_footer','wpc_auto_fancy_box');

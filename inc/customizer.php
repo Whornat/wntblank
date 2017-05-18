@@ -79,6 +79,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	//****** pour la 2eme section *****************
 	// ********************************************
 	$wp_customize->add_setting( 'slider_script',	array('default' => 'none', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'parallax_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
 	
@@ -217,6 +218,22 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// -----------------------------------------------------------
+	// 1 parametre pour Parallax script
+	$wp_customize->add_control('control_parallaxscript', 
+	array(
+		'label'    => __( 'Script for parallax', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_fonctionnality_options',
+		'settings' => 'parallax_script',
+		'type'     => 'radio',
+		'choices'  => array(
+			'none'  => 'aucun',
+			'paroller' => 'jquery.paroller.js',
+		),
+	)
+	);
+	// -----------------------------------------------------------
+	
+	
 	// 2 parametre clefgoogleMAP
 	$wp_customize->add_control('control_googlemapkey', 
 	array(
