@@ -93,7 +93,7 @@ figure.wp-caption img{ max-width: 100%; height: auto;}
 
 figure.gallery-item { display: block; position: relative; float: left; overflow: hidden;}
 figure.gallery-item figcaption { position: absolute;
-background: rgba(0,0,0,0.75);
+background: rgba($color_dark, 0.75);
 color: white;
 padding: 5%;
 opacity: 0;
@@ -101,7 +101,7 @@ opacity: 0;
 -moz-transition: all 0.6s ease;
 -o-transition: all 0.6s ease; }
 figure.gallery-item figcaption h2, figure.gallery-item figcaption h3, figure.gallery-item figcaption h4, figure.gallery-item figcaption a, figure.gallery-item figcaption a:visited { color:#FFF}
-figure.gallery-item figcaption a:hover { color:#CCC}
+figure.gallery-item figcaption a:hover { color:rgba($color_white, 0.8)}
 
 figure.gallery-item:hover figcaption { opacity: 1; }
 
@@ -152,7 +152,7 @@ figure.gallery-item.cap-full:hover figcaption {}
 .edit-link,
 .more-link,
 .tags-links { margin:0 0.5rem}
-.tags-links { color:#999; font-style:italic;}
+.tags-links { color:$color_grey; font-style:italic;}
 
 .comments-link a,
 .edit-link a,

@@ -3,7 +3,7 @@
  Template Name: Onepage-scrolling
  */
  get_header(); ?>
- 
+
 </div><!-- .row row-site-content -->
 </div><!-- content -->
 </div><!-- .container -->
@@ -16,14 +16,14 @@
 
 <?php // NAVIGATION SCROLLING ------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------ ?>
-        
-        
-		<main id="main" class="site-main noppadingtop" role="main">
+
+
+		<main id="main" class="site-main nopaddingtop" role="main">
 			<?php
 			//while ( have_posts() ) : the_post();
 				//get_template_part( 'template-parts/content', 'page' );
 			//endwhile; // End of the loop.
-			?>  
+			?>
 <section id="step1" class="content content_slide slide_fullheight" style="background:#CCCCCC">
          		<div class="container">
   				<h1>Section 01</h1>
@@ -60,11 +60,11 @@
                 </div><!--.container-->
 </section>
 
-           
-            
+
+
          </main><!-- #main -->
 	</div><!-- #primary -->
-    
+
 <?php
 //get_sidebar();
 get_footer();

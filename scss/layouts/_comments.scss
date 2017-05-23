@@ -5,10 +5,9 @@
 .bypostauthor {	display: block;}
 
 #commentform input, #commentform textarea, .search-field, .post-password-form input {
-  background-clip: padding-box;
-  background-color: #fff;
+  background-color: rgba($color_white, 0.8);
   background-image: none;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba($color_white, 0.95);
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -42,6 +41,7 @@
  margin: 0;
  padding:0;
 }
+.comment-list li { margin-bottom: 0.75rem;}
 
 .comment-list .children {
  list-style: none;
@@ -53,7 +53,7 @@
 }
 
 .comment-author {
- color: #CCC;
+ color:  $color_grey;
  margin-bottom: 0.4375em;
  display:inline-block;
 }
@@ -66,16 +66,9 @@
  width: 28px;
 }
 
-.bypostauthor > article .fn:after {
- content: "\f304";
- left: 3px;
- position: relative;
- top: 5px;
-}
-
 .comment-metadata,
 .pingback .edit-link {
- color: #686868;
+
 
  font-size: 13px;
  font-size: 0.8125rem;
@@ -88,27 +81,12 @@
 
 .comment-metadata a,
 .pingback .comment-edit-link {
- color: #686868;
-}
 
-.comment-metadata a:hover,
-.comment-metadata a:focus,
-.pingback .comment-edit-link:hover,
-.pingback .comment-edit-link:focus {
- color: #007acc;
 }
 
 .comment-metadata .edit-link,
 .pingback .edit-link {
  display: inline-block;
-}
-
-.comment-metadata .edit-link:before,
-.pingback .edit-link:before {
- content: "\002f";
- display: inline-block;
- opacity: 0.7;
- padding: 0 0.538461538em;
 }
 
 .comment-content ul,
@@ -122,7 +100,7 @@
 }
 
 .comment-form label {
- color: #686868;
+
  display: block;
 
  font-size: 13px;
@@ -141,7 +119,7 @@
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
- color: #686868;
+
  font-size: 13px;
  font-size: 0.8125rem;
  font-style:italic;
@@ -150,8 +128,7 @@
 }
 
 .no-comments {
- border-top: 1px solid #d1d1d1;
-
+ border-top: 1px solid $color_grey;
  font-weight: 700;
  margin: 0;
  padding-top: 1.75em;
@@ -168,11 +145,6 @@
 
 .form-submit { text-align:right;}
 
-.required {
- color: #007acc;
- font-family: Merriweather, Georgia, serif;
-}
-
 .comment-reply-title small {
  font-size: 100%;
 }
@@ -187,7 +159,7 @@
 
 .comment-reply-title small a:hover,
 .comment-reply-title small a:focus {
- color: #CCC;
+ color:  $color_grey;
 }
 
 .comment-reply-title small a:before {
