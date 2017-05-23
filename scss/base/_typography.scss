@@ -1,0 +1,14 @@
+/* GESTION DE LA TYPOGRAPHY -------------------------------- */
+/* --------------------------------------------------------- */
+
+.text-left { text-align:left}
+.text-right { text-align:right}
+.text-center { text-align:center}
+
+ul.error { margin-bottom:0.5rem;}
+ul.error li{ list-style:none}
+ul.error li:before{ font-family:'FontAwesome';content:'\f00d'; display:inline-block; margin-right:0.5rem; font-size:1.1rem; color:#ff0000;}
+
+ul.checked {margin-bottom:0.5rem;}
+ul.checked li{ list-style:none}
+ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-block; margin-right:0.5rem; font-size:1.1rem; color:#10ac39;}

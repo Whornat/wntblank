@@ -1,0 +1,21 @@
+/* POST NAVIGATION ---------------------------------------------- */
+/* --------------------------------------------------------- */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation { clear:both; width:100%; margin:1rem 0;}
+
+
+.nav-previous a:before{ font-family:'FontAwesome'; margin-right:0.5rem; content:'\f060'}
+.nav-next a:after{ font-family:'FontAwesome'; margin-left:0.5rem; content:'\f061'}
+.nav-links:after { clear: both; content: ""; display: table;}
+
+
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a,
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a { text-transform:uppercase; font-weight:600; text-decoration:none;}
+.nav-links .nav-next { text-align: right;}
+.inlinemenu {}
+.inlinemenu li{ display:inline; margin:0 5px;}

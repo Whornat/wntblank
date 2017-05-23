@@ -1,0 +1,30 @@
+/* STRUCTURE GLOBALE DU SITE ------------------------------- */
+/* --------------------------------------------------------- */
+
+#masthead { position:relative;}
+.site-title { text-align:center; margin:0;}
+#site-logo { margin:0.5rem; display:block;}
+.site-sloggan { margin-top:1rem;}
+#site-logo img { max-width:100%; height:auto;}
+
+.site-branding.withfullbanner { padding: 1rem 0 4rem; background-position: top center; background-size: cover; background-repeat: no-repeat;}
+/* --------------------------------------------------------- */
+.nomargin { margin:0 !important;}
+.nomargintop { margin-top:0 !important;}
+.nopadding { padding:0 !important;}
+.nopaddingtop { padding-top:0 !important;}
+
+/* --------------------------------------------------------- */
+.site-content { padding-top:1rem; padding-bottom:2rem;}
+.withmenu_topfixed #content{ padding-top:4rem;}
+#masthead .navbar.fixed-top { padding: 0rem 1rem;}
+.panel { padding:0.5rem 1rem;}
+/* si logger --------- */
+body.admin-bar .fixed-top { top: 32px;}
+body.admin-bar #content.paddingforfixednav { padding-top: 6.1rem;}
+/* si logger --------- */
+
+/* BOOTSTRAP HACK TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
+.row-full { margin-left: -28px; margin-right: -28px;}
+.row-full:after { clear: both; content: ""; display: table;}
+/* BOOTSTRAP HACK TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/

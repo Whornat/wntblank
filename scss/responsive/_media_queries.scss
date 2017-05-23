@@ -1,0 +1,25 @@
+/* RESPONSIVE SESSION -------------------------------------- */
+/* --------------------------------------------------------- */
+
+@media (max-width: 575px) {
+  .site-sloggan { text-align:center}
+  #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}
+  .site-branding.withfullbanner { min-height:100px !important;}
+}
+@media (max-width: 767px) {}
+@media (max-width: 991px) {
+  .withmenu_topfixed #content{ padding-top:8rem;}
+}
+@media (max-width: 1199px) {}
+
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .comment-navigation .nav-previous,
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {float: left;width: 50%;}
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-next {float: right;text-align: right;width: 50%;}
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}

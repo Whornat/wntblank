@@ -1,0 +1,19 @@
+.sticky {display: block;}
+.hentry {margin: 0 0 1.5em;}
+.byline,
+.updated:not(.published) {display: none;}
+
+.single .byline,
+.group-blog .byline {display: inline;}
+
+.page-content,
+.entry-content,
+.entry-summary {margin: 1.5em 0 0;}
+
+.page-links {clear: both;margin: 0 0 1.5em;}
+
+/*--------------------------------------------------------------
+## Posts and pages protégés
+--------------------------------------------------------------*/
+.post-password-form {}
+.post-password-form input[type="submit"]:hover{ background:#e6e6e6; border-color:#adadad; color:#373a3c}
