@@ -18,6 +18,38 @@ object {
 }
 
 /*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
@@ -148,11 +180,14 @@ figure.gallery-item.cap-full:hover figcaption {}
 
 
 /* WORDPRESS utilities */
+.cat-links,
 .comments-link,
 .edit-link,
 .more-link,
-.tags-links { margin:0 0.5rem}
+.tags-links { margin:0.15rem 0.5rem; display: inline;}
 .tags-links { color:$color_grey; font-style:italic;}
+
+.cat-links a {display: inline-block;}
 
 .comments-link a,
 .edit-link a,
@@ -168,6 +203,7 @@ figure.gallery-item.cap-full:hover figcaption {}
 	line-height: 1;
 	padding: 0.15rem 0.5rem;
 	text-decoration: none;
+	display: inline-block;
 
 	&:hover {
 		background: rgba($color_white, 0.5);

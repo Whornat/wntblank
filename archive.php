@@ -20,14 +20,14 @@ get_header(); ?>
 				<?php
 			 //print_r(get_queried_object());
 		$term_id = get_queried_object()->term_id;
-		$term_name = get_queried_object()->name;			
+		$term_name = get_queried_object()->name;
 		$image_id = get_term_meta( $term_id, 'image', true );
 		if ( ! empty( $image_id ) ) {
 			$image_atts = wp_get_attachment_image_src( $image_id, 'thumbnail' );
 			$image_url = $image_atts[0];
     		echo '<img src="' . esc_url( $image_atts[0] ) . '" alt="'.$term_name.'" class="image_term"/>';
 			}
-				
+
 					the_archive_title();
     		echo '</h1>';
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -43,10 +43,11 @@ get_header(); ?>
 			}else{
 			get_template_part( 'template-parts/excerpt', get_post_type() );
 			}
-			
+
 			endwhile;
 
-			the_posts_navigation();
+			wp_bootstrap_pagination();
+			//the_posts_navigation();
 
 		else :
 

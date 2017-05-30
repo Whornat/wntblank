@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
 	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
-    
+
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -42,8 +42,8 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
-  			wp_bootstrap_pagination();
+			//the_posts_navigation();
+  		wp_bootstrap_pagination();
 
 		else :
 
