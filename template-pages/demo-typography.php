@@ -24,7 +24,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-            <div class="container">
+            <div class="">
             <i class="fa fa-camera-retro fa-lg"></i> fa-lg
 <i class="fa fa-camera-retro fa-2x"></i> fa-2x
 <i class="fa fa-camera-retro fa-3x"></i> fa-3x
@@ -33,12 +33,12 @@ get_header(); ?>
             </div>
 
 
-          	<div class="container">
+          	<div class="">
             <h1>FANCY BOX</h1>
             <p><a href="http://www.immo-visite.com/client_data/assets/2222222222.jpg" class="fancybox btn">lien Image avec effet fancy</a></p>
             <p><a href="<?php echo get_page_link(2); ?>" class="btn btn-success" data-fancybox data-type="ajax" data-src="<?php echo get_page_link(1); ?>" data-selector="#primary">lien Page interne avec effet fancy</a></p>
             </div>
-       	  <div class="container">
+       	  <div class="">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus nisl, venenatis a dolor eget, volutpat feugiat neque. In hac habitasse platea dictumst. Etiam imperdiet dolor quis eros aliquam, ac tincidunt mi finibus. Phasellus tempor, libero quis elementum tempor, massa lectus sollicitudin sapien, a aliquet eros nulla eu tortor. In et scelerisque ipsum. Nunc fringilla sagittis quam, eget aliquam sapien scelerisque sollicitudin. Sed rhoncus lorem ipsum, ut sagittis purus mattis sed. Sed tristique ipsum et posuere hendrerit.</p>
 
 <p class="lead">Proin et interdum nisi. Integer ultrices ut lacus eu venenatis. Sed dolor ante, eleifend et facilisis nec, feugiat non nisi. Morbi at diam ut nisi fermentum ultrices vitae ac odio.</p>

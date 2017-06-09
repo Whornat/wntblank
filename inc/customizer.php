@@ -21,11 +21,11 @@ add_action( 'customize_register', 'wntblank_theme_boot4_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function mytheme_customizer_live_preview(){
-	wp_enqueue_script( 
+	wp_enqueue_script(
 		  'wntblank_theme_boot4_customizer',			//Give the script an ID
 		  get_template_directory_uri().'/js/customizer.js',//Point to file
 		  array( 'jquery','customize-preview' ),	//Define dependencies
-		  '',						//Define a version (optional) 
+		  '',						//Define a version (optional)
 		  true						//Put script in footer?
 	);
 }
@@ -37,31 +37,31 @@ add_action( 'customize_preview_init', 'mytheme_customizer_live_preview' );
 
 function wntblank_themeoptions( $wp_customize ) {
 	// 1) JE CREE MA NOUVELLE SECTION ----------------------------------
-	$wp_customize->add_section( 
-	'mytheme_structure_options', 
+	$wp_customize->add_section(
+	'mytheme_structure_options',
 	array(
 		'title'       => __( 'Structure du theme', 'mytheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblank_theme_boot4'), 
+		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblank_theme_boot4'),
 	)
 	);
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
-	$wp_customize->add_section( 
+	$wp_customize->add_section(
 	'mytheme_fonctionnality_options',
 	// 2eme section
 	array(
 		'title'       => __( 'Fonctionnalités du theme', 'mytheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Enabled advanced setting', 'wntblank_theme_boot4'), 
-	) 
+		'description' => __('Enabled advanced setting', 'wntblank_theme_boot4'),
+	)
 	);
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
-	
-	
+
+
 	// 2) JE CREE MON PARAMETRE ----------------------------------
-	$wp_customize->add_setting( 'content_position',	array('default' => 'pull-left', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'content_position',	array('default' => 'flex-first', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'content_size',	array('default' => 'col', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille de la sidebarre
@@ -72,8 +72,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'topmenu_align',	array('default' => '', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_logo',	array('default' => '', 'transport' => 'postMessage'));
-	
-	// 4eme parametre pour le "branding"
+		// 4eme parametre pour le "branding"
 	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
 	// ********************************************
 	//****** pour la 2eme section *****************
@@ -82,9 +81,9 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'parallax_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
-	
+
 	// 3) JE CRE L'INTERFACE ----------------------------------
-	$wp_customize->add_control('control_content_position', 
+	$wp_customize->add_control('control_content_position',
 	array(
 		'label'    => __( 'Content position', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -97,7 +96,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// 2nd parametre pour la taille
-	$wp_customize->add_control('control_content_size', 
+	$wp_customize->add_control('control_content_size',
 	array(
 		'label'    => __( 'Content size', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -110,9 +109,9 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
-	
+
 	// 2nd parametre pour la taille
-	$wp_customize->add_control('control_sidebar_size', 
+	$wp_customize->add_control('control_sidebar_size',
 	array(
 		'label'    => __( 'Sidebar size', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -125,12 +124,12 @@ function wntblank_themeoptions( $wp_customize ) {
 			'col-lg-12' => 'Full',
 		),
 	)
-	);	
-	
-	
-	
+	);
+
+
+
 	// 3nd parametre pour le menu
-	$wp_customize->add_control('control_topmenu_type', 
+	$wp_customize->add_control('control_topmenu_type',
 	array(
 		'label'    => __( 'Menu type', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -145,9 +144,9 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
-	
+
 	// 3nd parametre pour le menu
-	$wp_customize->add_control('control_topmenu_align', 
+	$wp_customize->add_control('control_topmenu_align',
 	array(
 		'label'    => __( 'Menu Align', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -160,9 +159,9 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// -----------------------------------------------------------
-	
+
 	// 3nd parametre pour le menu
-	$wp_customize->add_control('control_topmenu_logo', 
+	$wp_customize->add_control('control_topmenu_logo',
 	array(
 		'label'    => __( 'Logo in Navbar', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -174,14 +173,14 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
-	// -----------------------------------------------------------	
-	
-	
-	
-	
+	// -----------------------------------------------------------
+
+
+
+
 	// -----------------------------------------------------------
 	// 4eme parametre pour le branding
-	$wp_customize->add_control('control_branding_type', 
+	$wp_customize->add_control('control_branding_type',
 	array(
 		'label'    => __( 'Branding type', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_structure_options',
@@ -197,14 +196,14 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// -----------------------------------------------------------
-	
+
 	// ********************************************
 	//****** pour la 2eme section *****************
-	// ********************************************	
-	
+	// ********************************************
+
 	// -----------------------------------------------------------
 	// 1 parametre pour le controle des slider
-	$wp_customize->add_control('control_sliderscript', 
+	$wp_customize->add_control('control_sliderscript',
 	array(
 		'label'    => __( 'Script for slider', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_fonctionnality_options',
@@ -219,7 +218,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	);
 	// -----------------------------------------------------------
 	// 1 parametre pour Parallax script
-	$wp_customize->add_control('control_parallaxscript', 
+	$wp_customize->add_control('control_parallaxscript',
 	array(
 		'label'    => __( 'Script for parallax', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_fonctionnality_options',
@@ -232,10 +231,10 @@ function wntblank_themeoptions( $wp_customize ) {
 	)
 	);
 	// -----------------------------------------------------------
-	
-	
+
+
 	// 2 parametre clefgoogleMAP
-	$wp_customize->add_control('control_googlemapkey', 
+	$wp_customize->add_control('control_googlemapkey',
 	array(
 		'label'    => __( 'googlemapkey', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_fonctionnality_options',
@@ -245,7 +244,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	);
 	// -----------------------------------------------------------
 	// 3 parametre clefgoogleMAP
-	$wp_customize->add_control('control_googleanalyticsID', 
+	$wp_customize->add_control('control_googleanalyticsID',
 	array(
 		'label'    => __( 'Google Analytics ID', 'wntblank_theme_boot4' ),
 		'section'  => 'mytheme_fonctionnality_options',
@@ -253,10 +252,10 @@ function wntblank_themeoptions( $wp_customize ) {
 		'type'     => 'text'
 	)
 	);
-	
-	
 
-	
+
+
+
 }
 add_action( 'customize_register' , 'wntblank_themeoptions' );
 

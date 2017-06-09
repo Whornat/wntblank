@@ -15,8 +15,8 @@
 get_header(); ?>
 
 	<?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
-	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">    
-    
+	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
+
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -25,9 +25,9 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				//if ( comments_open() || get_comments_number() ) :
+				//	comments_template();
+				//endif;
 
 			endwhile; // End of the loop.
 			?>
