@@ -1,11 +1,11 @@
-<div class="navbar-customcolor menu_standard">
-      	<div class="container">
-  <nav class="navbar-toggleable-sm navbar navbar-light navbar-main">
+   <div class="navbar-customcolor fixed-bottom">
+   <div class="container">
+   <nav class="navbar-toggleable-sm navbar navbar-light navbar-main ">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-   <?php if (get_theme_mod('topmenu_logo') == 'true') {?>
+   	<?php if (get_theme_mod('topmenu_logo') == 'true') {?>
 
     	<a class="navbar-brand brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo-navbar" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
@@ -15,11 +15,9 @@
 			<?php } ?>
 		</a>
 
-   <?php } ?>
+   	<?php } ?>
 
-
-  <a class="navbar-brand hidden-md-up" href="#">Menu principal</a>
-   <?php
+         <?php
  // Use the new walker
  wp_nav_menu( array(
     'menu'            => 'primary',
@@ -34,7 +32,8 @@
     'walker'          => new bs4navwalker())
 );
 ?>
-</nav><!-- .navbar -->
 
-    	</div><!-- .container -->
-    </div><!-- .menu_container -->
+</nav><!-- .navbar -->
+</div><!-- .container -->
+
+</div><!-- .fixed-top -->

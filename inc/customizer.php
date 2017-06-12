@@ -138,6 +138,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'choices'  => array(
 			''=> 'Standard',
 			'topfixed' => 'Fixed on the top',
+			'bottomfixed' => 'Fixed on the bottom',
 			'topfixedonscroll' => 'Scrolling Fixe nav on the top',
 			'custom' => 'Custom (add menu-custom.php in folder "template-parts")',
 			'none' => 'Hide menu',
@@ -155,6 +156,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'choices'  => array(
 			''=> 'Standard',
 			'justify-content-center' => 'Centered',
+			'justify-content-end' => 'Right',
 		),
 	)
 	);

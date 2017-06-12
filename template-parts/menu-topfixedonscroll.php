@@ -12,7 +12,7 @@
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
        		<img src="<?php echo get_theme_mod( 'wntblank_logotheme' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 			<?php } else { ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/IMG/logo.png" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'description' ); ?>" id="site-logo-navbar">
+				<?php bloginfo( 'name' ); ?>
 			<?php } ?>
 		</a>
 
