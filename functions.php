@@ -89,7 +89,8 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_setup' );
  * @global int $content_width
  */
 function wntblank_theme_boot4_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 640 );
+	//$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 960 );
 }
 add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
 
@@ -352,12 +353,12 @@ function _twbs_bootstrap_20542( $classes )
 /** suppression des Template page de demo si on n'est pas un administrator */
 add_filter( 'theme_page_templates', 'my_remove_page_template' );
 function my_remove_page_template( $pages_templates ) {
-	
+
 	$current_user = wp_get_current_user();
 
 	if( !current_user_can('manage_options') ) {
 	//if( !current_user_can('manage_options') || ( 'guillaume' !== $current_user->name ) ) {
-		
+
 	unset( $pages_templates['template-pages/demo-animate.php'] );
     unset( $pages_templates['template-pages/demo-components.php'] );
     unset( $pages_templates['template-pages/demo-image.php'] );
