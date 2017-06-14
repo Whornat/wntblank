@@ -8,7 +8,7 @@
 // POUR UTILISER infinite SCROLL, il faut rajouter ça dans "Archive.php" par exemple...
 //<div class="load-more-manual">
 //	<nav id="page-nav" role="navigation">
-//next_posts_link( __( '<span class="more btn btn-primary btn-lg btn-block">Annonces suivante</span>', 'wpc' ) ); 
+//next_posts_link( __( '<span class="more btn btn-primary btn-lg btn-block">Annonces suivante</span>', 'wpc' ) );
 //</nav>
 //</div>
 
@@ -32,7 +32,7 @@ function slug_masonry_init() { ?>
 
 <script>
 jQuery( document ).ready( function( $ ) {
-    /* Masonry + Infinite Scroll */	
+    /* Masonry + Infinite Scroll */
     var $container = $('#loops');
     $container.imagesLoaded(function () {
         $container.masonry({
@@ -70,7 +70,7 @@ jQuery( document ).ready( function( $ ) {
     });
     $(document).ajaxError(function (e, xhr, opt) {
         if (xhr.status == 404) $('#page-nav a').remove();
-    });    
+    });
 });
 </script>
 
