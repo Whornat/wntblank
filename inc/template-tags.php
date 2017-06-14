@@ -33,7 +33,7 @@ function wntblank_theme_boot4_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'wntblank_theme_boot4' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-	
+
 	if ('post' === get_post_type()){
 	echo '<a href="'.get_post_type_archive_link( 'post' ).'" class="archive_link_post">Article</a> '; // WPCS: XSS OK.
 	}
