@@ -77,7 +77,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// ********************************************
 	//****** pour la 2eme section *****************
 	// ********************************************
-	$wp_customize->add_setting( 'slider_script',	array('default' => 'none', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'slider_script',	array('noslider' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'parallax_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
@@ -212,7 +212,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'slider_script',
 		'type'     => 'radio',
 		'choices'  => array(
-			'none'  => 'aucun',
+			'noslider'  => 'aucun',
 			'royalslider' => 'RoyalSlider',
 			'flexslider' => 'Flexslider',
 		),
