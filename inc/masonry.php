@@ -50,7 +50,7 @@ jQuery( document ).ready( function( $ ) {
         loading: {
             msgText: 'Chargement des contenus...',
             finishedMsg: 'Aucun contenu à charger.',
-            img: 'http://i.imgur.com/6RMhx.gif'
+            img: 'https://i.imgur.com/6RMhx.gif'
         }
     }, function (newElements) {
         var $newElems = $(newElements).css({
