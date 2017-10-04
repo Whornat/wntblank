@@ -68,7 +68,7 @@ wp_nav_menu( array(
 <script type="text/javascript">
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-    $('.navscroll a').bind('click', function(event) {
+    $('.navscroll a, a.scrollinglink').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
