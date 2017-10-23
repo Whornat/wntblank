@@ -36,6 +36,12 @@ Text Domain:  	wntblank_theme_child
 
 .nopaddingtop { padding-top: 0 !important; }
 
+/*---------------------------------------------------------- */
+.block { margin-bottom: 1rem; }
+
+.block .content { padding: 1.5rem; }
+
+/*----------------------------------------------------------- */
 /* --------------------------------------------------------- */
 .site-content { padding-top: 1rem; padding-bottom: 2rem; }
 
@@ -466,7 +472,8 @@ body.page .crunchify-social { text-align: center; }
 /* --------------------------------------------------------- */
 @media (max-width: 575px) { .site-sloggan { text-align: center; }
   #masthead .navbar-main .navbar-nav .nav-link { text-align: center; }
-  .site-branding.withfullbanner { min-height: 100px !important; } }
+  .site-branding.withfullbanner { min-height: 100px !important; }
+  .thumbnailcontainer { float: none !important; width: 100%; margin: 0; } }
 
 @media (max-width: 991px) { .withmenu_topfixed #content { padding-top: 8rem; } }
 
