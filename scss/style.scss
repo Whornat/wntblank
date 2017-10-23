@@ -1,6 +1,6 @@
 @import "_vars";
-@import "theme_info";
-@import "mixins/mixins-master";
+@import "_theme_info";
+@import "mixins/_mixins-master";
 
 /* BASE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
@@ -13,7 +13,7 @@
 @import "menus/_navbar";
 @import "menus/_postnavigation";
 
-/* LAYOUTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* LAYOUTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
 @import "layouts/_page";
 @import "layouts/_post";
