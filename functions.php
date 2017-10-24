@@ -294,6 +294,11 @@ require get_template_directory() . '/inc/'.$parallax_script.'-init.php';
  * fonction pour les excerpts
  */
 include(get_stylesheet_directory() . '/inc/excerpt-advanced.php');
+/* function pour gérer les EMBEDDED de wordpress */
+include(get_stylesheet_directory() . '/inc/embedded-advanced.php');
+
+
+
 
 
 // -------------------------------------------------------------
