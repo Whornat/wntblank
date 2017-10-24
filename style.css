@@ -464,6 +464,14 @@ body.page .crunchify-social { text-align: center; }
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer { display: block; }
 
+/* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/*--------------------------------------------------------------
+## SURCHARGE BOOTSTRAP
+--------------------------------------------------------------*/
+.card { margin-bottom: 1rem; }
+
+.btn { white-space: normal; }
+
 /* RESPONSIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* RESPONSIVE SESSION -------------------------------------- */
 /* --------------------------------------------------------- */
