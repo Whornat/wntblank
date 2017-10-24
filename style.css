@@ -470,7 +470,7 @@ body.page .crunchify-social { text-align: center; }
 --------------------------------------------------------------*/
 .card { margin-bottom: 1rem; }
 
-.btn { white-space: normal; }
+.btn { white-space: normal !important; margin: 3px 0; }
 
 /* RESPONSIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* RESPONSIVE SESSION -------------------------------------- */
