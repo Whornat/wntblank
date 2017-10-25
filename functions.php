@@ -129,8 +129,7 @@ function wntblank_theme_boot4_scripts() {
 
 	// Integration BOOTSTRAP 4-alpha6 --------------------
 	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4-alpha6/bootstrap-autoprefixer.css');
-	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.css');
-
+	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.min.css');
 	//VERSION CDN------------------
 	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
 
@@ -151,36 +150,30 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-modernizr_script', get_template_directory_uri() . '/JS/modernizr.custom.min.js','','',false );
 
 	// GOOGLE FONT --------------------
-	//wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
+	wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
 
 	//------------------------fancybox-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox-3/jquery.fancybox.min.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-fancybox_script', get_template_directory_uri() . '/JS/fancybox-3/jquery.fancybox.min.js','','',true );
 	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_stylesheet_directory_uri() . '/JS/fancybox-init.js','','',true );
-
-	//------------------------OPTIONAL-------------------------
-	//wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
-	//wp_enqueue_script( 'wntblank_theme_boot4-jquerymousewheel_script', get_template_directory_uri() . '/JS/jquery.mousewheel.js','','',true );
+	
 	//------------------------ANIMATION-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
-
-	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4-alpha6/dist/js/bootstrap.min.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	
-	//VERSION CDN------------------
-	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js','','',true );
+	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
 
+	// NE FONCTIONNE PLUS :/
 	//wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/bootstrap-4/JS/bootstrap-dropdownsonhover-v01.js','','',true );
-
-	// pour alpha 5
-	//wp_enqueue_script('wntblank_theme_boot4-ie10viewport', get_template_directory_uri() . '/bootstrap-4/JS/ie10-viewport-bug-workaround.js','','',true );
-	//wp_enqueue_script('wntblank_theme_boot4-tether', get_template_directory_uri() . '/bootstrap-4/JS/tether.min.js','','',true );
-
+	
 	//pour alpha beta :
 	//wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
 	wp_enqueue_script('wntblank_theme_boot4-popper', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/popper.min.js','','',true );
 	
+
+	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
+	//VERSION CDN------------------
+	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	
 	
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -188,7 +181,8 @@ function wntblank_theme_boot4_scripts() {
 	wp_deregister_script('jquery');
 	//wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '');
 	// pour alpha 6 ci-dessous :
-	wp_register_script('jquery','https://code.jquery.com/jquery-3.2.1.slim.min.js', false, '');
+	// >>> https://code.jquery.com/jquery-3.2.1.slim.min.js ne fonctionne pas avec FANCYBOX
+	wp_register_script('jquery','https://code.jquery.com/jquery-3.2.1.min.js', false, '');
 	wp_enqueue_script('jquery');
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -245,19 +239,19 @@ require_once('bootstrap_pagination.php');
 /**
  * Masonry
  */
- //require get_template_directory() . '/inc/masonry.php';
+ require get_template_directory() . '/inc/masonry.php';
 
 
  /**
  * One page scrolling
  */
- require get_template_directory() . '/inc/onepage-scrolling.php';
- require get_template_directory() . '/inc/onepage-functions.php';
+require get_template_directory() . '/inc/onepage-scrolling.php';
+require get_template_directory() . '/inc/onepage-functions.php';
 
 /**
  * scrollmagic
  */
- require get_template_directory() . '/inc/scrollmagic.php';
+require get_template_directory() . '/inc/scrollmagic.php';
 
 /**
  * Customisation Tiny MCE
@@ -295,7 +289,7 @@ require get_template_directory() . '/inc/'.$parallax_script.'-init.php';
  /**
  * fonction pour widget
  */
-//require get_template_directory() . '/inc/widgets-custom.php';
+require get_template_directory() . '/inc/widgets-custom.php';
 
  /**
  * fonction pour les excerpts
