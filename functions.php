@@ -159,7 +159,7 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_stylesheet_directory_uri() . '/JS/fancybox-init.js','','',true );
 
 	//------------------------OPTIONAL-------------------------
-	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
+	//wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
 	//wp_enqueue_script( 'wntblank_theme_boot4-jquerymousewheel_script', get_template_directory_uri() . '/JS/jquery.mousewheel.js','','',true );
 	//------------------------ANIMATION-------------------------
 	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
@@ -177,9 +177,12 @@ function wntblank_theme_boot4_scripts() {
 	//wp_enqueue_script('wntblank_theme_boot4-ie10viewport', get_template_directory_uri() . '/bootstrap-4/JS/ie10-viewport-bug-workaround.js','','',true );
 	//wp_enqueue_script('wntblank_theme_boot4-tether', get_template_directory_uri() . '/bootstrap-4/JS/tether.min.js','','',true );
 
-	//pour alpha 6 :
-	wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
-
+	//pour alpha beta :
+	//wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-popper', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/popper.min.js','','',true );
+	
+	
+	
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	// nécessaire pour utiliser "dropdownsonhover-v01" et fancy box-----------------------------------------------------------------------
 	wp_deregister_script('jquery');
