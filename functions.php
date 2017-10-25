@@ -171,7 +171,7 @@ function wntblank_theme_boot4_scripts() {
 	//VERSION CDN------------------
 	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js','','',true );
 
-	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/bootstrap-4/JS/bootstrap-dropdownsonhover-v01.js','','',true );
+	//wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/bootstrap-4/JS/bootstrap-dropdownsonhover-v01.js','','',true );
 
 	// pour alpha 5
 	//wp_enqueue_script('wntblank_theme_boot4-ie10viewport', get_template_directory_uri() . '/bootstrap-4/JS/ie10-viewport-bug-workaround.js','','',true );
@@ -185,7 +185,7 @@ function wntblank_theme_boot4_scripts() {
 	wp_deregister_script('jquery');
 	//wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '');
 	// pour alpha 6 ci-dessous :
-	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '');
+	wp_register_script('jquery','https://code.jquery.com/jquery-3.2.1.slim.min.js', false, '');
 	wp_enqueue_script('jquery');
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
