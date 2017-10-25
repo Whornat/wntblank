@@ -127,8 +127,10 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
 
 function wntblank_theme_boot4_scripts() {
 
-	// Integration BOOTSTRAP 4 --------------------
-	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4-alpha6/bootstrap-autoprefixer.css');
+	// Integration BOOTSTRAP 4-alpha6 --------------------
+	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4-alpha6/bootstrap-autoprefixer.css');
+	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.css');
+
 	//VERSION CDN------------------
 	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
 
@@ -163,7 +165,9 @@ function wntblank_theme_boot4_scripts() {
 	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
 	wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
 
-	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4-alpha6/dist/js/bootstrap.min.js','','',true );
+	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4-alpha6/dist/js/bootstrap.min.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
+	
 	//VERSION CDN------------------
 	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js','','',true );
 
@@ -174,7 +178,7 @@ function wntblank_theme_boot4_scripts() {
 	//wp_enqueue_script('wntblank_theme_boot4-tether', get_template_directory_uri() . '/bootstrap-4/JS/tether.min.js','','',true );
 
 	//pour alpha 6 :
-	wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
 
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	// nécessaire pour utiliser "dropdownsonhover-v01" et fancy box-----------------------------------------------------------------------
