@@ -71,6 +71,12 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_align',	array('default' => '', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
+	$wp_customize->add_setting( 'topmenu_style',	array('default' => 'navbar-light', 'transport' => 'postMessage'));
+	// 3eme parametre pour le menu
+	$wp_customize->add_setting( 'topmenu_bg',	array('default' => 'bg-light', 'transport' => 'postMessage'));
+	// 3eme parametre pour le menu	
+	
+	
 	$wp_customize->add_setting( 'topmenu_logo',	array('default' => '', 'transport' => 'postMessage'));
 		// 4eme parametre pour le "branding"
 	$wp_customize->add_setting( 'branding_type',	array('default' => '', 'transport' => 'postMessage'));
@@ -145,6 +151,40 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
+	
+	// 3nd parametre pour le menu
+	$wp_customize->add_control('control_topmenu_style',
+	array(
+		'label'    => __( 'Menu style', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'topmenu_style',
+		'type'     => 'radio',
+		'choices'  => array(
+			'navbar-light'=> 'Navbar Light',
+			'navbar-dark' => 'Navbar Dark',
+			'navbar-custom' => 'Navbar Custom',
+		),
+	)
+	);
+	
+	// 3nd parametre pour le menu
+	$wp_customize->add_control('control_topmenu_bg',
+	array(
+		'label'    => __( 'Menu Background', 'wntblank_theme_boot4' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'topmenu_bg',
+		'type'     => 'radio',
+		'choices'  => array(
+			'bg-light'=> 'Background Light',
+			'bg-dark' => 'Background Dark',
+			'bg-primary' => 'Background Primary',
+			'bg-custom' => 'Background Custom',
+		),
+	)
+	);
+	
+	
+	
 
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_align',

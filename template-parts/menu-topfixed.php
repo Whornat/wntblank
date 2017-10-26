@@ -1,9 +1,6 @@
-   <div class="navbar-customcolor fixed-top">
+   <div class="<?php if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> fixed-top">
    <div class="container">
-   <nav class="navbar-toggleable-sm navbar navbar-light navbar-main ">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-expand-sm <?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> navbar-main"> 
 
    	<?php if (get_theme_mod('topmenu_logo') == 'true') {?>
 
@@ -16,6 +13,12 @@
 		</a>
 
    	<?php } ?>
+	  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>		  
+	  
+	  
 
          <?php
  // Use the new walker
@@ -26,7 +29,7 @@
     'container_id'    => 'navbarNavDropdown',
     'container_class' => 'collapse navbar-collapse '.get_theme_mod('topmenu_align').' ',
     'menu_id'         => false,
-    'menu_class'      => 'nav navbar-nav',
+    'menu_class'      => 'navbar-nav mr-auto',
     'depth'           => 2,
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker())

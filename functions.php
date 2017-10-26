@@ -128,8 +128,10 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
 function wntblank_theme_boot4_scripts() {
 
 	// Integration BOOTSTRAP 4-alpha6 --------------------
-	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4-alpha6/bootstrap-autoprefixer.css');
 	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.min.css');
+	// ma version custom en dessous
+	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/bootstrap.css');
+
 	//VERSION CDN------------------
 	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
 
@@ -163,8 +165,7 @@ function wntblank_theme_boot4_scripts() {
 	
 	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
 
-	// NE FONCTIONNE PLUS :/
-	//wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/bootstrap-4/JS/bootstrap-dropdownsonhover-v01.js','','',true );
+	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/JS/bootstrap-dropdownsonhover-v01.js','','',true );
 	
 	//pour alpha beta :
 	//wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );

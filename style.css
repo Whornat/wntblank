@@ -231,10 +231,6 @@ figure.gallery-item.cap-full figcaption { left: 0; bottom: 0; width: 100%; heigh
 /* menu top fixed --------------------------------------------------*/
 body.admin-bar #masthead .navbar-fixed-top { top: 32px; }
 
-#masthead .navbar-brand.brand-logo { height: 3rem; margin: 0 1rem 0 0; }
-
-#masthead .navbar-brand.brand-logo img { width: auto; height: 100%; }
-
 .navbar-fixed-top .navbar-main .navbar-nav .nav-link, .stickyonscroll .navbar-main .navbar-nav .nav-link { padding: 0.8rem 0.5rem; }
 
 /*menu-topfixedonscroll.php */
@@ -465,6 +461,7 @@ body.page .crunchify-social { text-align: center; }
 .infinity-end.neverending .site-footer { display: block; }
 
 /* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* -------------------------------------------------------------------- */
 /*--------------------------------------------------------------
 ## SURCHARGE BOOTSTRAP
 --------------------------------------------------------------*/
@@ -472,6 +469,8 @@ body.page .crunchify-social { text-align: center; }
 
 .btn { white-space: normal !important; margin: 3px 0; }
 
+/* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* -------------------------------------------------------------------- */
 /* RESPONSIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* RESPONSIVE SESSION -------------------------------------- */
 /* --------------------------------------------------------- */

@@ -129,10 +129,86 @@ get_header(); ?>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+</nav>
+				
+<h2>POPOVER</h2>				
+			<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>	
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})				
+</script>
+				
+<h2>Alertes</h2>				
+<div class="alert alert-primary" role="alert">
+  This is a primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  This is a secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  This is a light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  This is a dark alert—check it out!
+</div>		
+<h2>BUTTONS</h2>				
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>	
+
+<h2>NAVBAR</h2>				
+      
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar navbar-dark bg-primary">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
 </nav>				
 				
-			
-       	  
+				
+				
+				
+				
                </div><!-- .container -->
          
 

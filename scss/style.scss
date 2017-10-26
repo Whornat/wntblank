@@ -2,6 +2,9 @@
 @import "_theme_info";
 @import "mixins/_mixins-master";
 
+//@import "../bootstrap-4.0.0-beta.2/scss/bootstrap";
+
+
 /* BASE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
 @import "base/_generale";
@@ -27,7 +30,20 @@
 @import "modules/_plugins";
 
 /* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* -------------------------------------------------------------------- */
+// Required
+//@import "../bootstrap-4.0.0-beta.2/scss/functions";
+//@import "../bootstrap-4.0.0-beta.2/scss/variables";
+//@import "../bootstrap-4.0.0-beta.2/scss/mixins";
+
+// Optional
+//@import "../bootstrap-4.0.0-beta.2/scss/buttons";
+//SURCHAGE
 @import "bootstrap/_surcharge";
+/* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* -------------------------------------------------------------------- */
+
+
 
 /* RESPONSIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 @import "responsive/_media_queries";

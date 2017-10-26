@@ -58,14 +58,12 @@ function wntblank_theme_boot4_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '','<span class="sep"></span>' );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wntblank_theme_boot4' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tags-links btn-group" role="group" aria-label="Tag list">' . esc_html__( 'Tagged %1$s', 'wntblank_theme_boot4' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'wntblank_theme_boot4' ), esc_html__( '1 Comment', 'wntblank_theme_boot4' ), esc_html__( '% Comments', 'wntblank_theme_boot4' ) );
-		echo '</span>';
+		comments_popup_link( esc_html__( 'Leave a comment', 'wntblank_theme_boot4' ), esc_html__( '1 Comment', 'wntblank_theme_boot4' ), esc_html__( '% Comments', 'wntblank_theme_boot4' ), 'comments-link btn btn-sm btn-light' );
 	}
 
 	edit_post_link(
@@ -74,8 +72,10 @@ function wntblank_theme_boot4_entry_footer() {
 			esc_html__( 'Edit %s', 'wntblank_theme_boot4' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link">',
-		'</span>'
+		'',
+		'',
+		'',
+		'edit-link btn btn-sm btn-secondary'
 	);
 }
 endif;

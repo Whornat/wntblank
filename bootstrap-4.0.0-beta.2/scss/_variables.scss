@@ -62,7 +62,8 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
+//$primary:       $blue !default;
+$primary:       $gray-800 !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -86,7 +87,6 @@ $theme-colors: map-merge((
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
-
 
 // Options
 //
