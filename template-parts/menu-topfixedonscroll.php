@@ -28,7 +28,7 @@
     'container_id'    => 'navbarNavDropdown',
     'container_class' => 'collapse navbar-collapse '.get_theme_mod('topmenu_align').' ',
     'menu_id'         => false,
-    'menu_class'      => 'navbar-nav mr-auto',
+    'menu_class'      => 'navbar-nav',
     'depth'           => 2,
     'fallback_cb'     => 'bs4navwalker::fallback',
     'walker'          => new bs4navwalker())

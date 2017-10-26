@@ -69,7 +69,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_type',	array('default' => '', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
-	$wp_customize->add_setting( 'topmenu_align',	array('default' => '', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'topmenu_align',	array('default' => 'mr-auto', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
 	$wp_customize->add_setting( 'topmenu_style',	array('default' => 'navbar-light', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
@@ -194,7 +194,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'topmenu_align',
 		'type'     => 'radio',
 		'choices'  => array(
-			''=> 'Standard',
+			'mr-auto'=> 'Standard',
 			'justify-content-center' => 'Centered',
 			'justify-content-end' => 'Right',
 		),
