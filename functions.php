@@ -60,23 +60,6 @@ function wntblank_theme_boot4_setup() {
 		'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	//add_theme_support( 'post-formats', array(
-		//'aside',
-		//'image',
-		//'video',
-		//'quote',
-		//'link',
-	//) );
-
-	// Set up the WordPress core custom background feature.
-	//add_theme_support( 'custom-background', apply_filters( 'wntblank_theme_boot4_custom_background_args', array(
-	//	'default-color' => 'ffffff',
-	//	'default-image' => '',
-	//) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'wntblank_theme_boot4_setup' );
@@ -93,33 +76,6 @@ function wntblank_theme_boot4_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 960 );
 }
 add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-//function wntblank_theme_boot4_widgets_init() {
-//	register_sidebar( array(
-//		'name'          => esc_html__( 'Sidebar', 'wntblank_theme_boot4' ),
-//		'id'            => 'sidebar-1',
-//		'description'   => '',
-//		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="content">',
-//		'after_widget'  => '</div></section>',
-//		'before_title'  => '<h2 class="widget-title">',
-//		'after_title'   => '</h2>',
-//	) );
-//		register_sidebar( array(
-//		'name'          => esc_html__( 'Sidebar footer', 'wntblank_theme_boot4' ),
-//		'id'            => 'sidebar-footer',
-//		'description'   => '',
-//		'before_widget' => '<section id="%1$s" class="widget %2$s col-md-4 col-sm-6"><div class="content">',
-//		'after_widget'  => '</div></section>',
-//		'before_title'  => '<h2 class="widget-title">',
-//		'after_title'   => '</h2>',
-//	) );
-//}
-//add_action( 'widgets_init', 'wntblank_theme_boot4_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
