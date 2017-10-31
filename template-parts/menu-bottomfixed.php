@@ -1,4 +1,4 @@
-   <div class="<?php if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> fixed-bottom">
+   <div class="<?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> fixed-bottom">
    <div class="container">
     <nav class="navbar navbar-expand-sm <?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> navbar-main">  
 
