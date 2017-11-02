@@ -29,60 +29,17 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
   position: fixed;
   right: 30px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: right;
-  z-index: 100; }
-
-.navbar-dotted .nav-item { float: none !important;}
+  z-index: 999;
+  list-style: none;
+}
+.navbar-dotted .nav-item { float: none !important; margin: 15px 0;}
 .navbar-dotted .nav-link { display: block; padding: 0 !important;}
 .navbar-dotted .nav-link.active { background: none;}
 
-.navbar-dotted a {
-    display: block;
-    line-height: 25px;
-    position: relative;
-    padding-right: 20px;
-    color: $color_white;
-    text-decoration: none; }
-
-.navbar-dotted a:hover .nav-label {
-      -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-      visibility: visible; }
-
-.navbar-dotted .nav-dot {
-    display: block;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    right: 0;
-    top: 35%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 100%;
-    -webkit-transition: all 0.3s linear;
-            transition: all 0.3s linear;
+.navbar-dotted .nav-dot { 
+	display: block; width: 0.8rem; height: 0.8rem; border-radius: 100%; background-color: rgba($color_white, 0.5); border: 1px solid rgba($color_white, 0.8);
+-webkit-box-shadow: 0 0 5px 0 rgba($color_dark,0.25);
+box-shadow: 0 0 5px 0 rgba($color_dark,0.25);
 }
-.navbar-dotted .nav-link.active .nav-dot { background: rgba(0, 0, 0, 0.8);}
+.navbar-dotted .nav-link.active .nav-dot{ background: none; background-color: rgba($color_white, 0.9); border: 1px solid rgba($color_white, 1);}
 
-
-.navbar-dotted .nav-label {
-    display: block;
-	padding-right: 1rem;
-    opacity: 0.5;
-    visibility: hidden;
-    -webkit-transform: translateX(-10px);
-    -ms-transform: translateX(-10px);
-    transform: translateX(-10px);
-    -webkit-transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
-    transition: all 0.2s cubic-bezier(.17, .67, .83, .67); }
-
-.navbar-dotted.is-dark a {color: #212121; }
-.navbar-dotted.is-dark .nav-dot {background-color: rgba(0, 0, 0, 0.5); }
-.navbar-dotted.is-light a {color: #ffffff; }
-.navbar-dotted.is-light .nav-dot {background-color: rgba(255, 255, 255, 0.5); }
-.navbar-dotted ul { margin: 0; padding: 0; }
-.navbar-dotted li { width: auto;list-style: none; }
