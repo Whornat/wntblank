@@ -33,4 +33,5 @@
 		<?php
 		// fin du test
         endif;
+		wp_reset_postdata();	   
 		?>

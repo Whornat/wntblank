@@ -7,6 +7,11 @@
 
 /* menu-.php --------------------------------------------------*/
 #masthead .navbar-toggler { width:auto;}
+.navbar-main .navbar-nav .nav-link {   
+	-webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
 /* menu top fixed --------------------------------------------------*/
 body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 #masthead .navbar-brand.brand-logo { }
