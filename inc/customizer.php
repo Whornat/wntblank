@@ -61,7 +61,7 @@ function wntblank_themeoptions( $wp_customize ) {
 
 
 	// 2) JE CREE MON PARAMETRE ----------------------------------
-	$wp_customize->add_setting( 'content_position',	array('default' => 'flex-first', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'content_position',	array('default' => '', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'content_size',	array('default' => 'col', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille de la sidebarre
@@ -96,8 +96,8 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'content_position',
 		'type'     => 'radio',
 		'choices'  => array(
-			'flex-first'  => 'Left',
-			'flex-last' => 'Right',
+			''  => 'Left',
+			'order-2' => 'Right',
 		),
 	)
 	);
