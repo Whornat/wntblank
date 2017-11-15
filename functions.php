@@ -246,7 +246,7 @@ require get_template_directory() . '/inc/'.$parallax_script.'-init.php';
  /**
  * fonction pour widget
  */
-require get_template_directory() . '/inc/widgets-custom.php';
+//require get_template_directory() . '/inc/widgets-custom.php';
 
  /**
  * fonction pour les excerpts
