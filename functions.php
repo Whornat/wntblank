@@ -255,11 +255,10 @@ include(get_stylesheet_directory() . '/inc/excerpt-advanced.php');
 /* function pour gérer les EMBEDDED de wordpress */
 include(get_stylesheet_directory() . '/inc/embedded-advanced.php');
 
-
-
-
-
 // -------------------------------------------------------------
+
+
+
 // FONCTION DES ATTRIBUTS DU BODY ------------------------------
 
 function body_customconfig() {
