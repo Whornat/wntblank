@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 ?>
@@ -51,8 +51,8 @@ wp_nav_menu( array(
 	
 	
 <div class="container site-info text-center">
-            <?php //printf( esc_html__( 'Proudly powered by %s', 'wntblank_theme_boot4' ), 'WordPress' ); ?>
-			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'wntblank_theme_boot4' ), 'wntblank_theme_boot4', '<a href="http://pagedemarque.com/" rel="designer">Pagedemarque</a>' ); ?>
+            <?php //printf( esc_html__( 'Proudly powered by %s', 'wntblanktheme' ), 'WordPress' ); ?>
+			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'wntblanktheme' ), 'wntblanktheme', '<a href="http://pagedemarque.com/" rel="designer">Pagedemarque</a>' ); ?>
 			<?php 
 			$infostheme = wp_get_theme();
 			$nomdusite = get_bloginfo( 'name' );
@@ -60,7 +60,7 @@ wp_nav_menu( array(
 			$site_url = network_site_url( '/' );
 			?>
             
-            <p class="credits">Une Conception <a href="<?php echo $infostheme->get( 'AuthorURI' ); ?>" target="blank" class="author_site"><?php echo $infostheme->get( 'Author' ); ?></a> pour <a href="<?php echo $site_url; ?>" class="client_site" title="<?php echo $descriptiondusite; ?>"><?php echo $nomdusite; ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>" class="mentionslegales">mentions légales</a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Plan du site' ) ); ?>" class="plandusite" title="plan du site">Plan du site</a></p>		
+            <p class="credits"><?php _e( 'Design by', 'wntblanktheme' ); ?> <a href="<?php echo $infostheme->get( 'AuthorURI' ); ?>" target="blank" class="author_site"><?php echo $infostheme->get( 'Author' ); ?></a> <?php _e( 'for', 'wntblanktheme'); ?> <a href="<?php echo $site_url; ?>" class="client_site" title="<?php echo $descriptiondusite; ?>"><?php echo $nomdusite; ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>" class="mentionslegales"><?php _e( 'Legal Notice', 'wntblanktheme' ); ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Plan du site' ) ); ?>" class="plandusite" title="plan du site"><?php _e( 'Sitemap', 'wntblanktheme' ); ?></a></p>		
         </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 

@@ -1,13 +1,13 @@
 <?php
 /**
- * wntblank_theme_boot4 functions and definitions.
+ * wntblanktheme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
-if ( ! function_exists( 'wntblank_theme_boot4_setup' ) ) :
+if ( ! function_exists( 'wntblanktheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'wntblank_theme_boot4_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wntblank_theme_boot4_setup() {
+function wntblanktheme_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on wntblank_theme_boot4, use a find and replace
-	 * to change 'wntblank_theme_boot4' to the name of your theme in all the template files.
+	 * If you're building a theme based on wntblanktheme, use a find and replace
+	 * to change 'wntblanktheme' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wntblank_theme_boot4', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wntblanktheme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,8 +44,8 @@ function wntblank_theme_boot4_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'wntblank_theme_boot4' ),
-		'footer' => __( 'footer Menu', 'wntblank_theme_boot4' )
+		'primary' => esc_html__( 'Primary', 'wntblanktheme' ),
+		'footer' => __( 'footer Menu', 'wntblanktheme' )
 	) );
 
 	/*
@@ -62,7 +62,7 @@ function wntblank_theme_boot4_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'wntblank_theme_boot4_setup' );
+add_action( 'after_setup_theme', 'wntblanktheme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -71,66 +71,66 @@ add_action( 'after_setup_theme', 'wntblank_theme_boot4_setup' );
  *
  * @global int $content_width
  */
-function wntblank_theme_boot4_content_width() {
-	//$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 640 );
-	$GLOBALS['content_width'] = apply_filters( 'wntblank_theme_boot4_content_width', 960 );
+function wntblanktheme_content_width() {
+	//$GLOBALS['content_width'] = apply_filters( 'wntblanktheme_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'wntblanktheme_content_width', 960 );
 }
-add_action( 'after_setup_theme', 'wntblank_theme_boot4_content_width', 0 );
+add_action( 'after_setup_theme', 'wntblanktheme_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
 
-function wntblank_theme_boot4_scripts() {
+function wntblanktheme_scripts() {
 
 	// Integration BOOTSTRAP 4-alpha6 --------------------
-	wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.min.css');
+	wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.min.css');
 	// ma version custom en dessous
-	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/bootstrap.css');
+	//wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/bootstrap.css');
 
 	//VERSION CDN------------------
-	//wp_enqueue_style('wntblank_theme_boot4-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
+	//wp_enqueue_style('wntblanktheme-bootstrapstyle', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css');
 
 
 
-	wp_enqueue_style( 'wntblank_theme_boot4-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wntblanktheme-style', get_stylesheet_uri() );
 
 	// MAP GOOGLE --------------------
 	if( get_theme_mod('googlemapkey') ){
-	wp_enqueue_script( 'wntblank_theme_boot4-googlemap', 'https://maps.googleapis.com/maps/api/js?key='.get_theme_mod('googlemapkey').'', true, '' );
-	wp_enqueue_script( 'wntblank_theme_boot4-googlemapACF', get_stylesheet_directory_uri() . '/JS/googlemapACF-init.js', array(), null, true );
+	wp_enqueue_script( 'wntblanktheme-googlemap', 'https://maps.googleapis.com/maps/api/js?key='.get_theme_mod('googlemapkey').'', true, '' );
+	wp_enqueue_script( 'wntblanktheme-googlemapACF', get_stylesheet_directory_uri() . '/JS/googlemapACF-init.js', array(), null, true );
 	}
 
 	// Integration Font AWESOME --------------------
-	wp_enqueue_style('wntblank_theme_boot4-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	wp_enqueue_style('wntblanktheme-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 	// Integration modernizr en version light : nécessaire pour scrollmagic --------------------
-	wp_enqueue_script( 'wntblank_theme_boot4-scrollmagic_scrollmagic-modernizr_script', get_template_directory_uri() . '/JS/modernizr.custom.min.js','','',false );
+	wp_enqueue_script( 'wntblanktheme-scrollmagic_scrollmagic-modernizr_script', get_template_directory_uri() . '/JS/modernizr.custom.min.js','','',false );
 
 	// GOOGLE FONT --------------------
 	wp_enqueue_style('googlefont-style', 'https://fonts.googleapis.com/css?family=Amaranth:400,400i,700|Roboto:300,400,400i,700');
 
 	//------------------------fancybox-------------------------
-	wp_enqueue_style('wntblank_theme_boot4-fancybox', get_template_directory_uri() . '/CSS/fancybox-3/jquery.fancybox.min.css');
-	wp_enqueue_script( 'wntblank_theme_boot4-fancybox_script', get_template_directory_uri() . '/JS/fancybox-3/jquery.fancybox.min.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-fancybox-init', get_stylesheet_directory_uri() . '/JS/fancybox-init.js','','',true );
+	wp_enqueue_style('wntblanktheme-fancybox', get_template_directory_uri() . '/CSS/fancybox-3/jquery.fancybox.min.css');
+	wp_enqueue_script( 'wntblanktheme-fancybox_script', get_template_directory_uri() . '/JS/fancybox-3/jquery.fancybox.min.js','','',true );
+	wp_enqueue_script('wntblanktheme-fancybox-init', get_stylesheet_directory_uri() . '/JS/fancybox-init.js','','',true );
 	
 	//------------------------ANIMATION-------------------------
-	wp_enqueue_style('wntblank_theme_boot4-animation', get_template_directory_uri() . '/CSS/animations.css');
-	wp_enqueue_script( 'wntblank_theme_boot4-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
+	wp_enqueue_style('wntblanktheme-animation', get_template_directory_uri() . '/CSS/animations.css');
+	wp_enqueue_script( 'wntblanktheme-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
 	
-	wp_enqueue_script( 'wntblank_theme_boot4-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
+	wp_enqueue_script( 'wntblanktheme-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
 
-	wp_enqueue_script('wntblank_theme_boot4-dropdownsonhover', get_template_directory_uri() . '/JS/bootstrap-dropdownsonhover-v01.js','','',true );
+	wp_enqueue_script('wntblanktheme-dropdownsonhover', get_template_directory_uri() . '/JS/bootstrap-dropdownsonhover-v01.js','','',true );
 	
 	//pour alpha beta :
-	//wp_enqueue_script('wntblank_theme_boot4-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
-	wp_enqueue_script('wntblank_theme_boot4-popper', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/popper.min.js','','',true );
+	//wp_enqueue_script('wntblanktheme-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
+	wp_enqueue_script('wntblanktheme-popper', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/popper.min.js','','',true );
 	
 
-	wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
+	wp_enqueue_script('wntblanktheme-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	//VERSION CDN------------------
-	//wp_enqueue_script('wntblank_theme_boot4-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js','','',true );
+	//wp_enqueue_script('wntblanktheme-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	
 	
 	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REMPLACER LA VERSION DE JQUERY - mettre la derniere XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -148,7 +148,7 @@ function wntblank_theme_boot4_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wntblank_theme_boot4_scripts' );
+add_action( 'wp_enqueue_scripts', 'wntblanktheme_scripts' );
 
 // integration API GOOGLE MAP pour ACF ------------------------------------------------------------
 // https://support.advancedcustomfields.com/forums/topic/google-maps-field-needs-setting-to-add-api-key/

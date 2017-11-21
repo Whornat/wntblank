@@ -27,8 +27,8 @@
 			<?php the_title() ?>
             </b><br/>
             <?php echo $address[0].','.$address[1];?><br/>
-            <a href="https://www.google.fr/maps/dir//<?php echo $address[0].'+'.$address[1].','.$address[2].'';?>" class="btn btn-secondary btn-sm btn_gmapitineraire" target="_blank">Itinéraire Google Map</a>
-            <a href="<?php the_permalink()?>" class="btn btn-primary btn-sm btn_maplinkpage" >Plus d'informations</a>
+            <a href="https://www.google.fr/maps/dir//<?php echo $address[0].'+'.$address[1].','.$address[2].'';?>" class="btn btn-secondary btn-sm btn_gmapitineraire" target="_blank"><?php _e( 'Google Map', wntblanktheme); ?></a>
+            <a href="<?php the_permalink()?>" class="btn btn-primary btn-sm btn_maplinkpage" ><?php _e( 'More information', wntblanktheme); ?></a>
             </div>
 		<?php
 		// fin du test

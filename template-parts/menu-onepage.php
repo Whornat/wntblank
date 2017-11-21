@@ -3,7 +3,7 @@
 
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbarsecondary" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span> <?php _e( 'Display menu', 'wntblanktheme' ); ?>
   </button>
 
    	<?php if (get_theme_mod('topmenu_logo') == 'true') {?>

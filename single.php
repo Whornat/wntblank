@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 get_header(); ?>

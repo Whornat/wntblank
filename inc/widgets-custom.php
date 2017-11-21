@@ -14,10 +14,10 @@ parent::__construct(
 'about_widget', 
 
 // Widget name will appear in UI
-__('About widget Widget', 'about_widget_blank_bootstrap'), 
+__('About widget Widget', 'wntblanktheme'), 
 
 // Widget description
-array( 'description' => __( 'Display "About" bloc ', 'about_widget_blank_bootstrap' ), ) 
+array( 'description' => __( 'Display "About" bloc ', 'wntblanktheme' ), ) 
 );
 }
 
@@ -34,7 +34,7 @@ $urlpage = apply_filters( 'widget_content', $instance['urlpage'] );
 echo $args['before_widget'];
 if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
-$readmore =  esc_html__( 'readmore', 'about_widget_blank_bootstrap' );
+$readmore =  esc_html__( 'readmore', 'wntblanktheme' );
 echo '<p class="fr_content">'.$content.'</p>';
 echo '<p class="eng_content">'.$content_eng.'</p>';
 echo '<p><a class="readmore" href="'.esc_url( get_permalink($urlpage) ).'">'.$readmore.'</a></p>';
@@ -51,9 +51,9 @@ $content_eng = $instance[ 'content_eng' ];
 $urlpage = $instance[ 'urlpage' ];
 }
 else {
-$title = __( 'New title', 'about_widget_blank_bootstrap' );
-$content = __( 'Your content', 'about_widget_blank_bootstrap' );
-$content_eng = __( 'Your content (ENG)', 'about_widget_blank_bootstrap' );
+$title = __( 'New title', 'wntblanktheme' );
+$content = __( 'Your content', 'wntblanktheme' );
+$content_eng = __( 'Your content (ENG)', 'wntblanktheme' );
 }
 // Widget admin form
 ?>

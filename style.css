@@ -9,7 +9,7 @@ Author URI: 	https://whornat.com
 License: 		GPL
 License URI: 	License.txt
 Tags: 			responsive-layout, post-formats
-Text Domain:  	wntblank_theme_child
+Text Domain:  	wntblanktheme
 */
 /* BASE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* STRUCTURE GLOBALE DU SITE ------------------------------- */
@@ -944,6 +944,9 @@ body.page .crunchify-social {
     float: none !important;
     width: 100%;
     margin: 0; } }
+@media (max-width: 767px) {
+  #masthead .navbar-toggler {
+    width: 100%; } }
 @media (max-width: 991px) {
   .withmenu_topfixed #content {
     padding-top: 8rem; }

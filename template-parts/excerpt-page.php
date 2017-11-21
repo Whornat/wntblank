@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 ?>
@@ -29,10 +29,10 @@
 			the_excerpt();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblank_theme_boot4' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblanktheme' ),
 				'after'  => '</div>',
 			) );
-        //echo'<p class="text-right"><a href='.get_the_permalink().'" class="btn btn-secondary readmore">'.esc_html__( 'Readmore', 'wntblank_theme_boot4' ).'</a></p>';
+        //echo'<p class="text-right"><a href='.get_the_permalink().'" class="btn btn-secondary readmore">'.esc_html__( 'Readmore', 'wntblanktheme' ).'</a></p>';
         ?>
 	</div><!-- .entry-content -->
 
@@ -41,7 +41,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'wntblank_theme_boot4' ),
+					esc_html__( 'Edit %s', 'wntblanktheme' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

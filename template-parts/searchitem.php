@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 ?>
@@ -15,17 +15,17 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wntblank_theme_boot4_posted_on(); ?>
+			<?php wntblanktheme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
-        <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Readmore', 'wntblank_theme_boot4' ); ?></a></p>
+        <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Readmore', 'wntblanktheme' ); ?></a></p>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer text-right">
-		<?php wntblank_theme_boot4_entry_footer(); ?>
+		<?php wntblanktheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

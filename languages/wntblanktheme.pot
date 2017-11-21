@@ -1,21 +1,145 @@
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: wntblank\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-21 14:41+0000\n"
-"PO-Revision-Date: 2017-11-21 14:41+0000\n"
-"Last-Translator: Guillaume <guillaume@pagedemarque.com>\n"
-"Language-Team: French (France)\n"
-"Language: fr-FR\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:63
+msgid "Design by"
+msgstr ""
+
 #: footer.php:63
 msgid "for"
-msgstr "pour"
+msgstr ""
+
+#: footer.php:63
+msgid "Legal Notice"
+msgstr ""
+
+#: footer.php:63
+msgid "Sitemap"
+msgstr ""
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary"
+msgstr ""
+
+#: functions.php:48
+msgid "footer Menu"
+msgstr ""
+
+#: template-parts/menu-topfixed.php:18 template-parts/menu-onepage.php:6
+#: template-parts/menu-bottomfixed.php:18 template-parts/menu.php:19
+#: template-parts/menu-topfixedonscroll.php:19
+msgid "Display menu"
+msgstr ""
+
+#: template-parts/content.php:43
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content.php:48 template-parts/excerpt.php:36
+#: template-parts/excerpt-nomducustompost.php:31
+#: template-parts/excerpt-page.php:32 template-parts/content-page.php:32
+#: template-parts/content-nomducustompost.php:34
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/searchitem.php:25 inc/excerpt-advanced.php:29
+#: inc/excerpt-advanced.php:32
+msgid "Readmore"
+msgstr ""
+
+#. %s: Name of current post
+#. %s: Name of current post
+#. %s: Name of current post
+#. %s: Name of current post
+#: template-parts/excerpt-page.php:44 template-parts/content-page.php:59
+#: template-parts/content-nomducustompost.php:61 inc/template-tags.php:72
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/biography.php:28
+msgid "Author:"
+msgstr ""
+
+#: template-parts/biography.php:33
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
 
 #. Name of the template
 msgid "Page demo masonry"
@@ -74,6 +198,62 @@ msgstr ""
 msgid "About widget Widget"
 msgstr ""
 
+#: inc/widgets-custom.php:20
+msgid "Display \"About\" bloc "
+msgstr ""
+
+#: inc/widgets-custom.php:37
+msgid "readmore"
+msgstr ""
+
+#: inc/widgets-custom.php:54
+msgid "New title"
+msgstr ""
+
+#: inc/widgets-custom.php:55
+msgid "Your content"
+msgstr ""
+
+#: inc/widgets-custom.php:56
+msgid "Your content (ENG)"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgctxt "post date"
+msgid "posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:61
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "% Comments"
+msgstr ""
+
 #. Name of the theme
 msgid "wntblank"
 msgstr ""
@@ -90,189 +270,3 @@ msgstr ""
 #. Author of the theme
 msgid "Whornat Design"
 msgstr ""
-
-#: comments.php:31
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Une réaction sur &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s réaction(s) sur &ldquo;%2$s&rdquo;"
-
-#: comments.php:40 comments.php:61
-msgid "Comment navigation"
-msgstr "Navigation commentaires"
-
-#: comments.php:43 comments.php:64
-msgid "Older Comments"
-msgstr "Anciens commentaires"
-
-#: comments.php:44 comments.php:65
-msgid "Newer Comments"
-msgstr "Nouveaux commentaires"
-
-#: comments.php:78
-msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
-
-#: footer.php:63
-msgid "Design by"
-msgstr "Un conception"
-
-#: footer.php:63
-msgid "Legal Notice"
-msgstr "Mentions Légales"
-
-#: footer.php:63
-msgid "Sitemap"
-msgstr "Plan du site"
-
-#: search.php:21
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Résultat de la recherche pour : %s"
-
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oups, la page ne peut être trouvée"
-
-#: 404.php:22
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Il semble que rien n’a été trouvé à cet endroit. Essayez un des liens ci-"
-"dessous ou faite une recherche."
-
-#: functions.php:47
-msgid "Primary"
-msgstr "Primaire"
-
-#: functions.php:48
-msgid "footer Menu"
-msgstr "Menu pied de page"
-
-#: template-parts/menu-topfixed.php:18 template-parts/menu-onepage.php:6
-#: template-parts/menu-bottomfixed.php:18 template-parts/menu.php:19
-#: template-parts/menu-topfixedonscroll.php:19
-msgid "Display menu"
-msgstr "Afficher le menu"
-
-#: template-parts/content.php:43
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Continuer la lecture %s <span class=\"meta-nav\">&rarr;</span>"
-
-#: template-parts/content.php:48 template-parts/excerpt.php:36
-#: template-parts/excerpt-nomducustompost.php:31
-#: template-parts/excerpt-page.php:32 template-parts/content-page.php:32
-#: template-parts/content-nomducustompost.php:34
-msgid "Pages:"
-msgstr "Pages :"
-
-#: template-parts/searchitem.php:25 inc/excerpt-advanced.php:29
-#: inc/excerpt-advanced.php:32
-msgid "Readmore"
-msgstr "Lire la suite"
-
-#. %s: Name of current post
-#. %s: Name of current post
-#. %s: Name of current post
-#. %s: Name of current post
-#: template-parts/excerpt-page.php:44 template-parts/content-page.php:59
-#: template-parts/content-nomducustompost.php:61 inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Modifier %s"
-
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
-msgstr "Aucun résultat trouvé"
-
-#: template-parts/content-none.php:21
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Prêt à publier votre premier article ? <a href=\"%1$s\">Cliquez ici</a>."
-
-#: template-parts/content-none.php:25
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Désolé, mais rien ne correspond à vos termes de recherche. Veuillez essayer "
-"avec un mot clés différents."
-
-#: template-parts/content-none.php:31
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Désolé, mais rien ne correspond à vos critères de recherche. Veuillez "
-"essayer encore avec des mots-clés différents."
-
-#: template-parts/biography.php:28
-msgid "Author:"
-msgstr "Auteur :"
-
-#: template-parts/biography.php:33
-#, php-format
-msgid "View all posts by %s"
-msgstr "Consultez tout les articles de %s"
-
-#: inc/widgets-custom.php:20
-msgid "Display \"About\" bloc "
-msgstr "Afficher un bloc \"A propos\""
-
-#: inc/widgets-custom.php:37
-msgid "readmore"
-msgstr "lire la suite"
-
-#: inc/widgets-custom.php:54
-msgid "New title"
-msgstr "Nouveau titre"
-
-#: inc/widgets-custom.php:55
-msgid "Your content"
-msgstr "votre contenu"
-
-#: inc/widgets-custom.php:56
-msgid "Your content (ENG)"
-msgstr "Your content (ENG)"
-
-#: inc/template-tags.php:28
-#, php-format
-msgctxt "post date"
-msgid "posted on %s"
-msgstr "posté le %s"
-
-#: inc/template-tags.php:33
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "par %s"
-
-#. used between list items, there is a space after the comma
-#: inc/template-tags.php:55
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Classé dans %1$s"
-
-#. used between list items, there is a space after the comma
-#: inc/template-tags.php:61
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Taggé  %1$s"
-
-#: inc/template-tags.php:66
-msgid "Leave a comment"
-msgstr "Laissez un commentaire"
-
-#: inc/template-tags.php:66
-msgid "1 Comment"
-msgstr "1 commentaire"
-
-#: inc/template-tags.php:66
-msgid "% Comments"
-msgstr "% Commentaires"

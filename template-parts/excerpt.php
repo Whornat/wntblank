@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 ?>
@@ -14,7 +14,7 @@
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wntblank_theme_boot4_posted_on(); ?>
+			<?php wntblanktheme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -33,15 +33,15 @@
 		<?php
 			the_excerpt();
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblank_theme_boot4' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblanktheme' ),
 				'after'  => '</div>',
 			) );
 
-        //echo'<p class="text-right"><a href='.get_the_permalink().'" class="btn btn-secondary readmore">'.esc_html__( 'Readmore', 'wntblank_theme_boot4' ).'</a></p>';
+        //echo'<p class="text-right"><a href='.get_the_permalink().'" class="btn btn-secondary readmore">'.esc_html__( 'Readmore', 'wntblanktheme' ).'</a></p>';
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer text-right">
-		<?php wntblank_theme_boot4_entry_footer(); ?>
+		<?php wntblanktheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

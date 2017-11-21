@@ -26,10 +26,10 @@ function wpm_manual_excerpt_read_more_link($excerpt) {
     	if (has_excerpt() && ! is_attachment())
 		// && get_post_type() == 'post'
 	  	{
-        	$excerpt_more = '&nbsp;<a href="' . get_permalink() . '" class="moretag excerptcustom btn btn-secondary btn-sm">'.esc_html__( 'Readmore', 'wntblank_theme_boot4' ).' <span class="screen-reader-text">' . get_the_title() . '</span></a>';
+        	$excerpt_more = '&nbsp;<a href="' . get_permalink() . '" class="moretag excerptcustom btn btn-secondary btn-sm">'.esc_html__( 'Readmore', 'wntblanktheme' ).' <span class="screen-reader-text">' . get_the_title() . '</span></a>';
     	// Si le contenu ne possède pas d'excerpt manuel, mais qu'un excerpt auto est généré 
 		}else{
-       		$excerpt_more = '&nbsp;<a href="' . get_permalink() . '" class="moretag excerptauto btn btn-secondary btn-sm">'.esc_html__( 'Readmore', 'wntblank_theme_boot4' ).'  <span class="screen-reader-text">' . get_the_title() . '</span></a>';
+       		$excerpt_more = '&nbsp;<a href="' . get_permalink() . '" class="moretag excerptauto btn btn-secondary btn-sm">'.esc_html__( 'Readmore', 'wntblanktheme' ).'  <span class="screen-reader-text">' . get_the_title() . '</span></a>';
 		}
 		// FIN --------------------------------------------------------------------
 	

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

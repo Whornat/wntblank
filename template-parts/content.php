@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php wntblank_theme_boot4_posted_on(); ?>
+			<?php wntblanktheme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -40,12 +40,12 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wntblank_theme_boot4' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wntblanktheme' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblank_theme_boot4' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wntblanktheme' ),
 				'after'  => '</div>',
 			) );
 			
@@ -78,6 +78,6 @@
     
 
 	<footer class="entry-footer text-right">
-		<?php wntblank_theme_boot4_entry_footer(); ?>
+		<?php wntblanktheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
