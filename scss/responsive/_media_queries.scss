@@ -7,9 +7,13 @@
   .site-branding.withfullbanner { min-height:100px !important;}
   .thumbnailcontainer { float: none !important; width: 100%; margin: 0}
 }
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+}
 @media (max-width: 991px) {
   .withmenu_topfixed #content{ padding-top:8rem;}
+  #primary.order-2 {-ms-flex-order:0;order:0;}
+  #primary #main {margin-left: 0; margin-right: 0;}	
 }
 @media (max-width: 1199px) {}
 
