@@ -31,13 +31,14 @@ get_header(); ?>
 					the_archive_title();
     		echo '</h1>';
 					 
-					$cpt_customizer = get_field( "cpt_customizer" ); 
-				 
-					if (!is_post_type_archive()){ 
+					//$cpt_customizer = get_field( "cpt_customizer" ); 
+					if (!is_post_type_archive() ){ 
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					}elseif (class_exists('acf')){
 						
-					}elseif (have_rows('cpt_customizer', 'option')){
-						
+							// SI IL Y A DES OPTIONS----------------
+							if (have_rows('cpt_customizer', 'option')){
+								
 							while( have_rows('cpt_customizer', 'option') ): the_row();
 							// si il s'agit bien du CPT, tu affiches la description ;)
 							if (get_sub_field('cpt_customizer_slug') == $term_name){
@@ -48,6 +49,9 @@ get_header(); ?>
 							}
 							// fin du si----
 							endwhile;
+							}
+							// FIN SI IL Y A DES OPTIONS----------------
+						
 					}
 					 
 				?>
