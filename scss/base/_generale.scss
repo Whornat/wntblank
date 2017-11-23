@@ -28,6 +28,16 @@ body.admin-bar .fixed-top { top: 32px;}
 body.admin-bar #content.paddingforfixednav { padding-top: 6.1rem;}
 /* si logger --------- */
 
+/* ------------- the_main_loop ---------------*/
+
+
+.the_main_loop {}
+.the_main_loop .thumbnailcontainer { float: left; display: block}
+
+.the_main_loop .col-md-6 .thumbnailcontainer ,
+.the_main_loop .col-md-4 .thumbnailcontainer {float: none; margin: 0 0 1rem}
+
+
 /* BOOTSTRAP HACK TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*/
 .row-full { margin-left: -28px; margin-right: -28px;}
 .row-full:after { clear: both; content: ""; display: table;}
