@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-23 11:00+0000\n"
+"POT-Creation-Date: 2017-11-23 15:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,6 +13,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
+
+#: bootstrap_pagination.php:11 bootstrap_pagination.php:60
+msgid "previous"
+msgstr ""
+
+#: bootstrap_pagination.php:12 bootstrap_pagination.php:75
+msgid "next"
+msgstr ""
+
+#: bootstrap_pagination.php:57
+msgid "first"
+msgstr ""
+
+#: bootstrap_pagination.php:79
+msgid "last"
+msgstr ""
 
 #: comments.php:31
 #, php-format

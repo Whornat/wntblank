@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wntblank\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-21 14:23+0000\n"
-"PO-Revision-Date: 2017-11-21 14:38+0000\n"
+"POT-Creation-Date: 2017-11-21 14:41+0000\n"
+"PO-Revision-Date: 2017-11-21 14:41+0000\n"
 "Last-Translator: Guillaume <guillaume@pagedemarque.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr-FR\n"
@@ -12,6 +12,84 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
+
+#: footer.php:63
+msgid "for"
+msgstr "pour"
+
+#. Name of the template
+msgid "Page demo masonry"
+msgstr ""
+
+#. Name of the template
+msgid "Page demo image"
+msgstr ""
+
+#. Name of the template
+msgid "Page demo animate"
+msgstr ""
+
+#. Name of the template
+msgid "Scrollmagic"
+msgstr ""
+
+#. Name of the template
+msgid "Page editor"
+msgstr ""
+
+#. Name of the template
+msgid "Page demo Composants BOOTSTRAP"
+msgstr ""
+
+#. Name of the template
+msgid "Paroller"
+msgstr ""
+
+#. Name of the template
+msgid "Page demo typography"
+msgstr ""
+
+#. Name of the template
+msgid "Scrollmagic custom"
+msgstr ""
+
+#. Name of the template
+msgid "Page Full"
+msgstr ""
+
+#. Name of the template
+msgid "Plan du site"
+msgstr ""
+
+#. Name of the template
+msgid "Onepage-scrolling"
+msgstr ""
+
+#. Name of the template
+msgid "Listing page enfant"
+msgstr ""
+
+#. Widget name will appear in UI
+#: inc/widgets-custom.php:17
+msgid "About widget Widget"
+msgstr ""
+
+#. Name of the theme
+msgid "wntblank"
+msgstr ""
+
+#. Description of the theme
+msgid "wntblank Parent Theme"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://whornat.com"
+msgstr ""
+
+#. Author of the theme
+msgid "Whornat Design"
+msgstr ""
 
 #: comments.php:31
 #, php-format
@@ -143,63 +221,6 @@ msgstr "Auteur :"
 msgid "View all posts by %s"
 msgstr "Consultez tout les articles de %s"
 
-#. Name of the template
-msgid "Page demo masonry"
-msgstr ""
-
-#. Name of the template
-msgid "Page demo image"
-msgstr ""
-
-#. Name of the template
-msgid "Page demo animate"
-msgstr ""
-
-#. Name of the template
-msgid "Scrollmagic"
-msgstr ""
-
-#. Name of the template
-msgid "Page editor"
-msgstr ""
-
-#. Name of the template
-msgid "Page demo Composants BOOTSTRAP"
-msgstr ""
-
-#. Name of the template
-msgid "Paroller"
-msgstr ""
-
-#. Name of the template
-msgid "Page demo typography"
-msgstr ""
-
-#. Name of the template
-msgid "Scrollmagic custom"
-msgstr ""
-
-#. Name of the template
-msgid "Page Full"
-msgstr ""
-
-#. Name of the template
-msgid "Plan du site"
-msgstr ""
-
-#. Name of the template
-msgid "Onepage-scrolling"
-msgstr ""
-
-#. Name of the template
-msgid "Listing page enfant"
-msgstr ""
-
-#. Widget name will appear in UI
-#: inc/widgets-custom.php:17
-msgid "About widget Widget"
-msgstr ""
-
 #: inc/widgets-custom.php:20
 msgid "Display \"About\" bloc "
 msgstr "Afficher un bloc \"A propos\""
@@ -255,20 +276,3 @@ msgstr "1 commentaire"
 #: inc/template-tags.php:66
 msgid "% Comments"
 msgstr "% Commentaires"
-
-#. Name of the theme
-msgid "wntblank"
-msgstr ""
-
-#. Description of the theme
-msgid "wntblank Parent Theme"
-msgstr ""
-
-#. URI of the theme
-#. Author URI of the theme
-msgid "https://whornat.com"
-msgstr ""
-
-#. Author of the theme
-msgid "Whornat Design"
-msgstr ""
