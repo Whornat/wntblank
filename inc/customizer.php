@@ -2,7 +2,7 @@
 /**
  * wntblank_theme_boot4 Theme Customizer.
  *
- * @package wntblank_theme_boot4
+ * @package wntblanktheme
  */
 
 /**
@@ -40,10 +40,10 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_section(
 	'mytheme_structure_options',
 	array(
-		'title'       => __( 'Structure du theme', 'mytheme' ),
+		'title'       => __( 'Theme\'s structure', 'wntblanktheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblank_theme_boot4'),
+		'description' => __('Changing default theme settings "wntblank": menu style, structures, etc.', 'wntblanktheme'),
 	)
 	);
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
@@ -51,10 +51,10 @@ function wntblank_themeoptions( $wp_customize ) {
 	'mytheme_fonctionnality_options',
 	// 2eme section
 	array(
-		'title'       => __( 'Fonctionnalités du theme', 'mytheme' ),
+		'title'       => __( 'Theme\'s features', 'wntblanktheme' ),
 		'priority'    => 100,
 		'capability'  => 'edit_theme_options',
-		'description' => __('Enabled advanced setting', 'wntblank_theme_boot4'),
+		'description' => __('Enabled advanced setting', 'wntblanktheme'),
 	)
 	);
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
@@ -93,7 +93,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3) JE CRE L'INTERFACE ----------------------------------
 	$wp_customize->add_control('control_content_position',
 	array(
-		'label'    => __( 'Content position', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Content position', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'content_position',
 		'type'     => 'radio',
@@ -107,7 +107,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3) JE CRE L'INTERFACE ----------------------------------
 	$wp_customize->add_control('control_archive_column',
 	array(
-		'label'    => __( 'Archive column', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Archive column', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'archive_column',
 		'type'     => 'radio',
@@ -125,7 +125,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2nd parametre pour la taille
 	$wp_customize->add_control('control_content_size',
 	array(
-		'label'    => __( 'Content size', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Content size', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'content_size',
 		'type'     => 'radio',
@@ -140,7 +140,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2nd parametre pour la taille
 	$wp_customize->add_control('control_sidebar_size',
 	array(
-		'label'    => __( 'Sidebar size', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Sidebar size', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'sidebar_size',
 		'type'     => 'radio',
@@ -158,7 +158,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_type',
 	array(
-		'label'    => __( 'Menu type', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Menu type', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'topmenu_type',
 		'type'     => 'radio',
@@ -176,7 +176,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_style',
 	array(
-		'label'    => __( 'Menu style', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Menu style', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'topmenu_style',
 		'type'     => 'radio',
@@ -191,7 +191,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_bg',
 	array(
-		'label'    => __( 'Menu Background', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Menu Background', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'topmenu_bg',
 		'type'     => 'radio',
@@ -210,7 +210,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_align',
 	array(
-		'label'    => __( 'Menu Align', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Menu Align', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'topmenu_align',
 		'type'     => 'radio',
@@ -226,7 +226,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3nd parametre pour le menu
 	$wp_customize->add_control('control_topmenu_logo',
 	array(
-		'label'    => __( 'Logo in Navbar', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Logo in Navbar', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'topmenu_logo',
 		'type'     => 'radio',
@@ -245,7 +245,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 4eme parametre pour le branding
 	$wp_customize->add_control('control_branding_type',
 	array(
-		'label'    => __( 'Branding type', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Branding type', 'wntblanktheme' ),
 		'section'  => 'mytheme_structure_options',
 		'settings' => 'branding_type',
 		'type'     => 'radio',
@@ -268,7 +268,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 1 parametre pour le controle des slider
 	$wp_customize->add_control('control_sliderscript',
 	array(
-		'label'    => __( 'Script for slider', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Script for slider', 'wntblanktheme' ),
 		'section'  => 'mytheme_fonctionnality_options',
 		'settings' => 'slider_script',
 		'type'     => 'radio',
@@ -283,7 +283,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 1 parametre pour Parallax script
 	$wp_customize->add_control('control_parallaxscript',
 	array(
-		'label'    => __( 'Script for parallax', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Script for parallax', 'wntblanktheme' ),
 		'section'  => 'mytheme_fonctionnality_options',
 		'settings' => 'parallax_script',
 		'type'     => 'radio',
@@ -299,7 +299,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2 parametre clefgoogleMAP
 	$wp_customize->add_control('control_googlemapkey',
 	array(
-		'label'    => __( 'googlemapkey', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Googlemapkey', 'wntblanktheme' ),
 		'section'  => 'mytheme_fonctionnality_options',
 		'settings' => 'googlemapkey',
 		'type'     => 'text'
@@ -309,7 +309,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 3 parametre clefgoogleMAP
 	$wp_customize->add_control('control_googleanalyticsID',
 	array(
-		'label'    => __( 'Google Analytics ID', 'wntblank_theme_boot4' ),
+		'label'    => __( 'Google Analytics ID', 'wntblanktheme' ),
 		'section'  => 'mytheme_fonctionnality_options',
 		'settings' => 'googleanalyticsID',
 		'type'     => 'text'
