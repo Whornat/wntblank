@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-21 14:41+0000\n"
+"POT-Creation-Date: 2017-11-23 11:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -216,6 +216,79 @@ msgstr ""
 
 #: inc/widgets-custom.php:56
 msgid "Your content (ENG)"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "Theme's structure"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid ""
+"Changing default theme settings \"wntblank\": menu style, structures, etc."
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Theme's features"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Enabled advanced setting"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Content position"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Archive column"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Content size"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid "Sidebar size"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "Menu type"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Menu style"
+msgstr ""
+
+#: inc/customizer.php:194
+msgid "Menu Background"
+msgstr ""
+
+#: inc/customizer.php:213
+msgid "Menu Align"
+msgstr ""
+
+#: inc/customizer.php:229
+msgid "Logo in Navbar"
+msgstr ""
+
+#: inc/customizer.php:248
+msgid "Branding type"
+msgstr ""
+
+#: inc/customizer.php:271
+msgid "Script for slider"
+msgstr ""
+
+#: inc/customizer.php:286
+msgid "Script for parallax"
+msgstr ""
+
+#: inc/customizer.php:302
+msgid "Googlemapkey"
+msgstr ""
+
+#: inc/customizer.php:312
+msgid "Google Analytics ID"
 msgstr ""
 
 #: inc/template-tags.php:28
