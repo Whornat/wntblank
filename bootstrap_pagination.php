@@ -8,8 +8,8 @@ function wp_bootstrap_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( 'previous', 'wntblank_theme_boot4' ),
-        'next_string'     => __( 'next', 'wntblank_theme_boot4' ),
+        'previous_string' => __( 'previous', 'wntblanktheme' ),
+        'next_string'     => __( 'next', 'wntblanktheme' ),
         'before_output'   => '<nav class="post-nav"><ul class="pagination">',
         'after_output'    => '</ul></nav>'
     );
@@ -54,10 +54,10 @@ function wp_bootstrap_pagination( $args = array() ) {
     
     $firstpage = esc_attr( get_pagenum_link(1) );
     if ( $firstpage && (1 != $page) )
-        $echo .= '<li class="page-item previous"><a class="page-link" href="' . $firstpage . '" title="' . __( 'first', 'wntblank_theme_boot4' ) . '">⟨⟨</a></li>';
+        $echo .= '<li class="page-item previous"><a class="page-link" href="' . $firstpage . '" title="' . __( 'first', 'wntblanktheme' ) . '">⟨⟨</a></li>';
 
     if ( $previous && (1 != $page) )
-        $echo .= '<li class="page-item previous"><a class="page-link" href="' . $previous . '" title="' . __( 'previous', 'wntblank_theme_boot4') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li class="page-item previous"><a class="page-link" href="' . $previous . '" title="' . __( 'previous', 'wntblanktheme') . '">' . $args['previous_string'] . '</a></li>';
     
     if ( !empty($min) && !empty($max) ) {
         for( $i = $min; $i <= $max; $i++ ) {
@@ -72,11 +72,11 @@ function wp_bootstrap_pagination( $args = array() ) {
     $next = intval($page) + 1;
     $next = esc_attr( get_pagenum_link($next) );
     if ($next && ($count != $page) )
-        $echo .= '<li class="page-item next"><a class="page-link" href="' . $next . '" title="' . __( 'next', 'wntblank_theme_boot4') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li class="page-item next"><a class="page-link" href="' . $next . '" title="' . __( 'next', 'wntblanktheme') . '">' . $args['next_string'] . '</a></li>';
     
     $lastpage = esc_attr( get_pagenum_link($count) );
     if ( $lastpage ) {
-        $echo .= '<li class="page-item next"><a class="page-link" href="' . $lastpage . '" title="' . __( 'last', 'wntblank_theme_boot4' ) . '">⟩⟩</a></li>';
+        $echo .= '<li class="page-item next"><a class="page-link" href="' . $lastpage . '" title="' . __( 'last', 'wntblanktheme' ) . '">⟩⟩</a></li>';
     }
 
     if ( isset($echo) )
