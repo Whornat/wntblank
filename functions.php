@@ -102,7 +102,12 @@ function wntblanktheme_scripts() {
 	}
 
 	// Integration Font AWESOME --------------------
-	wp_enqueue_style('wntblanktheme-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	//wp_enqueue_style('wntblanktheme-font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	//WITH JS
+	//wp_enqueue_script( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.0.1/JS-mode/js/fontawesome-all.js', array(), null, true );
+	//WITH CSS
+	wp_enqueue_style( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.0.1/CSS-mode/css/fontawesome-all.css' );
+	
 
 	// Integration modernizr en version light : nécessaire pour scrollmagic --------------------
 	wp_enqueue_script( 'wntblanktheme-scrollmagic_scrollmagic-modernizr_script', get_template_directory_uri() . '/JS/modernizr.custom.min.js','','',false );
