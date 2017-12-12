@@ -226,6 +226,9 @@ figure.gallery-item.cap-full figcaption { left: 0; bottom: 0; width: 100%; heigh
 /* MENUS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* NAVIGATION ---------------------------------------------- */
 /* --------------------------------------------------------- */
+/* Gestion des icones FontAwesome dans le menu */
+.nav-link > i { margin-right: 5px; }
+
 /* rajoute du padding d/g au lien de la navbar par defaut */
 .navbar-nav .nav-link { padding: 0.5rem; }
 

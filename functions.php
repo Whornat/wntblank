@@ -193,7 +193,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * AJOUT MENU BOOTSTRAP.
  */
-require_once('bootstrap_bs4navwalker.php');
+require_once('class-wp-bootstrap-navwalker.php');
 // Register Custom Navigation Walker
 require_once('bootstrap_pagination.php');
 

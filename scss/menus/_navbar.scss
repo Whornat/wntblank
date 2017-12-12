@@ -1,6 +1,9 @@
 /* NAVIGATION ---------------------------------------------- */
 /* --------------------------------------------------------- */
 
+/* Gestion des icones FontAwesome dans le menu */
+.nav-link > i { margin-right: 5px}
+
 /* rajoute du padding d/g au lien de la navbar par defaut */
 .navbar-nav .nav-link { padding: 0.5rem;}
 .navbar-nav .nav-link.active { background:rgba($color_white, 0.2)}

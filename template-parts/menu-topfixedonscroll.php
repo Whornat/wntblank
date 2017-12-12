@@ -30,8 +30,8 @@
     'menu_id'         => false,
     'menu_class'      => 'navbar-nav',
     'depth'           => 2,
-    'fallback_cb'     => 'bs4navwalker::fallback',
-    'walker'          => new bs4navwalker())
+    'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+    'walker'			=> new WP_Bootstrap_Navwalker())
 );
 ?>
 </nav><!-- .navbar -->
