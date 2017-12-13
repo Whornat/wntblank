@@ -13,7 +13,7 @@
 		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );	?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-excerpt">
 	<?php 
 	 	// affichage de l'image FEATURED SI STICKY!!!!!
 		if ( '' != get_the_post_thumbnail()) {

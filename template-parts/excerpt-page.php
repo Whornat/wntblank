@@ -14,7 +14,7 @@
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-excerpt">
     
         
     <?php // Affichage de l'image featured ?>

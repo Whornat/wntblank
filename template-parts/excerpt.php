@@ -20,7 +20,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-excerpt">
 
     <?php // Affichage de l'image featured ?>
 	<?php if ( '' != get_the_post_thumbnail()) { ?>

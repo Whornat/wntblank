@@ -20,7 +20,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-excerpt">
 
 <?php
 		$content = apply_filters( 'the_content', get_the_content() );
