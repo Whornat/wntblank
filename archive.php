@@ -57,31 +57,18 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<div class="the_main_loop <?php if (get_theme_mod('archive_column') !== ''){echo'row';};?>">
+			<div class="the_main_loop row <?php //if (get_theme_mod('archive_column') !== ''){echo'row';};?>">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 			
 			// SI PAS DE COLONNAGE DE SELECTIONNEE ------------
-			if (get_theme_mod('archive_column') == ''){
 
 				if ('post' === get_post_type()){
 				get_template_part( 'template-parts/excerpt', get_post_format() );
 				}else{
 				get_template_part( 'template-parts/excerpt', get_post_type() );
 				}
-				
-			// SI UN COLONNAGE DE SELECTIONNEE ------------
-			}else{
-				echo'<div class="'.get_theme_mod('archive_column').'">';	
-				if ('post' === get_post_type()){
-				get_template_part( 'template-parts/excerpt', get_post_format() );
-				}else{
-				get_template_part( 'template-parts/excerpt', get_post_type() );
-				}
-				echo'</div><!-- .'.get_theme_mod('archive_column').'--> ';	
-			}
-			// FIN SI "control_archive_column" ------------
 
 			endwhile;
 			wp_bootstrap_pagination();
