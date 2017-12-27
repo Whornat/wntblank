@@ -65,7 +65,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'content_size',	array('default' => 'col', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
-	$wp_customize->add_setting( 'archive_column',	array('default' => '', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'archive_column',	array('default' => 'col-12', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille de la sidebarre
 	$wp_customize->add_setting( 'sidebar_size',	array('default' => 'col-lg-3', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
@@ -112,7 +112,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'archive_column',
 		'type'     => 'radio',
 		'choices'  => array(
-			''  => 'none',
+			'col-12'  => 'none',
 			'col-md-6' => '2',
 			'col-md-6 col-lg-4' => '4'
 		),
