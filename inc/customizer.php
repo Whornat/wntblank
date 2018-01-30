@@ -63,7 +63,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => '', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
-	$wp_customize->add_setting( 'content_size',	array('default' => 'col', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'content_size',	array('default' => 'col-9', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'archive_column',	array('default' => 'col-12', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille de la sidebarre
@@ -130,7 +130,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'content_size',
 		'type'     => 'radio',
 		'choices'  => array(
-			'col'  => 'Standard',
+			'col-lg-9'  => 'Standard',
 			'col-lg-8' => 'Smaller',
 			'col-lg-12' => 'Full',
 		),
