@@ -66,6 +66,8 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'content_size',	array('default' => 'col-9', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'archive_column',	array('default' => 'col-12', 'transport' => 'postMessage'));
+	// 2nd parametre pour la taille du content
+	$wp_customize->add_setting( 'grid_layout',	array('default' => 'default', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille de la sidebarre
 	$wp_customize->add_setting( 'sidebar_size',	array('default' => 'col-lg-3', 'transport' => 'postMessage'));
 	// 3eme parametre pour le menu
@@ -118,6 +120,22 @@ function wntblank_themeoptions( $wp_customize ) {
 		),
 	)
 	);
+	
+	// 3) JE CRE L'INTERFACE ----------------------------------
+	$wp_customize->add_control('control_grid_layout',
+	array(
+		'label'    => __( 'Grid layout', 'wntblanktheme' ),
+		'section'  => 'mytheme_structure_options',
+		'settings' => 'grid_layout',
+		'type'     => 'radio',
+		'choices'  => array(
+			'default'  => 'standard',
+			'masonry' => 'Masonry',
+			'card-columns' => 'Card columns'
+		),
+	)
+	);
+	
 	
 	
 	

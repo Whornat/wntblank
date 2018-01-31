@@ -58,6 +58,9 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<div class="the_main_loop row <?php //if (get_theme_mod('archive_column') !== ''){echo'row';};?>">
+			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'<div class="card-columns">';};?>
+				
+				
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -65,13 +68,23 @@ get_header(); ?>
 			// SI PAS DE COLONNAGE DE SELECTIONNEE ------------
 
 				if ('post' === get_post_type()){
-				get_template_part( 'template-parts/excerpt', get_post_format() );
+					//grid_layout
+					if (get_theme_mod('grid_layout') == 'card-columns'){ get_template_part( 'template-parts/card', get_post_format() );
+						}else{
+						get_template_part( 'template-parts/excerpt', get_post_format() );
+					}
+					//grid_layout
 				}else{
-				get_template_part( 'template-parts/excerpt', get_post_type() );
+					//grid_layout
+					if (get_theme_mod('grid_layout') == 'card-columns'){ get_template_part( 'template-parts/card', get_post_type() );
+						}else{
+						get_template_part( 'template-parts/excerpt', get_post_type() );
+					}
+					//grid_layout					
 				}
 
 			endwhile;
-			wp_bootstrap_pagination();
+			//wp_bootstrap_pagination();
 			//the_posts_navigation();
 			else :
 			get_template_part( 'template-parts/content', 'none' );
@@ -79,6 +92,11 @@ get_header(); ?>
 			
 			
 		endif; ?>
+				
+			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'</div><!--.card-columns-->';};?>
+			<?php  wp_bootstrap_pagination();?>
+
+				
 			</div><!-- .the_main_loop -->
 			
 		</main><!-- #main -->
