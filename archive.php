@@ -7,53 +7,49 @@
  * @package wntblanktheme
  */
 
-get_header(); ?>
+get_header(); 
+
+		//print_r(get_queried_object());
+		// get the current taxonomy term
+		$term = get_queried_object();
+		$term_id = get_queried_object()->term_id;
+		$term_name = get_queried_object()->name;
+		$image_id = get_term_meta( $term_id, 'image', true );
+		$image_term = get_field('image_term', $term);
+		// thumbnail
+		$image_term_size = 'thumbnail';
+		$image_term_thumbnail = $image_term['sizes'][ $image_term_size ];
+		$image_term_alt = $image_term['alt'];
+		// color			 
+		$color = get_field('color', $term);	
+?>
+<?php if ($color !== ''){?>
+<style type="text/css">
+	.page-header .page-title { color: <?php echo $color;?>}
+	.the_main_loop .btn-secondary { background-color: <?php echo $color;?>}
+</style>
+<?php }?>
+
 
 	<?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
 	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
 		<main id="main" class="site-main" role="main">
 		<?php
 		if ( have_posts() ) : ?>
-
+			
 		<header class="page-header">
-           		 <h1 class="page-title">
-				<?php
-			 //print_r(get_queried_object());
-		$term_id = get_queried_object()->term_id;
-		$term_name = get_queried_object()->name;
-		$image_id = get_term_meta( $term_id, 'image', true );
-		if ( ! empty( $image_id ) ) {
-			$image_atts = wp_get_attachment_image_src( $image_id, 'thumbnail' );
-			$image_url = $image_atts[0];
-    		echo '<img src="' . esc_url( $image_atts[0] ) . '" alt="'.$term_name.'" class="image_term"/>';
-			}
-
-					the_archive_title();
-    		echo '</h1>';
-					 
-					//$cpt_customizer = get_field( "cpt_customizer" ); 
+           		 <h1 class="page-title" ><?php the_archive_title();?></h1>
+		<?php
 					if (!is_post_type_archive() ){ 
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					}elseif (class_exists('acf')){
-						
-							// SI IL Y A DES OPTIONS----------------
-							if (have_rows('cpt_customizer', 'option')){
-								
-							while( have_rows('cpt_customizer', 'option') ): the_row();
-							// si il s'agit bien du CPT, tu affiches la description ;)
-							if (get_sub_field('cpt_customizer_slug') == $term_name){
-								//the_sub_field('cpt_customizer_slug');
-								echo'<div class="cpt-description">';
-								the_sub_field('cpt_customizer_description');
-								echo'</div>';
-							}
-							// fin du si----
-							endwhile;
-							}
-							// FIN SI IL Y A DES OPTIONS----------------
-						
-					}
-					 
+						echo'<div class="taxonomy-description">';
+						//IMAGE --------------------------------
+						if ( '' != $image_term_thumbnail ) { 
+							 echo'<img src="'.$image_term_thumbnail.'" alt="'.$image_term_alt.'" class="image_term alignleft" />';
+						};	
+						//IMAGE --------------------------------
+						the_archive_description();
+						echo'</div><!--taxonomy-description-->';				
+					}					 
 				?>
 			</header><!-- .page-header -->
 
