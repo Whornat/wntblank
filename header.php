@@ -42,5 +42,15 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-    <div class="container">
+	<?php 
+		$postid = get_the_ID();
+		$pagesize = get_field('pagesize', $postid);
+		//echo $postid;
+		//echo $pagesize;
+		if ($pagesize == ''){
+			echo '<div class="container">';
+		}else{
+			echo '<div class="'.$pagesize.'">';
+		} 
+	?>
     <div class="row row-site-content">

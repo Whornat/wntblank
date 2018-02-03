@@ -57,8 +57,10 @@ function wntblanktheme_entry_footer() {
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '','<span class="sep"></span>' );
+		//$tags_list = get_the_tag_list( '<ul class="list-inline"><li class="list-inline-item btn btn-secondary btn-sm">','</li><li class="list-inline-item btn btn-secondary btn-sm">','</li></ul>');
+		
 		if ( $tags_list ) {
-			printf( '<div class="tags-links btn-group" role="group" aria-label="Tag list">' . esc_html__( 'Tagged %1$s', 'wntblanktheme' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tags-links btn-group" role="group" aria-label="Tag list">' . esc_html__( 'Tagged %1$s', 'wntblanktheme' ) . '</div>', $tags_list ); 
 		}
 	}
 
