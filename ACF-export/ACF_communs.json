@@ -5,8 +5,8 @@
         "fields": [
             {
                 "key": "field_5a75fcf2a5bb5",
-                "label": "pagesize",
-                "name": "Format de la page",
+                "label": "Format de la page",
+                "name": "pagesize",
                 "type": "radio",
                 "instructions": "",
                 "required": 0,
