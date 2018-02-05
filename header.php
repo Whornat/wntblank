@@ -42,7 +42,11 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-	<?php 
+	<?php
+// TESTER SI ACF est installé --------------------------------------------
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
+if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) || is_plugin_active( 'advanced-custom-fields/acf.php' )) {
+		
 		$postid = get_the_ID();
 		$pagesize = get_field('pagesize', $postid);
 		//echo $postid;
@@ -51,6 +55,10 @@
 			echo '<div class="container">';
 		}else{
 			echo '<div class="'.$pagesize.'">';
-		} 
+		}
+	
+}else{echo '<div class="container">';}
+// TESTER SI ACF est installé --------------------------------------------			
+			
 	?>
     <div class="row row-site-content">
