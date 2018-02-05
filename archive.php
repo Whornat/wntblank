@@ -41,7 +41,7 @@ get_header();
            		 <h1 class="page-title" ><?php the_archive_title();?></h1>
 		<?php
 					if (!is_post_type_archive() ){ 
-						echo'<div class="taxonomy-description">';
+						echo'<div class="taxonomy-description clearfix">';
 						//IMAGE --------------------------------
 						if ( '' != $image_term_thumbnail ) { 
 							 echo'<img src="'.$image_term_thumbnail.'" alt="'.$image_term_alt.'" class="image_term alignleft" />';
