@@ -63,7 +63,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => '', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
-	$wp_customize->add_setting( 'content_size',	array('default' => 'col-9', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'content_size',	array('default' => 'col-lg-9', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
 	$wp_customize->add_setting( 'archive_column',	array('default' => 'col-12', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
@@ -87,7 +87,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// ********************************************
 	//****** pour la 2eme section *****************
 	// ********************************************
-	$wp_customize->add_setting( 'slider_script',	array('noslider' => 'none', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'slider_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'parallax_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
@@ -291,7 +291,7 @@ function wntblank_themeoptions( $wp_customize ) {
 		'settings' => 'slider_script',
 		'type'     => 'radio',
 		'choices'  => array(
-			'noslider'  => 'aucun',
+			'none'  => 'aucun',
 			'royalslider' => 'RoyalSlider',
 			'flexslider' => 'Flexslider',
 		),
