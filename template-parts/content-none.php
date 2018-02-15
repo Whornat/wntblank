@@ -9,12 +9,12 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="hentry no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wntblanktheme' ); ?></h1>
+		<h1 class="page-title text-center"><?php esc_html_e( 'Nothing Found', 'wntblanktheme' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="entry-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
