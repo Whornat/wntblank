@@ -80,6 +80,9 @@ get_header();
 				}
 
 			endwhile;
+			if (get_theme_mod('grid_layout') == 'card-columns'){echo'</div><!--.card-columns-->';};
+			echo '</div><!-- .the_main_loop -->';
+				
 			//wp_bootstrap_pagination();
 			//the_posts_navigation();
 			else :
@@ -89,11 +92,9 @@ get_header();
 			
 		endif; ?>
 				
-			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'</div><!--.card-columns-->';};?>
 			<?php  wp_bootstrap_pagination();?>
 
 				
-			</div><!-- .the_main_loop -->
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->
