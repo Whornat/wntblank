@@ -10,7 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+    <?php // Affichage de l'image featured ?>
+	<?php if ( '' != get_the_post_thumbnail() && get_field('topbanner')) { ?>
+		<header class="entry-header with_banner" style="background-image: url('<?php the_post_thumbnail_url( 'banner' );?>')">
+	<?php }else{ ?>
+		<header class="entry-header">
+	<?php }?>
+    <?php // Fin Affichage de l'image featured ?>	
+	
 		<h1 class="entry-title">
     <?php 
 	// SI L'ID du parent est égal à l'ID de la page, je n'affiche pas LE LIEN DU PARENT
