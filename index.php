@@ -18,8 +18,8 @@ get_header(); ?>
 	<div id="primary" class="<?php echo $content_size ?> content-area <?php echo get_theme_mod('content_position') ?>">
 
 		<main id="main" class="site-main" role="main">
-
-		<?php
+			<div class="the_main_loop row">
+	<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+		</div><!--.the_main_loop-->				
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

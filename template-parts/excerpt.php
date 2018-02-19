@@ -10,7 +10,7 @@
 ?>
 <?php 
 $colonnage = 'col-12';
-$colonnage = get_theme_mod('archive_column');
+if (get_theme_mod('archive_column')){$colonnage = get_theme_mod('archive_column');};
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($colonnage); ?>>
