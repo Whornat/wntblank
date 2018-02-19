@@ -38,7 +38,13 @@
 <div id="page" class="site withmenu_<?php echo get_theme_mod('topmenu_type')?>">
 	<header id="masthead" class="site-header">
     	<?php get_template_part( 'template-parts/branding', get_theme_mod('branding_type')); ?>
+
+		<?php if (is_front_page() && is_page_template('template-pages/onepage-scrolling.php')) { // This is a homepage ?>
+    	<?php get_template_part( 'template-parts/menu_home', get_theme_mod('topmenu_type') ); ?>
+		<?php }else{ // This is a homepage ?>
     	<?php get_template_part( 'template-parts/menu', get_theme_mod('topmenu_type') ); ?>
+		<?php } // This is a homepage ?>	
+	
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
