@@ -9,12 +9,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php // Affichage de l'image featured ?>
+    <?php // Affichage de l'image featured
+	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) || is_plugin_active( 'advanced-custom-fields/acf.php' )) { ?>
 	<?php if ( '' != get_the_post_thumbnail() && get_field('topbanner')) { ?>
 		<header class="entry-header with_banner" style="background-image: url('<?php the_post_thumbnail_url( 'banner' );?>')">
 	<?php }else{ ?>
 		<header class="entry-header">
-	<?php }?>
+	<?php 
+	}
+	}?>
+
     <?php // Fin Affichage de l'image featured ?>
 		<?php
 			if ( is_single() ) {
