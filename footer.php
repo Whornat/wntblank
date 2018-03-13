@@ -60,7 +60,7 @@ wp_nav_menu( array(
 			$site_url = network_site_url( '/' );
 			?>
             
-            <p class="credits"><?php _e( 'Design by', 'wntblanktheme' ); ?> <a href="<?php echo $infostheme->get( 'AuthorURI' ); ?>" target="blank" class="author_site"><?php echo $infostheme->get( 'Author' ); ?></a> <?php _e( 'for', 'wntblanktheme'); ?> <a href="<?php echo $site_url; ?>" class="client_site" title="<?php echo $descriptiondusite; ?>"><?php echo $nomdusite; ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>" class="mentionslegales"><?php _e( 'Legal Notice', 'wntblanktheme' ); ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Plan du site' ) ); ?>" class="plandusite" title="plan du site"><?php _e( 'Sitemap', 'wntblanktheme' ); ?></a></p>		
+            <p class="credits"><span class="author_credit"><?php _e( 'Design by', 'wntblanktheme' ); ?> <a href="<?php echo $infostheme->get( 'AuthorURI' ); ?>" target="blank" class="author_site"><?php echo $infostheme->get( 'Author' ); ?></a></span> <span class="for_credit"><?php _e( 'for', 'wntblanktheme'); ?></span> <a href="<?php echo $site_url; ?>" class="client_site" title="<?php echo $descriptiondusite; ?>"><?php echo $nomdusite; ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Mentions légales' ) ); ?>" class="mentionslegales"><?php _e( 'Legal Notice', 'wntblanktheme' ); ?></a> <span class="pipe">|</span> <a href="<?php echo get_permalink( get_page_by_title( 'Plan du site' ) ); ?>" class="plandusite" title="plan du site"><?php _e( 'Sitemap', 'wntblanktheme' ); ?></a></p>		
         </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
