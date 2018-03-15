@@ -219,6 +219,12 @@ require get_template_directory() . '/inc/scrollmagic.php';
  * Customisation Tiny MCE
  */
 require get_template_directory() . '/inc/tinymce.php';
+/**
+ * AUTO GALLERY 
+ */
+require get_template_directory() . '/inc/autogallery.php';
+
+
  /**
  * CREATION DE CUSTOM POST & TAXONOMIE
  */
