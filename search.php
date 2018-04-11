@@ -21,32 +21,46 @@ get_header(); ?>
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'wntblanktheme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
+			<div class="the_main_loop row <?php //if (get_theme_mod('archive_column') !== ''){echo'row';};?>">
+			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'<div class="card-columns">';};?>
+				
+				
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+			
+			// SI PAS DE COLONNAGE DE SELECTIONNEE ------------
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-			if ('post' === get_post_type()){
-			get_template_part( 'template-parts/searchitem', get_post_format() );
-			}else{
-			get_template_part( 'template-parts/searchitem', get_post_type() );
-			}
+				if ('post' === get_post_type()){
+					//grid_layout
+					if (get_theme_mod('grid_layout') == 'card-columns'){ get_template_part( 'template-parts/card', get_post_format() );
+						}else{
+						get_template_part( 'template-parts/searchitem', get_post_format() );
+					}
+					//grid_layout
+				}else{
+					//grid_layout
+					if (get_theme_mod('grid_layout') == 'card-columns'){ get_template_part( 'template-parts/card', get_post_type() );
+						}else{
+						get_template_part( 'template-parts/searchitem', get_post_type() );
+					}
+					//grid_layout					
+				}
 
 			endwhile;
-
+			if (get_theme_mod('grid_layout') == 'card-columns'){echo'</div><!--.card-columns-->';};
+			echo '</div><!-- .the_main_loop -->';
+				
+			//wp_bootstrap_pagination();
 			//the_posts_navigation();
-			wp_bootstrap_pagination();
-
-		else :
-
+			else :
 			get_template_part( 'template-parts/content', 'none' );
-
+			
+			
+			
 		endif; ?>
-
+							
+			<?php  wp_bootstrap_pagination();?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
