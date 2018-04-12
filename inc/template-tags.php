@@ -77,7 +77,7 @@ function wntblanktheme_entry_footer() {
 		'',
 		'',
 		'',
-		'edit-link btn btn-sm btn-secondary'
+		'edit-link btn btn-xs btn-outline-primary'
 	);
 }
 endif;

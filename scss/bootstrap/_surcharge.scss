@@ -8,6 +8,9 @@
 	margin: 3px 0;
 }
 
+.btn-group-xs > .btn, .btn-xs {	padding: .15rem .25rem !important;	font-size: .65rem !important;	line-height: 1.25 !important; letter-spacing: 1px}
+
+
 .card-columns {
 	//-webkit-column-count: $card-columns;
 	//column-count: $card-columns;
