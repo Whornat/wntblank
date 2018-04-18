@@ -84,7 +84,7 @@ add_action( 'after_setup_theme', 'wntblanktheme_content_width', 0 );
 function wntblanktheme_scripts() {
 
 	// Integration BOOTSTRAP 4-alpha6 --------------------
-	wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/css/bootstrap.min.css');
+	wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.1.0/css/bootstrap.min.css');
 	// ma version custom en dessous
 	//wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/bootstrap.css');
 
@@ -133,7 +133,7 @@ function wntblanktheme_scripts() {
 	wp_enqueue_script('wntblanktheme-popper', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/popper.min.js','','',true );
 	
 
-	wp_enqueue_script('wntblanktheme-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/js/bootstrap.min.js','','',true );
+	wp_enqueue_script('wntblanktheme-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.1.0/js/bootstrap.min.js','','',true );
 	//VERSION CDN------------------
 	//wp_enqueue_script('wntblanktheme-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	
