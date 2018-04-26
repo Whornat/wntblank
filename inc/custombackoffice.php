@@ -23,6 +23,9 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+add_filter( 'login_headerurl', 'custom_loginlogo_url' );
+function custom_loginlogo_url($url) {   return '#';}
+
 
 //* Unregister metabox on Custom Post Type
 if (is_admin()) :

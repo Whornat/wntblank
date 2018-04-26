@@ -79,7 +79,7 @@ if($images) : ?>
 <?php endif;
 // SI AUCUNE IMAGES
 	if( count($images) == 0) : ?>
-			 <?php echo get_the_post_thumbnail($parametre, 'medium', array('class' => '')); ?>
+			 <?php echo get_the_post_thumbnail($post_parent, 'medium', array('class' => 'img-fluid')); ?>
 	<?php endif;
 //---------------
 }
