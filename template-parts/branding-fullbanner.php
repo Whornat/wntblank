@@ -6,7 +6,7 @@
 if (get_theme_mod('topmenu_type') !== 'topfixed') {?>
 <div class="container">
 <div class="row justify-content-md-center">
-        	<div class="col-md-3">
+        	<div class="col-md-6">
 			<h1 class="site-title">
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
     		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

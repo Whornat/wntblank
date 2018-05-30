@@ -24,8 +24,8 @@ function wntblank_theme_boot4_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'wntblank_theme_boot4_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1200,
-		'height'                 => 250,
+		'width'                  => 1500,
+		'height'                 => 200,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'wntblank_theme_boot4_header_style',
 	) ) );
