@@ -7,7 +7,7 @@
 
     	<a class="navbar-brand brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo-navbar" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php if ( get_theme_mod( 'wntblank_logotheme' ) ) { ?>
-       		<img src="<?php echo get_theme_mod( 'wntblank_logotheme' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+       		<img src="<?php echo get_theme_mod( 'wntblank_logotheme' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"  class="img-fluid">
 			<?php } else { ?>
 				<?php bloginfo( 'name' ); ?>
 			<?php } ?>
