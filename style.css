@@ -971,6 +971,9 @@ body.page .crunchify-social {
 .card {
   margin-bottom: 1rem; }
 
+.card-img-top, .card-img-bottom {
+  height: auto; }
+
 .btn {
   white-space: normal !important;
   margin: 3px 0; }
