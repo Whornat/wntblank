@@ -26,7 +26,8 @@
 
 <body <?php body_class(); ?>  <?php echo body_customconfig(); ?>>
 
-	<div id="fb-root"></div>
+<?php if( get_theme_mod('facebooksdk') ){ ?>
+<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
@@ -34,7 +35,8 @@
 	  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.10";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, "script", "facebook-jssdk"));</script>
-
+<?php } ?>
+	
 <div id="page" class="site withmenu_<?php echo get_theme_mod('topmenu_type')?>">
 	<header id="masthead" class="site-header">
     	<?php get_template_part( 'template-parts/branding', get_theme_mod('branding_type')); ?>
