@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: wntblank\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-23 15:55+0000\n"
-"PO-Revision-Date: 2018-03-13 08:57+0000\n"
+"PO-Revision-Date: 2018-04-09 15:16+0000\n"
 "Last-Translator: guillaume <guillaume@pagedemarque.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -119,7 +119,7 @@ msgstr "Taille du contenu"
 
 #: inc/customizer.php:143
 msgid "Sidebar size"
-msgstr ""
+msgstr "Taille de la sidebar"
 
 #: inc/customizer.php:161
 msgid "Menu type"
@@ -147,11 +147,11 @@ msgstr "Style pour \"Branding\""
 
 #: inc/customizer.php:271
 msgid "Script for slider"
-msgstr ""
+msgstr "Script pour le slider"
 
 #: inc/customizer.php:286
 msgid "Script for parallax"
-msgstr ""
+msgstr "Script pour le parallax"
 
 #: inc/customizer.php:302
 msgid "Googlemapkey"
@@ -204,7 +204,7 @@ msgstr "Les commentaires sont fermés."
 
 #: footer.php:63
 msgid "Design by"
-msgstr "Un conception"
+msgstr "Une conception"
 
 #: footer.php:63
 msgid "for"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-12 16:53+0000\n"
+"POT-Creation-Date: 2018-06-07 10:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -63,6 +63,10 @@ msgid "for"
 msgstr ""
 
 #: footer.php:63
+msgid "Privacy Policy"
+msgstr ""
+
+#: footer.php:63
 msgid "Legal Notice"
 msgstr ""
 
@@ -104,16 +108,11 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/content.php:57 template-parts/excerpt.php:41
-#: template-parts/excerpt-nomducustompost.php:36
+#: template-parts/content.php:57 template-parts/searchitem.php:42
+#: template-parts/excerpt.php:41 template-parts/excerpt-nomducustompost.php:36
 #: template-parts/excerpt-page.php:32 template-parts/content-page.php:40
 #: template-parts/content-nomducustompost.php:42
 msgid "Pages:"
-msgstr ""
-
-#: template-parts/searchitem.php:25 inc/excerpt-advanced.php:29
-#: inc/excerpt-advanced.php:32
-msgid "Readmore"
 msgstr ""
 
 #. %s: Name of current post
@@ -232,6 +231,10 @@ msgstr ""
 
 #: inc/widgets-custom.php:56
 msgid "Your content (ENG)"
+msgstr ""
+
+#: inc/excerpt-advanced.php:29 inc/excerpt-advanced.php:32
+msgid "Readmore"
 msgstr ""
 
 #: inc/customizer.php:43

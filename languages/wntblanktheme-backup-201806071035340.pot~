@@ -3,16 +3,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-23 15:54+0000\n"
+"POT-Creation-Date: 2018-03-12 16:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Loco https://localise.biz/"
 
 #: bootstrap_pagination.php:11 bootstrap_pagination.php:60
 msgid "previous"
@@ -99,15 +99,15 @@ msgstr ""
 msgid "Display menu"
 msgstr ""
 
-#: template-parts/content.php:43
+#: template-parts/content.php:52
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/content.php:48 template-parts/excerpt.php:36
-#: template-parts/excerpt-nomducustompost.php:31
-#: template-parts/excerpt-page.php:32 template-parts/content-page.php:32
-#: template-parts/content-nomducustompost.php:34
+#: template-parts/content.php:57 template-parts/excerpt.php:41
+#: template-parts/excerpt-nomducustompost.php:36
+#: template-parts/excerpt-page.php:32 template-parts/content-page.php:40
+#: template-parts/content-nomducustompost.php:42
 msgid "Pages:"
 msgstr ""
 
@@ -120,8 +120,8 @@ msgstr ""
 #. %s: Name of current post
 #. %s: Name of current post
 #. %s: Name of current post
-#: template-parts/excerpt-page.php:44 template-parts/content-page.php:59
-#: template-parts/content-nomducustompost.php:61 inc/template-tags.php:72
+#: template-parts/excerpt-page.php:44 template-parts/content-page.php:67
+#: template-parts/content-nomducustompost.php:69 inc/template-tags.php:74
 #, php-format
 msgid "Edit %s"
 msgstr ""
@@ -251,59 +251,63 @@ msgstr ""
 msgid "Enabled advanced setting"
 msgstr ""
 
-#: inc/customizer.php:96
+#: inc/customizer.php:98
 msgid "Content position"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:112
 msgid "Archive column"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:127
+msgid "Grid layout"
+msgstr ""
+
+#: inc/customizer.php:146
 msgid "Content size"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:161
 msgid "Sidebar size"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:179
 msgid "Menu type"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:197
 msgid "Menu style"
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:212
 msgid "Menu Background"
 msgstr ""
 
-#: inc/customizer.php:213
+#: inc/customizer.php:231
 msgid "Menu Align"
 msgstr ""
 
-#: inc/customizer.php:229
+#: inc/customizer.php:247
 msgid "Logo in Navbar"
 msgstr ""
 
-#: inc/customizer.php:248
+#: inc/customizer.php:266
 msgid "Branding type"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:289
 msgid "Script for slider"
 msgstr ""
 
-#: inc/customizer.php:286
+#: inc/customizer.php:304
 msgid "Script for parallax"
 msgstr ""
 
-#: inc/customizer.php:302
+#: inc/customizer.php:320
 msgid "Googlemapkey"
 msgstr ""
 
-#: inc/customizer.php:312
+#: inc/customizer.php:330
 msgid "Google Analytics ID"
 msgstr ""
 
@@ -326,20 +330,20 @@ msgid "Posted in %1$s"
 msgstr ""
 
 #. used between list items, there is a space after the comma
-#: inc/template-tags.php:61
+#: inc/template-tags.php:63
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:68
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:68
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/template-tags.php:68
 msgid "% Comments"
 msgstr ""
 
