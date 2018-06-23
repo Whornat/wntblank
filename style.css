@@ -809,6 +809,10 @@ body.admin-bar #masthead .navbar-fixed-top {
   margin: 1rem 0; }
 
 /* onepage.php */
+.page-template-onepage-scrolling .content_slide .entry-header,
+.page-template-onepage-scrolling .content_slide .section-header {
+  text-align: center; }
+
 .page-template-onepage-scrolling #content {
   display: none; }
 
