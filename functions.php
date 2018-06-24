@@ -223,6 +223,10 @@ require get_template_directory() . '/inc/tinymce.php';
  * AUTO GALLERY 
  */
 require get_template_directory() . '/inc/autogallery.php';
+/**
+ * SHORT CODE
+ */
+require get_template_directory() . '/inc/shortcode.php';
 
 
  /**
