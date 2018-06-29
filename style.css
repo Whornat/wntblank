@@ -862,7 +862,7 @@ body.admin-bar #masthead .navbar-fixed-top {
 ## ROYAL SLIDER
 --------------------------------------------------------------*/
 img.rsImg {
-  max-width: 100%;
+  max-width: 100% !important;
   height: auto; }
 
 /* SOCIAL LINKS FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
