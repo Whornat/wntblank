@@ -858,6 +858,13 @@ body.admin-bar #masthead .navbar-fixed-top {
   vertical-align: middle;
   white-space: nowrap; }
 
+/*--------------------------------------------------------------
+## ROYAL SLIDER
+--------------------------------------------------------------*/
+img.rsImg {
+  max-width: 100%;
+  height: auto; }
+
 /* SOCIAL LINKS FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF */
 .crunchify-link {
   padding: 4px 8px 6px 8px;
