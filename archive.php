@@ -9,6 +9,12 @@
 
 get_header(); 
 
+
+
+		// TESTER SI ACF est installé --------------------------------------------
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
+		if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) || is_plugin_active( 'advanced-custom-fields/acf.php' )) {
+
 		//print_r(get_queried_object());
 		// get the current taxonomy term
 		$term = get_queried_object();
@@ -22,13 +28,21 @@ get_header();
 		$image_term_alt = $image_term['alt'];
 		// color			 
 		$color = get_field('color', $term);	
-?>
-<?php if ($color !== ''){?>
+			
+if ($color !== ''){?>
 <style type="text/css">
 	.page-header .page-title { color: <?php echo $color;?>}
 	.the_main_loop .btn-secondary { background-color: <?php echo $color;?>}
 </style>
-<?php }?>
+<?php }		
+			
+			
+			
+		}
+		// TESTER SI ACF est installé --------------------------------------------
+		?>			
+
+
 
 
 	<?php if (get_theme_mod('content_size') == ''){ $content_size = "col"; }else{ $content_size = get_theme_mod('content_size');} ?>
