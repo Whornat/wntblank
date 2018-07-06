@@ -154,10 +154,13 @@ ul.checked li:before {
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
-iframe,
 object {
   max-width: 100%;
   height: auto; }
+
+/* Make sure embeds and iframes fit their containers. */
+iframe {
+  max-width: 100%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -989,6 +992,11 @@ body.page .crunchify-social {
   white-space: normal !important;
   margin: 3px 0; }
 
+/*-- ALPHA BG --------------------- */
+.bg-white.bg-alpha50 {
+  background-color: rgba(255, 255, 255, 0.5) !important; }
+
+/*--------------------------------- */
 .btn-group-xs > .btn, .btn-xs {
   padding: .15rem .25rem !important;
   font-size: .65rem !important;
