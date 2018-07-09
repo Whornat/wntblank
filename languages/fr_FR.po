@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: wntblank\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-07 10:35+0000\n"
-"PO-Revision-Date: 2018-06-07 10:36+0000\n"
-"Last-Translator: guillaume <guillaume@pagedemarque.com>\n"
+"PO-Revision-Date: 2018-07-09 17:23+0000\n"
+"Last-Translator: whornat <ecrire@whornat.com>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
@@ -160,7 +160,7 @@ msgstr "Auteur :"
 #: template-parts/biography.php:33
 #, php-format
 msgid "View all posts by %s"
-msgstr "Consultez tout les articles de %s"
+msgstr "Consultez tous les articles de %s"
 
 #. Name of the template
 msgid "Page demo masonry"
