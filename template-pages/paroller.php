@@ -22,196 +22,277 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
             
-  <section id="vertical" class="my-5">
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
-             data-paroller-factor="0.5">
-            <h1 class="heading-1 py-5 text-white">Hello Parallax!</h1>
-            <p class="text-white">data-paroller-factor="0.5"</p>
-        </div>
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/1200/abstract/0') no-repeat center;"
-             data-paroller-factor="-0.15">
-            <h1 class="heading-1 py-5 text-white">Scrolling is fun!</h1>
-            <p class="text-white">data-paroller-factor="-0.15"</p>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4" data-paroller-factor="0.5" data-paroller-type="foreground">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.5" data-paroller-type="foreground"</code>
-                        </p>
+<section id="demo" class="row">
+        <div class="inner">
+            <h2>Demo</h2>
+
+            <h6 class="mega my-element"
+                data-paroller-factor="0.5"
+                data-paroller-factor-lg="0.4"
+                data-paroller-factor-md="0.3"
+                data-paroller-factor-sm="-0.2"
+                data-paroller-factor-xs="-0.1"
+                data-paroller-type="foreground"
+                data-paroller-direction="horizontal"
+            >
+                👋 Heola! こんにちは! Ahoj! Cześć! Olá!
+            </h6>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="mega my-element"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-lg="0.4"<br>
+                        data-paroller-factor-md="0.3"<br>
+                        data-paroller-factor-sm="-0.2"<br>
+                        data-paroller-factor-xs="-0.1"<br>
+                        data-paroller-type="foreground"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.my-element').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"</code>
-                        </p>
+
+            <h6 class="mega align-right paroller-example">
+                გამარჯობა! Hello! Zdravo! Привет! 你好! Ciao! !مرحبا Hallå! Χαίρετε! ¡Hola! 👋
+            </h6>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="paroller-example"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.paroller-example').paroller({<br>
+                        factorXs: 0.1,<br>
+                        factorSm: 0.1,<br>
+                        factorMd: -0.4,<br>
+                        factorLg: -0.5,<br>
+                        factorXl: -0.6,<br>
+                        factor: -0.4,<br>
+                        type: 'foreground',<br>
+                        direction: 'horizontal'<br>
+                        });
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"</code>
-                        </p>
+
+            <div class="jumbotron"
+                 style="background: url('https://unsplash.it/1920/800?image=950') no-repeat center; background-size: cover;"
+                 data-paroller-factor="0.5"
+                 data-paroller-factor-xs="0.2"
+            >
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/800?image=950') no-repeat center;<br>
+                        background-size: cover;"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-xs="0.2"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4" data-paroller-factor="0.9" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.9" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/800?image=152') repeat center; background-size: cover;"
+                 data-paroller-factor="-0.5"
+                 data-paroller-factor-sm="-0.2"
+                 data-paroller-factor-xs="-0.1"
+            >
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/800?image=152') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.5"<br>
+                        data-paroller-factor-sm="-0.2"<br>
+                        data-paroller-factor-xs="-0.1"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="0.15" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/4" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.15" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/500?image=974') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.2">
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/500?image=974') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.2"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/5" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
-                                data-paroller-direction="vertical"</code>
-                        </p>
+
+            <div class="d-flex">
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') no-repeat center; background-size: cover;"
+                     data-paroller-factor="0.5"
+                     data-paroller-factor-md="0.3"
+                     data-paroller-factor-sm="0.2"
+                     data-paroller-factor-xs="0.1"
+                >
+                </div>
+
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size: cover;"
+                     data-paroller-factor="-0.4">
+                </div>
+
+                <div class="image"
+                     style="background: url('https://unsplash.it/400/800?image=889') no-repeat center; background-size: cover;"
+                     data-paroller-factor="-0.1">
+                </div>
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-md="0.3"<br>
+                        data-paroller-factor-sm="0.2"<br>
+                        data-paroller-factor-xs="0.1"
+                        <hr>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.4"
+                        <hr>
+                        class="image"
+                        style="background: url('https://unsplash.it/400/800?image=889') repeat center; background-size:
+                        cover;"<br>
+                        data-paroller-factor="-0.1"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.image').paroller();
+                        <hr>
+                        $('.image').paroller();
+                        <hr>
+                        $('.image').paroller();
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-5">
-            <div class="col col-sm-6" data-paroller-factor="0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/500?image=867') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.15" data-paroller-direction="horizontal">
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/500?image=867') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.15"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
                     </div>
                 </div>
             </div>
-            <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="vertical">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card vertical</h4>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom; background-size: cover;"
+                 data-paroller-factor="0.3" data-paroller-direction="horizontal">
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom;
+                        background-size: cover;"<br>
+                        data-paroller-factor="0.3"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
+                    </div>
+                </div>
+            </div>
+
+            <div class="jumbotron text-center my-5"
+                 style="background: url('https://unsplash.it/1920/900?image=888') no-repeat center; background-size: cover;"
+                 data-paroller-factor="-0.5" data-paroller-direction="horizontal">
+            </div>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="jumbotron"
+                        style="background: url('https://unsplash.it/1920/900?image=888') no-repeat center;
+                        background-size: cover;"<br>
+                        data-paroller-factor="-0.5"<br>
+                        data-paroller-direction="horizontal"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.jumbotron').paroller();
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="mega align-center" data-paroller-factor="0.1" data-paroller-type="foreground">
+                Scrolling is fun ✌️
+            </h6>
+              
+            <div class=" ">
+                <div class=" -inner">
+                    <div>
+                        <h5>html</h5>
+                        class="mega align-center" data-paroller-factor="0.1" data-paroller-type="foreground"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.mega').paroller();
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="horizontal" class="my-5">
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/600/abstract/8') no-repeat center;"
-             data-paroller-factor="0.5"
-             data-paroller-direction="horizontal">
-            <h1 class="heading-1 py-5 text-white">Hola, horizontal Parallax!</h1>
-            <p class="text-white">data-paroller-factor="0.5"</p>
-        </div>
-        <div class="jumbotron text-center bg-faded my-5"
-             style="background: url('http://lorempixel.com/1200/1200/abstract/5') repeat center;"
-             data-paroller-factor="-0.75"
-             data-paroller-direction="horizontal">
-            <h1 class="heading-1 py-5 text-white">Maybe some horizontal scrolling with repeated background?</h1>
-            <p class="text-white">data-paroller-factor="-0.75"</p>
-        </div>
-        <div class="row my-5">
-            <div class="col col-md-4" data-paroller-factor="-0.3" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/1" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.3" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"
-                            </code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-4" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/2" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="-0.1" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"</code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-4" data-paroller-factor="0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/3" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                        <p class="card-text">
-                            <code>data-paroller-factor="0.1" data-paroller-type="foreground"
-                                data-paroller-direction="horizontal"</code>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row my-5">
-            <div class="col col-sm-6" data-paroller-factor="-0.2" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/6" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-sm-6" data-paroller-factor="-0.1" data-paroller-type="foreground"
-                 data-paroller-direction="horizontal">
-                <div class="card">
-                    <img class="card-img-top" src="http://lorempixel.com/400/200/abstract/7" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Card horizontal</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-       	  
             
 
 		</main><!-- #main -->
