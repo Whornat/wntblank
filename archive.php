@@ -68,7 +68,7 @@ if ($color !== ''){?>
 			</header><!-- .page-header -->
 
 			<div class="the_main_loop row <?php //if (get_theme_mod('archive_column') !== ''){echo'row';};?>">
-			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'<div class="card-columns">';};?>
+			<?php if (get_theme_mod('grid_layout') == 'card-columns'){echo'<div class="card-columns col">';};?>
 				
 				
 			<?php
