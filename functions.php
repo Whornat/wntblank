@@ -348,7 +348,7 @@ function my_remove_page_template( $pages_templates ) {
     unset( $pages_templates['template-pages/demo-masonry.php'] );
 	  //unset( $pages_templates['template-pages/demo-typography.php'] );
 		unset( $pages_templates['template-pages/fullpage.php'] );
-		unset( $pages_templates['template-pages/onepage-scrolling.php'] );
+		//unset( $pages_templates['template-pages/onepage-scrolling.php'] );
 		unset( $pages_templates['template-pages/pageeditor.php'] );
 		unset( $pages_templates['template-pages/paroller.php'] );
 		//unset( $pages_templates['template-pages/plandusite.php'] );
