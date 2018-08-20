@@ -32,7 +32,14 @@
     </h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+		<?php 	
+		$postid = get_the_ID();
+		$pagesize = get_field('pagesize', $postid);
+		if ($pagesize == ''){
+			echo '<div class="entry-content">';
+		}else{
+			echo '<div class="entry-content container">';
+		}?>	
 		<?php
 			the_content();
 
