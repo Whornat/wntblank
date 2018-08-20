@@ -1026,6 +1026,9 @@ body.page .crunchify-social {
   #masthead .navbar-main .navbar-nav .nav-link {
     text-align: center; }
 
+  .navbar-brand {
+    margin: 0 auto !important; }
+
   .site-branding.withfullbanner {
     min-height: 100px !important; }
 

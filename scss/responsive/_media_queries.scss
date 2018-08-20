@@ -4,6 +4,8 @@
 @media (max-width: 575px) {
   .site-sloggan { text-align:center}
   #masthead .navbar-main .navbar-nav .nav-link { text-align:center;}
+	.navbar-brand { margin: 0 auto !important}
+	
   .site-branding.withfullbanner { min-height:100px !important;}
   .thumbnailcontainer { float: none !important; width: 100%;}
 }
