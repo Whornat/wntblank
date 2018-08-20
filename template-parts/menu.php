@@ -1,7 +1,7 @@
 <div class="menu_standard <?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?>">
       	<div class="container">
 		
-  <nav class="navbar navbar-expand-md <?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> navbar-main">  
+  <nav class="navbar navbar-expand-lg <?php if( get_theme_mod('topmenu_style') == '' ){echo' navbar-light ';}else{echo ''.get_theme_mod( "topmenu_style").' ' ;};if( get_theme_mod('topmenu_bg') == '' ){echo' bg-light';}else{echo ''.get_theme_mod( "topmenu_bg" ).' ' ;};?> navbar-main">  
 	  
 	<?php if (get_theme_mod('topmenu_logo') == 'true') {?>
 

@@ -6,7 +6,7 @@
 
 /* rajoute du padding d/g au lien de la navbar par defaut */
 .navbar-nav .menu-item { margin: 0 0.25rem;}
-.navbar-nav .nav-link { padding: 0.5rem;}
+.navbar-nav .nav-link { padding: 0.5rem; text-align: center}
 .navbar-nav .nav-link.active { background:rgba($color_white, 0.2)}
 
 /* menu-.php --------------------------------------------------*/
@@ -51,4 +51,7 @@ body.admin-bar #masthead .navbar-fixed-top { top: 32px;}
 box-shadow: 0 0 5px 0 rgba($color_dark,0.25);
 }
 .navbar-dotted .nav-link.active .nav-dot{ background: none; background-color: rgba($color_white, 0.9); border: 1px solid rgba($color_white, 1);}
+
+
+
 
