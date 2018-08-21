@@ -210,13 +210,13 @@ figure.gallery-item.cap-full:hover figcaption {}
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin: 0.5rem 1.5rem 0.5rem 0;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin: 0.5rem 0.5rem 1.5rem 0;
 }
 
 .aligncenter {
