@@ -1007,14 +1007,6 @@ body.page .crunchify-social {
   line-height: 1.25 !important;
   letter-spacing: 1px; }
 
-.the_main_loop > .card-columns {
-  -webkit-column-count: 2;
-  column-count: 2; }
-
-@media (max-width: 767px) {
-  .the_main_loop > .card-columns {
-    -webkit-column-count: 1;
-    column-count: 1; } }
 /* Bootstrap XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* -------------------------------------------------------------------- */
 /* RESPONSIVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */

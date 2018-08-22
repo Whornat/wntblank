@@ -17,15 +17,11 @@
 
 .btn-group-xs > .btn, .btn-xs {	padding: .15rem .25rem !important;	font-size: .65rem !important;	line-height: 1.25 !important; letter-spacing: 1px}
 
-.card-columns {
-	//-webkit-column-count: $card-columns;
-	//column-count: $card-columns;
-}
-.the_main_loop > .card-columns  {
-	-webkit-column-count: $card-columns;
-	column-count: $card-columns;
-}
-@media (max-width: 767px) {
-.the_main_loop > .card-columns {-webkit-column-count: 1; column-count: 1;}
-	
-}
+//.the_main_loop > .card-columns  {
+//	-webkit-column-count: $card-columns;
+//	column-count: $card-columns;
+//}
+//@media (max-width: 767px) {
+//.the_main_loop > .card-columns {-webkit-column-count: 1; column-count: 1;}
+//	
+//}

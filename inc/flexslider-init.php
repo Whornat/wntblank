@@ -54,7 +54,7 @@ if($images) : ?>
 	        <li<?php 
 	        	// Each end image in a row gets the "lastimage" class added. 
 	        	if($count % $perRow == 0) { echo ' class="lastimage"'; } ?>>
-	            	<?php echo wp_get_attachment_image($image->ID, 'medium'); ?>
+	            	<?php echo wp_get_attachment_image($image->ID, 'large'); ?>
                  	<?php // ----------TESTTTT -------------------------------------- ?>
                     <?php //echo $image->ID ?>
                     <?php //print_r(wp_get_attachment_metadata( $image->ID, true)); ?>

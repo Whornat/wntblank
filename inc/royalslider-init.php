@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 <?php 
 // si il n'y a pas d'image alors on affcihe le featured
 }else {
-the_post_thumbnail($parametre, 'medium', array('class' => 'img-fluid'));
+the_post_thumbnail($parametre, 'large', array('class' => 'img-fluid'));
 
 }
 // et voila c'est fini ;)
