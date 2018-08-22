@@ -1,5 +1,5 @@
 /*
- * jQuery FlexSlider v2.7.0
+ * jQuery FlexSlider v2.7.1
  * http://www.woothemes.com/flexslider/
  *
  * Copyright 2012 WooThemes
@@ -12,7 +12,13 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
-
+/*@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') forma.flex-pauseplayt('svg');
+  font-weight: normal;
+  font-style: normal;
+*/}
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
@@ -98,6 +104,11 @@ html[xmlns] .flexslider .slides {
 .loading .flex-viewport {
   max-height: 300px;
 }
+@-moz-document url-prefix() {
+  .loading .flex-viewport {
+    max-height: none;
+  }
+}
 .carousel li {
   margin-right: 5px;
 }
@@ -107,7 +118,7 @@ html[xmlns] .flexslider .slides {
 .flex-direction-nav a {
   text-decoration: none;
   display: block;
-  width: 50px;
+  width: 40px;
   height: 50px;
   margin: -20px 0 0;
   position: absolute;
