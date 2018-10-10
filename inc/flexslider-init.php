@@ -42,7 +42,7 @@ function wnt_image_gallery($parametre) {
 if($images) : ?>
  
 <div class="slider project-slider">
-    <div id="slider" class="flexslider">
+    <div id="wnt_image_gallery" class="flexslider">
     <ul class="slides">
     	<?php
     	// We'll use the $count here to keep track of what image we're on.
@@ -91,7 +91,7 @@ if($images) : ?>
 // Le script d'initialisation
 // Can also be used with $(document).ready()
 $(window).on("load", function() {
-  $('.flexslider').flexslider({
+  $('#wnt_image_gallery').flexslider({
     animation: "slide"
   });
 });
