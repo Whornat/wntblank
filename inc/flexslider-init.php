@@ -38,9 +38,58 @@ function wnt_image_gallery($parametre) {
     );
  
     $images = get_posts($args);
+	
+// 10/2018 : acf field POST GALLERY : surcharger la gallery auto 
+//---------------------------------------------------------------
+$post_gallery = get_field('post_gallery', $post_parent);
+$size = 'large'; 
+	
+if($post_gallery) { 
+	//print_r ($post_gallery);
+?>
+	
+	
+<div class="slider project-slider">
+    <div id="wnt_image_gallery" class="flexslider">
+    <ul class="slides">
+    	
+		 <?php foreach( $post_gallery as $image ): ?>
+            <li>
+            	<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+            </li>
+        <?php endforeach; ?>
+		
+	</ul>
+    </div>
+    
+	<?php 
+	// Did we have more images than our limit? Then create a "More" link.
+	// This link goes directly to the first image.
+	if( count($images) > $limitImages) : ?>
+	<p class="photo-more">
+		<a href="<?php echo get_permalink($images[0]->ID); ?>">View More Images &raquo;</a>
+	</p>
+	<?php endif; ?>
+</div><!-- end #slider .flexslider -->
+
+<script type="application/javascript">
+// Le script d'initialisation
+// Can also be used with $(document).ready()
+$(window).on("load", function() {
+  $('#wnt_image_gallery').flexslider({
+    animation: "slide"
+  });
+});
+</script>	
+	
+	
+	
+	
+	
+<?php }else {
 // Assuming we found some images, display them.
 if($images) : ?>
- 
+	
 <div class="slider project-slider">
     <div id="wnt_image_gallery" class="flexslider">
     <ul class="slides">
@@ -103,6 +152,13 @@ $(window).on("load", function() {
 	if( count($images) == 0) : ?>
 			 <?php echo get_the_post_thumbnail($parametre, 'large', array('class' => 'img-fluid')); ?>
 	<?php endif;
+	
+	
+	// 10/2018 : acf field POST GALLERY : surcharger la gallery auto 
+	//---------------------------------------------------------------
+}	
+	//---------------------------------------------------------------	
+		
 //---------------
 }
 
