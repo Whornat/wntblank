@@ -60,6 +60,7 @@ function wntblank_themeoptions( $wp_customize ) {
 	// 1) JE CREE MA 2nd SECTION ----------------------------------
 
 
+    $wp_customize->add_setting( 'wntblank_logotheme' ); // Add setting for logo uploader
 	// 2) JE CREE MON PARAMETRE ----------------------------------
 	$wp_customize->add_setting( 'content_position',	array('default' => '', 'transport' => 'postMessage'));
 	// 2nd parametre pour la taille du content
@@ -92,6 +93,17 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
 
+	
+	
+    // Add control for logo uploader (actual uploader)
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wntblank_logotheme', array(
+        'label'    => __( 'Upload your logo', 'wntblank_theme_boot4' ),
+        'section'  => 'title_tagline',
+        'settings' => 'wntblank_logotheme',
+    ) ) );	
+	
+	
+	
 	// 3) JE CRE L'INTERFACE ----------------------------------
 	$wp_customize->add_control('control_content_position',
 	array(
