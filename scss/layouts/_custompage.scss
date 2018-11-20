@@ -10,11 +10,10 @@
 .page-template-onepage-scrolling .content_slide .section-header{ text-align: center}
 
 .page-template-onepage-scrolling #content { display:none;}
-@media (min-width: 576px) {
-	.slide_fullheight { min-height: 100vh;}
-}
-
-.content_slide { padding:8rem 0;}
+//@media (min-width: 576px) {
+.slide_fullheight { min-height: 100vh;}
+//}
+.content_slide { padding:8rem 0 4rem;}
 
 /* imagine.php */
 .page-template-imagine #content { display:none;}
