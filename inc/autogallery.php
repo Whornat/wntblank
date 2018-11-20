@@ -40,7 +40,6 @@ if($images) : ?>
 	        <div class="<?php echo $col;?> <?php 
 	        	// Each end image in a row gets the "lastimage" class added. 
 	        	if($count % $perRow == 0) { echo 'lastimage'; } ?>">
-				
 <figure>
 <?php 
 	  //print_r($image);	

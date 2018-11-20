@@ -106,7 +106,7 @@ function wntblanktheme_scripts() {
 	//WITH JS
 	//wp_enqueue_script( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.0.1/JS-mode/js/fontawesome-all.js', array(), null, true );
 	//WITH CSS
-	wp_enqueue_style( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.3.1/CSS-mode/css/all.css' );
+	wp_enqueue_style( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.5.0/CSS-mode/css/all.css' );
 	
 
 	// Integration modernizr en version light : nécessaire pour scrollmagic --------------------
