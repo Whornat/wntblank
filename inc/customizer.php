@@ -92,6 +92,8 @@ function wntblank_themeoptions( $wp_customize ) {
 	$wp_customize->add_setting( 'parallax_script',	array('default' => 'none', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googlemapkey',	array('default' => '', 'transport' => 'postMessage'));
 	$wp_customize->add_setting( 'googleanalyticsID',	array('default' => '', 'transport' => 'postMessage'));
+	$wp_customize->add_setting( 'facebooksdk',	array('default' => '', 'transport' => 'postMessage'));
+
 
 	
 	
@@ -345,6 +347,21 @@ function wntblank_themeoptions( $wp_customize ) {
 		'type'     => 'text'
 	)
 	);
+	
+	// -----------------------------------------------------------
+	// 3 parametre clefgoogleMAP
+	$wp_customize->add_control('control_facebooksdk',
+	array(
+		'label'    => __( 'facebooksdk', 'wntblanktheme' ),
+		'section'  => 'mytheme_fonctionnality_options',
+		'settings' => 'facebooksdk',
+		'type'     => 'radio',
+		'choices'  => array(
+			''=> 'NO',
+			'true' => 'YES',
+		),
+	)
+	);	
 
 
 

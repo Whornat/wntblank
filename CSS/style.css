@@ -852,23 +852,8 @@ body.admin-bar #masthead .navbar-fixed-top {
 .search-field, .search-submit {
   width: 100%; }
 
-.widget_search .search-form label,
-.widget_search .search-form .search-submit {
-  margin: 0; }
-
-.widget_search .search-form label {
-  width: 80%; }
-
-.widget_search .search-form .search-submit {
-  width: 17%;
-  vertical-align: 0;
-  text-indent: 500px; }
-
-.widget_search .search-form .search-submit {
-  background-image: url("IMG/search.svg");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center; }
+label {
+  display: block !important; }
 
 /*--------------------------------------------------------------
 ## CONTACT FORM 7
