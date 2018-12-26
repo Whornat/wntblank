@@ -84,7 +84,7 @@ add_action( 'after_setup_theme', 'wntblanktheme_content_width', 0 );
 function wntblanktheme_scripts() {
 
 	// Integration BOOTSTRAP 4-alpha6 --------------------
-	wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.1.3-dist/css/bootstrap.min.css');
+	wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.2.1-dist/css/bootstrap.min.css');
 	// ma version custom en dessous
 	//wp_enqueue_style('wntblanktheme-bootstrapstyle', get_template_directory_uri() . '/bootstrap-4.0.0-beta.2/bootstrap.css');
 
@@ -106,7 +106,7 @@ function wntblanktheme_scripts() {
 	//WITH JS
 	//wp_enqueue_script( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.0.1/JS-mode/js/fontawesome-all.js', array(), null, true );
 	//WITH CSS
-	wp_enqueue_style( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.5.0/CSS-mode/css/all.css' );
+	wp_enqueue_style( 'wntblanktheme-font_awesome', get_template_directory_uri() . '/fontawesome-pro-5.6.3/CSS-mode/css/all.css' );
 	
 
 	// Integration modernizr en version light : nécessaire pour scrollmagic --------------------
@@ -134,7 +134,7 @@ function wntblanktheme_scripts() {
 	wp_enqueue_script('wntblanktheme-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js','','',true );
 	
 
-	wp_enqueue_script('wntblanktheme-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.1.3-dist/js/bootstrap.min.js','','',true );
+	wp_enqueue_script('wntblanktheme-bootstrapmin', get_template_directory_uri() . '/bootstrap-4.2.1-dist/js/bootstrap.min.js','','',true );
 	//VERSION CDN------------------
 	//wp_enqueue_script('wntblanktheme-bootstrapmin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js','','',true );
 	
