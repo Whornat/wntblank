@@ -122,11 +122,16 @@ function wntblanktheme_scripts() {
 	
 	//------------------------ANIMATION-------------------------
 	wp_enqueue_style('wntblanktheme-animation', get_template_directory_uri() . '/CSS/animations.css');
-	wp_enqueue_script( 'wntblanktheme-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
 	
-	wp_enqueue_script( 'wntblanktheme-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
-
-	wp_enqueue_script('wntblanktheme-dropdownsonhover', get_template_directory_uri() . '/JS/bootstrap-dropdownsonhover-v01.js','','',true );
+	
+	//wp_enqueue_script( 'wntblanktheme-animation_script', get_template_directory_uri() . '/JS/css3-animate-it.js','','',true );
+	//wp_enqueue_script( 'wntblanktheme-jqueryeasing_script', get_template_directory_uri() . '/JS/jquery.easing.js','','',true );
+	//wp_enqueue_script('wntblanktheme-dropdownsonhover', get_template_directory_uri() . '/JS/bootstrap-dropdownsonhover-v01.js','','',true );
+	
+	// Fusionné dans 
+	wp_enqueue_script('wntblanktheme-dropdownsonhover', get_template_directory_uri() . '/JS/animateit-easing-bsDropdown.min.js','','',true );
+	
+	
 	
 	//pour alpha beta :
 	//wp_enqueue_script('wntblanktheme-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js','','',true );
@@ -219,8 +224,17 @@ require get_template_directory() . '/inc/scrollmagic.php';
 /**
  * Customisation Tiny MCE
  */
-require get_template_directory() . '/inc/tinymce.php';
+// require get_template_directory() . '/inc/tinymce.php';
 /**
+
+/**
+ * Customisation For GUTENBERG >>> MOVE to CHILD
+ */
+//require get_template_directory() . '/inc/gutenberg.php';
+/**
+
+
+
  * AUTO GALLERY 
  */
 require get_template_directory() . '/inc/autogallery.php';
@@ -315,23 +329,6 @@ function be_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'be_body_classes' );
 
-/* suppression de la class "tag" du body de wordpress car ça fait un conflit avec bootstrap*/
-add_filter( 'body_class', '_twbs_bootstrap_20542', 10, 1 );
-add_filter( 'post_class', '_twbs_bootstrap_20542', 10, 1 );
-function _twbs_bootstrap_20542( $classes )
-{
-    return array_diff( $classes, array(
-        'tag',
-        'tag-pill',
-        'tag-default',
-        'tag-info',
-        'tag-warning',
-        'tag-danger',
-        'tag-success',
-        'tag-primary',
-    ) );
-}
-/* suppression de la class "tag" du body de wordpress car ça fait un conflit avec bootstrap*/
 
 /** suppression des Template page de demo si on n'est pas un administrator */
 add_filter( 'theme_page_templates', 'my_remove_page_template' );

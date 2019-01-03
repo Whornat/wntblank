@@ -1,11 +1,3 @@
-body {
-  color: #333;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.42857;
-}
-
-
 .alignleft {
 	display: inline;
 	float: left;
@@ -54,3 +46,19 @@ ul.error li:before{ font-family:'FontAwesome';content:'\f00d'; display:inline-bl
 ul.checked {margin-bottom:0.5rem;}
 ul.checked li{ list-style:none}
 ul.checked li:before{ font-family:'FontAwesome';content:'\f00c'; display:inline-block; margin-right:0.5rem; font-size:1.1rem; color:#10ac39;}
+
+
+/* Main column width */
+.wp-block {
+    max-width: 855px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
