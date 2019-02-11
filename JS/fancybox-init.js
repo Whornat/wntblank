@@ -1,18 +1,48 @@
 $(function() {
-	
+
 	// activation sur les galeries---
 	$(".fancybox, .gallery-icon > a").fancybox({});
+	
 	// activation par defaut----
 	$("[data-fancybox]").fancybox({
 		// Options will go here
 	});
-	
+
 	// *************************************************************************
 	// CREATION AUTOMATIQUE D'effet FANCYBOX SUR IMAGE WP ----------------------
 	// *************************************************************************
-	        $(".entry-content").find("a:has(img)").addClass('fancybox');
-			$(".entry-content").find("a:has(img)").attr('rel','group1');
-        	        $(".fancybox").fancybox( {
+	
+		// EFFET IFRAME
+		$(".entry-content .iframelink").attr('data-fancybox','iframe');
+		$(".entry-content .iframelink").attr('data-src',$(this).attr("href"));
+		$(".entry-content .iframelink").attr('data-type','iframe');	
+		
+		// EFFET FANCY SUR Lien avec image
+		// ????DESACTIVE CAR BUG AVEC IMAGE AVEC LIEN EXTERN
+	   	//$(".entry-content").find("a:has(img)").addClass('fancybox');
+		//$(".entry-content").find("a:has(img)").attr('rel','group1');
+	
+		//Forcer suppression d'un effet fancy
+		$(".entry-content").find("a.nofancybox").removeClass('fancybox');
+	
+
+		// SI UN LIEN DANS UN ARTICLE contient un fichier image, crÃ©ation d'un effet fancyauto
+		$('.entry-content a[href*=".jpg"]').addClass('fancybox');
+		$('.entry-content a[href*=".jpg"]').attr('data-fancybox','group1');
+		$('.entry-content a[href*=".png"]').addClass('fancybox');
+		$('.entry-content a[href*=".png"]').attr('data-fancybox','group1');
+		$('.entry-content a[href*=".jpeg"]').addClass('fancybox');
+		$('.entry-content a[href*=".jpeg"]').attr('data-fancybox','group1');	
+	
+			
+		// FIXER LE LIENS IMAGES DU BLOG AVEC EFFET AJAX
+		$(".entry-content .thumbnailcontainer").attr('data-filter','#main .hentry');
+		$(".entry-content .thumbnailcontainer").attr('data-src',$(this).attr("href"));
+		$(".entry-content .thumbnailcontainer").attr('data-type','ajax');
+	
+	
+			
+      $(".fancybox").fancybox( {
 					fitToView	: true,
 					autoSize	: true,
 					autoHeight	: true,
@@ -25,154 +55,9 @@ $(function() {
 						buttons	: {}
 					}
 				} );
-	        $("a.group").fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':false});
+	    $("a.group").fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':false});
 	// *************************************************************************
-	// *************************************************************************	
-
-//--------- DEMO MORPHING------------------------------------------
-//---------http://codepen.io/fancyapps/pen/vxLVJE ------------------
-
-var Morphing = function( $btn ) {
-  this._init( $btn );
-};
-
-Morphing.prototype._init = function( $btn ) {
-  var that = this;
-
-  that.$btn = $btn.width( $btn.width() ).addClass('morphing-btn');
-
-  // Add wrapping element and set initial width used for positioning
-  $btn.wrap(function() {
-    var $wrap = $('<div class="morphing-btn-wrap"></div>');
-
-    $wrap.width( $(this).outerWidth( true ) );
-
-    return $wrap;
-  });
-
-  that.$clone = $('<div />')
-    .hide()
-    .addClass('morphing-btn-clone')
-    .insertAfter( $btn );
-
-  $btn.on('click', function(e) {
-    e.preventDefault();
-
-    that.open();
-  });
-};
-
-Morphing.prototype.open = function() {
-  var that = this;
-
-  if ( that.$btn.hasClass('morphing-btn_circle') ) {
-    return;
-  }
-
-  // First, animate button to the circle
-  that.$btn.one("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
-    if ( e.originalEvent.propertyName !== 'width' ) {
-      return;
-    }
-
-    $(this).off(".fm");
-
-    that._animate();
-  });
-
-  that.$btn.width( that.$btn.width() ).addClass('morphing-btn_circle');
-
-};
-
-Morphing.prototype._animate = function() {
-  var that   = this;
-  var $btn   = that.$btn;
-  var $clone = that.$clone;
-  var scale  = this._retrieveScale( $btn );
-  var pos    = $btn[0].getBoundingClientRect();
-
-  $clone.css({
-    top       : pos.top  + $btn.outerHeight() * 0.5 - ( $btn.outerHeight() * scale * 0.5 ),
-    left      : pos.left + $btn.outerWidth()  * 0.5 - ( $btn.outerWidth()  * scale * 0.5 ),
-    width     : $btn.outerWidth()  * scale,
-    height    : $btn.outerHeight() * scale,
-    transform : 'scale(' + 1 / scale + ')'
-  });
-
-  $clone.one("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
-    $(this).off(".fm");
-
-    // Open fancyBox
-    $.fancybox.open({ src : $btn.data('src') || $btn.attr('href') }, {
-      infobar  : false,
-      buttons  : false,
-      smallBtn : false,
-      touch    : false,
-      margin   : 0,
-      onInit : function( instance ) {
-        instance.$refs.slider_wrap.append('<button class="morphing-close" data-fancybox-close>X</button>');
-        instance.$refs.bg.remove();
-      },
-      afterClose : function() {
-        that.close();
-      }
-    });
-
-  });
-
-  // Trigger expanding of the cloned element
-  $clone.show().addClass('morphing-btn-clone_visible');
-
-};
-
-Morphing.prototype.close = function() {
-  var that   = this;
-  var $btn   = that.$btn;
-  var $clone = that.$clone;
-  var scale  = that._retrieveScale( $btn );
-  var pos    = $btn[0].getBoundingClientRect();
-
-  $clone.css({
-    top       : pos.top  + $btn.outerHeight() * 0.5 -  ( $btn.outerHeight() * scale * 0.5 ),
-    left      : pos.left + $btn.outerWidth()  * 0.5  - ( $btn.outerWidth()  * scale * 0.5 ),
-    width     : $btn.outerWidth()  * scale,
-    height    : $btn.outerHeight() * scale,
-    transform : 'scale(' + ( 1 / scale ) + ')'
-  });
-
-  $clone.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-    $clone.hide();
-
-    $btn.removeClass('morphing-btn_circle');
-  });
-
-  $clone.removeClass('morphing-btn-clone_visible');
-};
-
-Morphing.prototype._retrieveScale = function( $btn ) {
-  var rez = Math.max( $(window).height() * 3 / $btn.height() , $(window).width() * 3 / $btn.width() );
-
-  return rez;
-};
-
-$.fn.fancyMorph = function( duration ) {
-  this.each(function() {
-    var $this = $(this);
-
-    if ( !$this.data('morphing') ) {
-      $this.data('morphing', new Morphing( $this ));
-    }
-
-  });
-
-  return this;
-};
-
-$("[data-morphing]").fancyMorph();
-//--------- DEMO MORPHING------------------------------------------
-//---------http://codepen.io/fancyapps/pen/vxLVJE ------------------
-
-
+	// *************************************************************************
 
 
 });
